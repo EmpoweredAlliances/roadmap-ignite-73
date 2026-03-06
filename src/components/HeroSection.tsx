@@ -81,7 +81,7 @@ const HeroSection = () => {
               variants={fadeUp}
               className="mb-5 mt-4 max-w-4xl font-headline text-[32px] font-extrabold leading-[1.1] text-primary-foreground sm:text-[42px] md:text-[52px] lg:text-[58px]">
 
-            The 3-Day Workshop Where We Build Your 90-Day AI Implementation Roadmap{" "}
+            Leading with AI{" "}
             <span className="text-cta">Together</span>
           </motion.h1>
 

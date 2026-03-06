@@ -27,14 +27,14 @@ const IntroducingSection = () => {
         </motion.p>
 
         {/* Stat pills */}
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-10 flex flex-wrap justify-center gap-4">
-          {stats.map((s, i) => (
-            <div key={i} className="min-w-[140px] rounded-xl bg-primary-foreground/10 px-5 py-4 text-center">
-              <p className="font-headline text-lg font-bold text-cta sm:text-xl">{s.big}</p>
-              <p className="font-body text-xs text-primary-foreground/60 sm:text-sm">{s.sub}</p>
-            </div>
-          ))}
-        </motion.div>
+         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-10 flex flex-wrap justify-center gap-4">
+           {stats.map((s, i) => (
+             <div key={i} className="min-w-[140px] rounded-xl bg-primary-foreground/10 px-5 py-4 text-center">
+               <p className="font-headline text-lg font-bold text-cta sm:text-xl">{s.big}</p>
+               <p className="font-body text-xs text-primary-foreground/60 sm:text-sm">{s.sub}</p>
+             </div>
+           ))}
+         </motion.div>
 
         {/* Key differentiators */}
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}

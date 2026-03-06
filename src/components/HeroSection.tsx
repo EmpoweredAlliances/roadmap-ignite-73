@@ -74,7 +74,7 @@ const HeroSection = () => {
               className="mb-4 max-w-2xl font-headline text-lg font-medium leading-relaxed text-foreground/80 sm:text-xl md:text-2xl"
             >
               Experience a faster, clearer way to make AI decisions
-              — without overbuilding or overcommitting.
+               - without overbuilding or overcommitting.
             </motion.p>
 
             {/* Description */}

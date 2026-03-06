@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        headline: ['Poppins', 'sans-serif'],
-        body: ['Open Sans', 'sans-serif'],
+        headline: ['"Source Serif 4"', 'serif'],
+        body: ['Inter', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -91,8 +91,8 @@ export default {
           to: { height: "0" },
         },
         "pulse-glow": {
-          "0%, 100%": { boxShadow: "0 0 20px hsl(45 100% 51% / 0.3)" },
-          "50%": { boxShadow: "0 0 40px hsl(45 100% 51% / 0.5)" },
+          "0%, 100%": { boxShadow: "0 0 20px hsl(28 90% 52% / 0.3)" },
+          "50%": { boxShadow: "0 0 40px hsl(28 90% 52% / 0.5)" },
         },
       },
       animation: {

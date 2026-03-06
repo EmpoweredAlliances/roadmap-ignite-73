@@ -33,7 +33,7 @@ const FinalCTASection = () => {
           </p>
 
           <p className="mx-auto mb-10 max-w-[500px] font-body text-sm text-primary-foreground/60">
-            Join an open-enrollment session — or schedule a conversation to explore how the AI Leadership Alignment Accelerator can align your leadership team.
+            Join an open-enrollment session - or schedule a conversation to explore how the AI Leadership Alignment Accelerator can align your leadership team.
           </p>
 
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">

@@ -1,5 +1,6 @@
 import { motion, type Variants } from "framer-motion";
 import { ArrowRight, Calendar, Clock, Monitor } from "lucide-react";
+import logo from "@/assets/ea-logo.png";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },

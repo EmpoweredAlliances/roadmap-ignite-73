@@ -41,7 +41,7 @@ const FinalCTASection = () => {
               href={BOOKING_URL}
               className="flex items-center gap-3 rounded-lg bg-cta px-8 py-4 font-body text-base font-bold text-cta-foreground shadow-lg transition-all duration-200 hover:bg-cta-hover hover:shadow-xl sm:text-lg"
             >
-              Register Now — <span className="line-through opacity-70">$99</span> FREE
+              Register Now - <span className="line-through opacity-70">$99</span> FREE
               <ArrowRight className="h-5 w-5" />
             </a>
             <a

@@ -1,177 +1,131 @@
 import { motion, type Variants } from "framer-motion";
-import { Check, Star } from "lucide-react";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] } },
 };
 
-interface DayData {
+interface AgendaItem {
+  time: string;
   title: string;
-  date: string;
-  winIcon: string;
-  winText: string;
-  col1: string[];
-  col2: string[];
-  footerLines: string[];
+  desc: string;
+  details?: string[];
 }
 
-const days: DayData[] = [
+const agenda: AgendaItem[] = [
   {
-    title: "DAY ONE: Your Foundation & Roadmap",
-    date: "Tuesday, March 24 | 9am – 5pm",
-    winIcon: "🎯",
-    winText: "Leave with your personalized AI tool stack identified and your strategic implementation roadmap mapped out.",
-    col1: ["Master AI Prompting", "AI Business Opportunities", "Business Ideation & Optimization", "Thinking like an \"AI CEO\"", "Reven Tool Suite"],
-    col2: ["AI Marketing & Copywriting", "Video & Image Generation", "AI Cloning", "Content Creation Systems"],
-    footerLines: ["LIVE HOT SEAT: Real business. Real solutions. Real-time."],
+    time: "0:00 – 0:20",
+    title: "Welcome & Program Overview",
+    desc: "Brief introductions, program overview, and operating agreements to set the stage.",
   },
   {
-    title: "DAY TWO: Lead Generation & Automation",
-    date: "Wednesday, March 25 | 9am – 5pm",
-    winIcon: "🚀",
-    winText: "Leave with your complete lead gen blueprint and automation roadmap.",
-    col1: ["Lead Magnets That Convert", "Funnel Building in GoHighLevel", "Landing Pages & Sales Funnels", "Email Marketing Systems", "Traffic Generation"],
-    col2: ["AI Chatbots", "SMS/Text Bots", "AI Voice Bots", "Marketing Automation", "Zapier Integrations"],
-    footerLines: ["LIVE HOT SEAT: Another member gets the deep dive."],
-  },
-  {
-    title: "DAY THREE: Social, Sales & Your 90-Day Plan",
-    date: "Thursday, March 26 | 9am – 5pm",
-    winIcon: "✅",
-    winText: "Leave with your social strategy, sales roadmap, and complete 90-day implementation plan.",
-    col1: ["Social Media Strategy", "Content Calendar Creation", "Social Growth Tactics", "Authority Building", "AI-Enhanced Sales Process"],
-    col2: ["Productivity & Efficiency", "Working with Virtual Assistants", "Your 90-Day Roadmap", "Accountability & Next Steps"],
-    footerLines: [
-      "LIVE HOT SEAT: Final implementation deep dive.",
-      "BONUS: Open Q&A — Any question. Any business. Answered.",
+    time: "0:20 – 1:05",
+    title: "AI Priority Acceleration Workflow — Interactive Walkthrough",
+    desc: "Work through the full workflow using participant prework inputs in a shared Mural workspace.",
+    details: [
+      "Ideation — AI + human intelligence generating options and alternative approaches",
+      "Organization — Grouping by themes, identifying gaps, summaries & HMW questions",
+      "Evaluation — Criteria-based prompts, visualizing analysis & bias detection",
+      "Prioritization — AI synthesis + leader judgment, ranking, owners + next steps",
     ],
   },
+  {
+    time: "1:05 – 1:35",
+    title: "Adaptation Exploration",
+    desc: "See how the workflow adapts to different leadership use cases.",
+    details: [
+      "AI Readiness — people, culture, support, tools & data",
+      "Workflow Automation — operational system assessment",
+      "Governance Guardrails — who decides, guardrails that grow",
+      "Strategy — long-term vision, short-term goals & plans",
+    ],
+  },
+  {
+    time: "1:35 – 1:50",
+    title: "Reflections & Insights",
+    desc: "Capture key learnings, discuss applications to your organization, and identify your next-right decisions.",
+  },
+  {
+    time: "1:50 – 2:00",
+    title: "Wrap Up & Next Steps",
+    desc: "Receive your takeaways and learn about the AI Leadership Alignment Accelerator series.",
+  },
 ];
-
-const throughoutLeft = [
-  "Live hot seats with real businesses",
-  "Interactive Q&A whenever you have questions",
-  "Live demonstrations of every tool",
-];
-const throughoutRight = [
-  "Detailed workbooks for each section",
-  "Small group (only 100 people)",
-  "Direct access to Francis, Brian, Dolmar, Richard & team",
-];
-
-const Bullet = ({ text }: { text: string }) => (
-  <li className="flex items-start gap-2.5">
-    <span className="mt-[7px] block h-1.5 w-1.5 shrink-0 rounded-full bg-cta" />
-    <span className="font-body text-sm text-card-foreground/80 sm:text-[15px]">{text}</span>
-  </li>
-);
-
-const CheckRow = ({ text }: { text: string }) => (
-  <div className="flex items-start gap-3">
-    <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-cta">
-      <Check className="h-3 w-3 text-cta-foreground" strokeWidth={3} />
-    </div>
-    <span className="font-body text-sm text-card-foreground/80 sm:text-base">{text}</span>
-  </div>
-);
 
 const AgendaSection = () => {
   return (
-    <section className="bg-secondary py-10 sm:py-16 lg:py-20">
-      <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
+    <section className="bg-secondary py-14 sm:py-16 lg:py-20">
+      <div className="mx-auto max-w-[900px] px-5 sm:px-8">
         {/* Badge */}
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-5 flex justify-center">
-          <span className="inline-block rounded-lg bg-cta px-6 py-2.5 font-headline text-sm font-bold uppercase tracking-[0.15em] text-cta-foreground">
-            The Complete Agenda
+          <span className="inline-block rounded-full bg-cta/10 px-5 py-2 font-body text-xs font-semibold uppercase tracking-[0.15em] text-cta">
+            Workshop Agenda
           </span>
         </motion.div>
 
-        {/* Header */}
         <motion.h2
           initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-          className="mb-6 text-center font-headline text-[28px] font-bold text-primary sm:text-4xl lg:text-[42px]"
+          className="mb-4 text-center font-headline text-[28px] font-bold text-foreground sm:text-[36px] lg:text-[42px]"
         >
-          Here's What Happens Over The 3 Days:
+          What Happens in 2 Hours
         </motion.h2>
 
-        {/* Intro */}
-        <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mx-auto mb-10 max-w-[800px] text-center font-body text-base leading-relaxed text-muted-foreground sm:text-lg lg:mb-14">
-          Over 3 intensive days, we'll walk you through the complete AI for Business system, showing you exactly what to do, how to do it, and what to implement first.
-          <br /><br />
-          This is interactive teaching with live demonstrations, hot seats, and Q&amp;A throughout. Every section comes with workbooks so you capture your action steps and have a clear implementation guide.
+        <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+          className="mx-auto mb-12 max-w-[700px] text-center font-body text-base leading-relaxed text-muted-foreground sm:text-lg">
+          Every minute is designed to move you from complexity to clarity. You'll participate, not just observe.
         </motion.p>
 
-        {/* Day cards */}
-        <div className="grid gap-6 lg:grid-cols-3 lg:gap-7">
-          {days.map((day, i) => (
+        {/* Timeline */}
+        <div className="relative space-y-6">
+          {/* Vertical line */}
+          <div className="absolute left-[23px] top-4 hidden h-[calc(100%-2rem)] w-0.5 bg-border sm:block" />
+
+          {agenda.map((item, i) => (
             <motion.div
               key={i}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "-40px" }}
+              viewport={{ once: true, margin: "-30px" }}
               variants={{
-                hidden: { opacity: 0, y: 30 },
-                visible: { opacity: 1, y: 0, transition: { delay: i * 0.12, duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] } },
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0, transition: { delay: i * 0.08, duration: 0.45, ease: [0.25, 0.46, 0.45, 0.94] } },
               }}
-              className="flex flex-col overflow-hidden rounded-2xl bg-card shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-transform duration-300 hover:-translate-y-1"
+              className="flex gap-5"
             >
-              {/* Navy header */}
-              <div className="bg-primary px-6 py-6 sm:px-8 sm:py-7">
-                <h3 className="mb-1.5 font-headline text-lg font-bold text-primary-foreground sm:text-xl lg:text-2xl">
-                  {day.title}
-                </h3>
-                <p className="font-body text-sm text-primary-foreground/70">{day.date}</p>
+              {/* Timeline dot */}
+              <div className="relative hidden shrink-0 sm:flex">
+                <div className="relative z-10 mt-1 flex h-[46px] w-[46px] items-center justify-center rounded-full bg-cta font-body text-xs font-bold text-cta-foreground">
+                  {i + 1}
+                </div>
               </div>
 
-              {/* Card body */}
-              <div className="flex flex-1 flex-col px-6 py-6 sm:px-8 sm:py-7">
-                {/* Big win box */}
-                <div className="mb-6 flex gap-3 rounded-lg border-l-4 border-cta bg-[hsl(30_100%_96%)] p-4">
-                  <span className="shrink-0 text-[20px]">{day.winIcon}</span>
-                  <p className="font-headline text-[13px] font-bold leading-snug text-primary sm:text-[14px]">{day.winText}</p>
-                </div>
-
-                {/* What we cover */}
-                <p className="mb-4 font-headline text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground">
-                  What We Cover
-                </p>
-                <ul className="flex-1 space-y-2.5">
-                    {day.col1.map((t) => <Bullet key={t} text={t} />)}
-                    {day.col2.map((t) => <Bullet key={t} text={t} />)}
+              {/* Card */}
+              <div className="flex-1 rounded-xl bg-card p-5 shadow-sm transition-shadow hover:shadow-md sm:p-6">
+                <p className="mb-1 font-body text-xs font-semibold uppercase tracking-wider text-cta">{item.time}</p>
+                <h3 className="mb-2 font-headline text-lg font-bold text-foreground sm:text-xl">{item.title}</h3>
+                <p className="font-body text-sm leading-relaxed text-muted-foreground sm:text-base">{item.desc}</p>
+                {item.details && (
+                  <ul className="mt-3 space-y-1.5">
+                    {item.details.map((d, j) => (
+                      <li key={j} className="flex items-start gap-2">
+                        <span className="mt-2 block h-1.5 w-1.5 shrink-0 rounded-full bg-cta" />
+                        <span className="font-body text-sm text-muted-foreground">{d}</span>
+                      </li>
+                    ))}
                   </ul>
-              </div>
-
-              {/* Red footer */}
-              <div className="flex items-start gap-2.5 bg-cta px-6 py-4 sm:px-8 sm:py-5">
-                <Star className="mt-0.5 h-4 w-4 shrink-0 text-cta-foreground" fill="currentColor" />
-                <div>
-                  {day.footerLines.map((line, j) => (
-                    <p key={j} className="font-headline text-xs font-bold text-cta-foreground sm:text-sm">
-                      {line}
-                    </p>
-                  ))}
-                </div>
+                )}
               </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Throughout box */}
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mt-12 lg:mt-16">
-          <div className="mx-auto max-w-[900px] rounded-2xl bg-card p-6 shadow-[0_8px_24px_rgba(0,0,0,0.08)] sm:p-10">
-            <h3 className="mb-6 text-center font-headline text-xl font-bold text-primary sm:text-2xl">
-              Throughout All 3 Days:
-            </h3>
-            <div className="grid gap-4 sm:grid-cols-2 sm:gap-x-10 sm:gap-y-4">
-              <div className="space-y-3">
-                {throughoutLeft.map((t) => <CheckRow key={t} text={t} />)}
-              </div>
-              <div className="space-y-3">
-                {throughoutRight.map((t) => <CheckRow key={t} text={t} />)}
-              </div>
-            </div>
-          </div>
+        {/* Prework note */}
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+          className="mt-10 rounded-xl bg-card p-6 text-center shadow-sm sm:p-8">
+          <p className="font-headline text-lg font-bold text-foreground sm:text-xl">Before the Workshop</p>
+          <p className="mt-2 font-body text-sm text-muted-foreground sm:text-base">
+            You'll complete a brief prework assignment (1–2 questions) to seed the live demonstration and ensure the session is directly relevant to your business challenges.
+          </p>
         </motion.div>
       </div>
     </section>

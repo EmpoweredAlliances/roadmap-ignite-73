@@ -8,79 +8,70 @@ const fadeUp: Variants = {
 };
 
 const perfectFor = [
-  "Are a Pro member wanting to implement (not just learn)",
-  "Feel overwhelmed by information and need clear direction",
-  "Have a business and want AI-powered lead gen and systems",
-  "Are an employee wanting to accelerate your career",
-  "Are starting a business and want a clear AI roadmap",
-  "Are a coach/consultant wanting to build authority",
-  "Learn better by seeing and asking vs. watching alone",
-  "Value small groups and personal access",
-  "Are ready to invest 3 days to transform the next 12 months",
+  "Executives or functional/business VPs from small and midsized companies",
+  "Leaders experimenting with AI or ready to start",
+  "Internal AI initiative leads responsible for building clarity and a decision path",
+  "Leadership teams stuck between AI urgency and AI confusion",
+  "Anyone who wants faster, clearer decisions without losing accountability",
 ];
 
-const skipIf = [
-  "Think AI is just hype",
-  "Want to figure it out alone",
-  "Can't commit to 3 days in Jacksonville",
-  "Want a magic button with no work",
-  "Aren't a Pro member",
-  "Expect us to build everything for you",
-  "Won't implement what you learn",
+const notFor = [
+  "Looking for a specific AI tool demo or implementation tutorial",
+  "Seeking technical training on coding or data science",
+  "Not in a leadership or decision-making role",
+  "Wanting someone else to make your AI decisions for you",
 ];
 
 const WhoIsForSection = () => {
   return (
-    <section className="border-t-4 border-cta bg-card">
-      <div className="mx-auto max-w-[1200px] px-5 py-[70px] sm:px-8">
-        {/* Badge */}
+    <section className="bg-card">
+      <div className="mx-auto max-w-[1000px] px-5 py-14 sm:px-8 sm:py-16 lg:py-20">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-5 flex justify-center">
-          <span className="inline-block rounded-lg bg-cta px-6 py-2.5 font-headline text-sm font-bold uppercase tracking-[0.15em] text-cta-foreground">
+          <span className="inline-block rounded-full bg-cta/10 px-5 py-2 font-body text-xs font-semibold uppercase tracking-[0.15em] text-cta">
             Is This For You?
           </span>
         </motion.div>
 
-        {/* Header */}
         <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-          className="mb-10 text-center font-headline text-[32px] font-bold text-primary sm:text-[42px] lg:mb-[50px]">
-          Who This Workshop Is For:
+          className="mb-10 text-center font-headline text-[28px] font-bold text-foreground sm:text-[36px] lg:text-[42px]">
+          Who This Workshop Is For
         </motion.h2>
 
-        {/* Two columns */}
         <div className="grid gap-8 lg:grid-cols-2">
           {/* Perfect For */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-            className="rounded-2xl border-2 border-[hsl(160_81%_38%)] bg-[hsl(172_60%_96%)] p-7 sm:p-10">
+            className="rounded-2xl border-2 border-accent bg-[hsl(172_40%_96%)] p-7 sm:p-8">
             <div className="mb-6 flex items-center gap-3">
               <span className="text-2xl">✅</span>
-              <h3 className="font-headline text-2xl font-bold text-primary">Perfect If You:</h3>
+              <h3 className="font-headline text-xl font-bold text-foreground sm:text-2xl">Perfect If You:</h3>
             </div>
             <div className="space-y-4">
               {perfectFor.map((text, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[hsl(160_81%_38%)]">
-                    <Check className="h-3 w-3 text-white" strokeWidth={3} />
+                  <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent">
+                    <Check className="h-3 w-3 text-accent-foreground" strokeWidth={3} />
                   </div>
-                  <p className="font-body text-[17px] leading-relaxed text-card-foreground">{text}</p>
+                  <p className="font-body text-sm leading-relaxed text-foreground/85 sm:text-base">{text}</p>
                 </div>
               ))}
             </div>
+            <p className="mt-5 font-body text-sm italic text-muted-foreground">No prior AI expertise required.</p>
           </motion.div>
 
-          {/* Skip This If */}
+          {/* Not For */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-            className="rounded-2xl border-2 border-cta bg-[hsl(0_100%_97%)] p-7 sm:p-10">
+            className="rounded-2xl border-2 border-border bg-secondary p-7 sm:p-8">
             <div className="mb-6 flex items-center gap-3">
-              <span className="text-2xl">❌</span>
-              <h3 className="font-headline text-2xl font-bold text-primary">Skip This If You:</h3>
+              <span className="text-2xl">🚫</span>
+              <h3 className="font-headline text-xl font-bold text-foreground sm:text-2xl">Not the Right Fit If You're:</h3>
             </div>
             <div className="space-y-4">
-              {skipIf.map((text, i) => (
+              {notFor.map((text, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-cta">
-                    <X className="h-3 w-3 text-white" strokeWidth={3} />
+                  <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-muted">
+                    <X className="h-3 w-3 text-muted-foreground" strokeWidth={3} />
                   </div>
-                  <p className="font-body text-[17px] leading-relaxed text-card-foreground">{text}</p>
+                  <p className="font-body text-sm leading-relaxed text-foreground/85 sm:text-base">{text}</p>
                 </div>
               ))}
             </div>
@@ -89,12 +80,12 @@ const WhoIsForSection = () => {
 
         {/* Decision box */}
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-          className="mx-auto mt-12 max-w-[800px] rounded-2xl bg-primary p-8 text-center sm:p-10">
-          <h3 className="mb-4 font-headline text-2xl font-bold text-primary-foreground sm:text-[28px]">
-            The Question Is Simple:
+          className="mx-auto mt-12 max-w-[700px] rounded-2xl bg-primary p-8 text-center sm:p-10">
+          <h3 className="mb-4 font-headline text-xl font-bold text-primary-foreground sm:text-2xl">
+            The Fastest Way to Better AI Decisions
           </h3>
-          <p className="mx-auto mb-8 max-w-[600px] font-body text-lg leading-relaxed text-primary-foreground/90 sm:text-2xl">
-            Are you ready to go from "I need to learn AI" to "Here's what I built with AI" in the next 90 days?
+          <p className="mx-auto mb-8 max-w-[550px] font-body text-base leading-relaxed text-primary-foreground/80 sm:text-lg">
+            If your team is stuck between AI urgency and AI confusion, this is the fastest way to make better next decisions — without wasting cycles.
           </p>
           <DualCTAButtons variant="dark" />
         </motion.div>

@@ -12,52 +12,45 @@ const fadeUp: Variants = {
 };
 
 const faqs = [
-  { q: "I'm not tech-savvy. Can I keep up?", a: "This is designed for all skill levels. The small group means personal help when you're stuck. Nobody gets left behind." },
-  { q: "What if I can't bring a guest?", a: "Fine! Just pay $100 deposit for your seat. Add someone later if you want (if seats available)." },
-  { q: "What if my plans change?", a: "Tell us before the event. Immediate refund. No hassle." },
-  { q: "What happens if I can't attend?", a: "If you're a PRO member, just let us know at support@aiforbusiness.com before the event. We use this deposit simply to keep track of attendees, as the room is limited to 100 only. We don't want the seats to go to waste because there will be a wait list of people who want to attend. This allows us to make sure that all those who can't attend and want to attend will have seats." },
-  { q: "Will this be recorded?", a: "Yes. All attendees get recordings but the session will not be recorded in it's entirety. The real value is interaction and being there to ask questions." },
-  { q: "What's different from your other events?", a: "Summits are 500+ people, presentation-style, broad topics. This is 100 max, workshop-style, focused on Pro system implementation. Learning vs. roadmap building." },
-  { q: "I don't have a business yet. Should I come?", a: "Absolutely. We cover what AI skills to develop, how to position yourself, how to build from scratch. For employees, aspiring entrepreneurs, and established owners." },
-  { q: "What if I'm in a unique industry?", a: "That's why we do hot seats and keep it small. We work through specific businesses regardless of industry. Principles are universal. Application is customized." },
-  
-  { q: "What happens after the workshop?", a: "You keep all Pro benefits for as long as you're an active member. Plus recordings and materials forever. And as a special bonus, we'll have a follow-up virtual mastermind call to hold you accountable and help you implement the plan." },
-  { q: "What should I bring?", a: "Your laptop, questions, and business challenges. We provide workbooks, materials, and everything else." },
-  
+  { q: "Do I need AI expertise to attend?", a: "No. This workshop is designed for leaders at all levels of AI familiarity. The focus is on decision-making methodology, not technical implementation." },
+  { q: "What's the format — virtual or in-person?", a: "The default format is a 2-hour virtual session. An optional 4-hour in-person format is also available. Both deliver the same core experience and outcomes." },
+  { q: "How is this different from other AI workshops?", a: "This is a decision container, not an AI demo. It's vendor-neutral and focused on leadership alignment and decision clarity — not tool implementation. You'll practice a repeatable workflow, not watch a presentation." },
+  { q: "What do I need to prepare?", a: "You'll complete a brief prework assignment (1–2 questions via Google Form) to seed the live demonstration. This ensures the session is directly relevant to your challenges." },
+  { q: "What do I walk away with?", a: "A repeatable meeting workflow, reusable AI prompts, session artifacts (priorities, decision log, and next steps), and a leader-ready guide for engaging your leadership team on AI priorities." },
+  { q: "Is this for individual leaders or teams?", a: "Leading with AI is an open-enrollment session for individual leaders. For teams, we offer the AI Leadership Alignment Accelerator — a customized version that kicks off with a private Leading with AI session for your leadership team." },
+  { q: "What's the AI Leadership Alignment Accelerator?", a: "It's our 3-pillar leadership-team workshop series (Readiness, Workflow Automation, Governance Guardrails) designed to create shared clarity and accelerate decisions on AI direction. Leading with AI previews how the workflow powers those sessions." },
+  { q: "How much does it cost?", a: "$99 per person for the open-enrollment session. Team packages for the AI Leadership Alignment Accelerator use a sliding scale based on company size, with package discounts available." },
 ];
 
 const FAQSection = () => {
   return (
-    <section className="bg-[hsl(0_0%_96%)]">
-      <div className="mx-auto max-w-[900px] px-5 py-[70px] sm:px-8">
-        {/* Badge */}
+    <section className="bg-secondary">
+      <div className="mx-auto max-w-[800px] px-5 py-14 sm:px-8 sm:py-16 lg:py-20">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-5 flex justify-center">
-          <span className="inline-block rounded-lg bg-cta px-6 py-2.5 font-headline text-sm font-bold uppercase tracking-[0.15em] text-cta-foreground">
-            Your Questions Answered
+          <span className="inline-block rounded-full bg-cta/10 px-5 py-2 font-body text-xs font-semibold uppercase tracking-[0.15em] text-cta">
+            Questions Answered
           </span>
         </motion.div>
 
-        {/* Header */}
         <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-          className="mb-10 text-center font-headline text-[32px] font-bold text-primary sm:text-[42px]">
+          className="mb-10 text-center font-headline text-[28px] font-bold text-foreground sm:text-[36px] lg:text-[42px]">
           Frequently Asked Questions
         </motion.h2>
 
-        {/* Accordion */}
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-          <Accordion type="single" collapsible className="space-y-4">
+          <Accordion type="single" collapsible className="space-y-3">
             {faqs.map((faq, i) => (
               <AccordionItem
                 key={i}
                 value={`faq-${i}`}
-                className="overflow-hidden rounded-xl border-none bg-card shadow-[0_2px_8px_rgba(0,0,0,0.06)] transition-shadow hover:shadow-[0_4px_12px_rgba(0,0,0,0.1)] data-[state=open]:shadow-[0_4px_12px_rgba(0,0,0,0.1)]"
+                className="overflow-hidden rounded-xl border-none bg-card shadow-sm transition-shadow hover:shadow-md data-[state=open]:shadow-md"
               >
                 <AccordionTrigger
-                  className="px-5 py-5 font-headline text-base font-bold text-primary hover:no-underline data-[state=open]:text-cta sm:px-7 sm:text-lg [&>svg]:h-5 [&>svg]:w-5 [&>svg]:text-cta"
+                  className="px-5 py-5 font-headline text-base font-bold text-foreground hover:no-underline data-[state=open]:text-cta sm:px-6 sm:text-lg [&>svg]:h-5 [&>svg]:w-5 [&>svg]:text-cta"
                 >
                   {faq.q}
                 </AccordionTrigger>
-                <AccordionContent className="border-t-2 border-border px-5 pb-6 pt-4 font-body text-base leading-relaxed text-card-foreground/80 sm:px-7">
+                <AccordionContent className="border-t border-border px-5 pb-5 pt-4 font-body text-sm leading-relaxed text-muted-foreground sm:px-6 sm:text-base">
                   {faq.a}
                 </AccordionContent>
               </AccordionItem>

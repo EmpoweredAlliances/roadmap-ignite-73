@@ -8,8 +8,8 @@ const fadeUp: Variants = {
 
 const stats = [
   { big: "2 Hours", sub: "Focused & Experiential" },
-  { big: "$99", sub: "Per Person" },
-  { big: "Virtual", sub: "Or In-Person (4hrs)" },
+  { big: "FREE", sub: "Intro sessions (regular $99)" },
+  { big: "Virtual", sub: "All initial sessions" },
 ];
 
 const IntroducingSection = () => {

@@ -10,7 +10,7 @@ const fadeUp: Variants = {
 const outcomes = [
   {
     title: "A Repeatable AI-Enabled Decision Workflow",
-    desc: "The AI Priority Acceleration Workflow for ideation, organization, evaluation, and prioritization — ready to use in your next leadership meeting."
+    desc: "The AI Priority Acceleration Workflow for ideation, organization, evaluation, and prioritization - ready to use in your next leadership meeting."
   },
   {
     title: "Clear AI / Human Boundaries",

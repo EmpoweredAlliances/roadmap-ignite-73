@@ -21,7 +21,7 @@ const IntroducingSection = () => {
         style={{ backgroundImage: `url(${workshopBg})` }}
       />
       <div className="absolute inset-0 bg-primary/90" />
-      <div className="mx-auto max-w-[1000px] px-5 py-14 sm:px-8 sm:py-16 lg:py-20">
+      <div className="relative mx-auto max-w-[1000px] px-5 py-14 sm:px-8 sm:py-16 lg:py-20">
         <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
           className="mb-4 text-center font-headline text-[28px] font-bold text-primary-foreground sm:text-[36px] lg:text-[42px]">
           About the Workshop

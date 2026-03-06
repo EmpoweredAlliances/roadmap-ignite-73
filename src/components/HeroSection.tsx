@@ -25,10 +25,6 @@ const HeroSection = () => {
             🔒 Exclusive Limited Seating for 100 PRO Members
           </p>
           <div className="flex items-center gap-2 sm:gap-4">
-            <CountdownTimer inline />
-            <a href="https://aiforbusinesslive.com/3-day-workshop-checkout-page" className="shrink-0 rounded-md bg-btn px-3 py-1.5 font-headline text-[10px] font-bold uppercase tracking-wide text-btn-foreground transition-all duration-200 hover:bg-btn-hover sm:px-5 sm:py-2 sm:text-xs">
-              Pro Members
-            </a>
             <a href="https://aiforbusinesslive.com/3-day-workshop-checkout" className="shrink-0 rounded-md border border-white/30 px-3 py-1.5 font-headline text-[10px] font-bold uppercase tracking-wide text-cta-foreground transition-all duration-200 hover:bg-white/10 sm:px-5 sm:py-2 sm:text-xs">
               General Admission
             </a>

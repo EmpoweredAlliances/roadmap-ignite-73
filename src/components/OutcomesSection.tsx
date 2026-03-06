@@ -22,7 +22,7 @@ const outcomes = [
   },
   {
     title: "1–2 Next-Right Decisions Defined",
-    desc: "What to decide, who must be involved, and what inputs are still missing — so you leave with a path, not just ideas."
+    desc: "What to decide, who must be involved, and what inputs are still missing - so you leave with a path, not just ideas."
   },
   {
     title: "AI Priority Acceleration Toolkit",

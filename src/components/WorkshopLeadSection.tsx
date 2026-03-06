@@ -20,7 +20,7 @@ const highlights = [
   {
     icon: Globe,
     title: "Global Leadership Experience",
-    desc: "70+ workshops for multicultural leaders across Japan, Singapore, China, and North America — partnering with organizations like Yamaha, Hitachi, Stanford, and Toshiba.",
+    desc: "70+ workshops for multicultural leaders across Japan, Singapore, China, and North America - partnering with organizations like Yamaha, Hitachi, Stanford, and Toshiba.",
   },
   {
     icon: GraduationCap,

@@ -51,7 +51,7 @@ const IntroducingSection = () => {
           </div>
           <div className="rounded-xl bg-primary/70 p-5 backdrop-blur-sm sm:p-6">
             <h3 className="mb-2 font-headline text-lg font-bold text-primary-foreground">Culture impact handled upfront</h3>
-            <p>Shared language, reduced AI anxiety, and responsible experimentation — all modeled in-session.</p>
+            <p>Shared language, reduced AI anxiety, and responsible experimentation - all modeled in-session.</p>
           </div>
           <div className="rounded-xl bg-primary/70 p-5 backdrop-blur-sm sm:p-6">
             <h3 className="mb-2 font-headline text-lg font-bold text-primary-foreground">Gateway to deeper alignment</h3>

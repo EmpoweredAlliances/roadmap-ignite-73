@@ -53,7 +53,7 @@ const FinalCTASection = () => {
           </div>
 
           <p className="mt-8 font-body text-sm italic text-primary-foreground/50">
-            — The Empowered Alliances Team
+            - The Empowered Alliances Team
           </p>
         </motion.div>
       </div>

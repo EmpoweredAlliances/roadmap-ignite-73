@@ -85,7 +85,7 @@ const HeroSection = () => {
               variants={fadeUp}
               className="mb-10 max-w-xl font-body text-base leading-relaxed text-muted-foreground"
             >
-              A focused, experiential workshop where leaders learn — and practice — the AI Priority Acceleration Workflow to turn messy inputs into sharper decisions.
+              A focused, experiential workshop where leaders learn - and practice - the AI Priority Acceleration Workflow to turn messy inputs into sharper decisions.
             </motion.p>
 
             {/* Event details pills */}

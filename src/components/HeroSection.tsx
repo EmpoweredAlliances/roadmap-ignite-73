@@ -1,5 +1,6 @@
 import { motion, type Variants } from "framer-motion";
 import { ArrowRight, Calendar, Clock, Monitor } from "lucide-react";
+import logo from "@/assets/ea-logo.png";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
@@ -16,11 +17,9 @@ const HeroSection = () => {
   return (
     <>
       {/* Sticky top bar */}
-      <div className="sticky top-0 z-50 w-full bg-primary px-3 py-2.5 sm:px-5">
-        <div className="mx-auto flex max-w-[1200px] items-center justify-between">
-          <p className="font-body text-sm font-semibold text-primary-foreground tracking-wide">
-            Empowered Alliances
-          </p>
+       <div className="sticky top-0 z-50 w-full bg-primary px-3 py-2.5 sm:px-5">
+         <div className="mx-auto flex max-w-[1200px] items-center justify-between">
+           <img src={logo} alt="Empowered Alliances" className="h-8 sm:h-10" />
           <a
             href={BOOKING_URL}
             className="shrink-0 rounded-md bg-cta px-4 py-1.5 font-body text-xs font-bold text-cta-foreground transition-all duration-200 hover:bg-cta-hover sm:px-5 sm:py-2 sm:text-sm"

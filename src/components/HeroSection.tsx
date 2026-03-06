@@ -1,6 +1,5 @@
 import { motion, type Variants } from "framer-motion";
 import DualCTAButtons from "@/components/DualCTAButtons";
-import CountdownTimer from "@/components/CountdownTimer";
 import EventInfoBox from "@/components/EventInfoBox";
 import TrustIndicators from "@/components/TrustIndicators";
 import heroImage from "@/assets/hero-workshop.jpg";

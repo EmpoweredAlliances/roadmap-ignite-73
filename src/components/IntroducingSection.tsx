@@ -45,15 +45,15 @@ const IntroducingSection = () => {
         {/* Key differentiators */}
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
           className="mb-10 space-y-4 font-body text-base leading-relaxed text-primary-foreground/80 sm:text-lg">
-          <div className="rounded-xl bg-primary-foreground/[0.06] p-5 sm:p-6">
+          <div className="rounded-xl bg-primary/70 p-5 backdrop-blur-sm sm:p-6">
             <h3 className="mb-2 font-headline text-lg font-bold text-primary-foreground">It's a decision container, not an AI demo</h3>
             <p>Vendor-neutral and scope-bounded — focused on leadership alignment and decision clarity, not tool implementation.</p>
           </div>
-          <div className="rounded-xl bg-primary-foreground/[0.06] p-5 sm:p-6">
+          <div className="rounded-xl bg-primary/70 p-5 backdrop-blur-sm sm:p-6">
             <h3 className="mb-2 font-headline text-lg font-bold text-primary-foreground">Culture impact handled upfront</h3>
             <p>Shared language, reduced AI anxiety, and responsible experimentation — all modeled in-session.</p>
           </div>
-          <div className="rounded-xl bg-primary-foreground/[0.06] p-5 sm:p-6">
+          <div className="rounded-xl bg-primary/70 p-5 backdrop-blur-sm sm:p-6">
             <h3 className="mb-2 font-headline text-lg font-bold text-primary-foreground">Gateway to deeper alignment</h3>
             <p>Preview how the same workflow powers the AI Leadership Alignment Accelerator working sessions: Readiness, Workflow Automation, and Governance Guardrails.</p>
           </div>

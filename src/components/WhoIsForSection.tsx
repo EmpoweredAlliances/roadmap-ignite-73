@@ -58,24 +58,24 @@ const WhoIsForSection = () => {
             <p className="mt-5 font-body text-sm italic text-muted-foreground">No prior AI expertise required.</p>
           </motion.div>
 
-          {/* Not For */}
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-            className="rounded-2xl border-2 border-border bg-secondary p-7 sm:p-8">
-            <div className="mb-6 flex items-center gap-3">
-              <span className="text-2xl">🚫</span>
-              <h3 className="font-headline text-xl font-bold text-foreground sm:text-2xl">Not the Right Fit If You're:</h3>
-            </div>
-            <div className="space-y-4">
-              {notFor.map((text, i) => (
-                <div key={i} className="flex items-start gap-3">
-                  <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-muted">
-                    <X className="h-3 w-3 text-muted-foreground" strokeWidth={3} />
-                  </div>
-                  <p className="font-body text-sm leading-relaxed text-foreground/85 sm:text-base">{text}</p>
-                </div>
-              ))}
-            </div>
-          </motion.div>
+           {/* Not For */}
+           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+             className="rounded-2xl border-2 border-border bg-secondary p-7 sm:p-8">
+             <div className="mb-6 flex items-center gap-3">
+               <span className="text-2xl">🚫</span>
+               <h3 className="font-headline text-xl font-bold text-white sm:text-2xl">Not the Right Fit If You're:</h3>
+             </div>
+             <div className="space-y-4">
+               {notFor.map((text, i) => (
+                 <div key={i} className="flex items-start gap-3">
+                   <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/20">
+                     <X className="h-3 w-3 text-white" strokeWidth={3} />
+                   </div>
+                   <p className="font-body text-sm leading-relaxed text-white/85 sm:text-base">{text}</p>
+                 </div>
+               ))}
+             </div>
+           </motion.div>
         </div>
 
         {/* Decision box */}

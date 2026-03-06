@@ -15,7 +15,7 @@ const highlights = [
   {
     icon: Users,
     title: "Executive Facilitation",
-    desc: "Over 15 years facilitating senior executive workshops — from Kaiser Permanente SVPs to Fortune 500 leadership teams — specializing in alignment, decision-making, and organizational transformation.",
+    desc: "Over 15 years facilitating senior executive workshops - from Kaiser Permanente SVPs to Fortune 500 leadership teams - specializing in alignment, decision-making, and organizational transformation.",
   },
   {
     icon: Globe,

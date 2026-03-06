@@ -112,7 +112,7 @@ const HeroSection = () => {
                 <ArrowRight className="h-5 w-5" />
               </a>
               <p className="font-body text-sm text-muted-foreground">
-                $99 per person · No prior AI expertise required
+                <span className="line-through opacity-60">$99</span> FREE per person · No prior AI expertise required
               </p>
             </motion.div>
           </div>

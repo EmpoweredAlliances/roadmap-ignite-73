@@ -14,7 +14,7 @@ const outcomes = [
   },
   {
     title: "Clear AI / Human Boundaries",
-    desc: "A practical distinction between what AI should do vs. what leaders must do — avoiding both hype and underuse."
+    desc: "A practical distinction between what AI should do vs. what leaders must do - avoiding both hype and underuse."
   },
   {
     title: "Three Alignment Priorities Identified",

@@ -16,7 +16,7 @@ const DualCTAButtons = ({ variant = "light", compact = false }: CTAButtonProps) 
         href={BOOKING_URL}
         className="flex w-full max-w-[420px] items-center justify-center gap-3 rounded-lg bg-cta px-8 py-4 font-body text-base font-bold text-cta-foreground shadow-lg transition-all duration-200 hover:bg-cta-hover hover:shadow-xl sm:text-lg"
       >
-        Register Now — $99
+        Register Now — <span className="line-through opacity-70">$99</span> FREE
         <ArrowRight className="h-5 w-5" />
       </a>
       {!compact && (

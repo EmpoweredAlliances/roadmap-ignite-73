@@ -32,13 +32,7 @@ const agenda: AgendaItem[] = [
   {
     time: "1:05 – 1:35",
     title: "Adaptation Exploration",
-    desc: "See how the workflow adapts to different leadership use cases.",
-    details: [
-      "AI Readiness — people, culture, support, tools & data",
-      "Workflow Automation — operational system assessment",
-      "Governance Guardrails — who decides, guardrails that grow",
-      "Strategy — long-term vision, short-term goals & plans",
-    ],
+    desc: "See how the workflow adapts to different leadership use cases: AI Readiness, Workflow Automation, Governance Guardrails, and Strategy.",
   },
   {
     time: "1:35 – 1:50",

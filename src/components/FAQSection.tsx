@@ -32,10 +32,10 @@ const FAQSection = () => {
           </span>
         </motion.div>
 
-        <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-          className="mb-10 text-center font-headline text-[28px] font-bold text-foreground sm:text-[36px] lg:text-[42px]">
-          Frequently Asked Questions
-        </motion.h2>
+         <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+           className="mb-10 text-center font-headline text-[28px] font-bold text-white sm:text-[36px] lg:text-[42px]">
+           Frequently Asked Questions
+         </motion.h2>
 
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
           <Accordion type="single" collapsible className="space-y-3">

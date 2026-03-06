@@ -3,6 +3,7 @@ import ExperienceHighlightsSection from "@/components/ExperienceHighlightsSectio
 import IntroducingSection from "@/components/IntroducingSection";
 import AgendaSection from "@/components/AgendaSection";
 import OutcomesSection from "@/components/OutcomesSection";
+import WorkshopLeadSection from "@/components/WorkshopLeadSection";
 import WhoIsForSection from "@/components/WhoIsForSection";
 import FAQSection from "@/components/FAQSection";
 import FinalCTASection from "@/components/FinalCTASection";
@@ -16,6 +17,7 @@ const Index = () => {
       <IntroducingSection />
       <AgendaSection />
       <OutcomesSection />
+      <WorkshopLeadSection />
       <WhoIsForSection />
       <FAQSection />
       <FinalCTASection />

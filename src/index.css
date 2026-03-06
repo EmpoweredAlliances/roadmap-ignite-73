@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&family=Open+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light sections */
+    --background: 0 0% 96%;
+    --foreground: 0 0% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+
+    /* Navy brand primary */
+    --primary: 216 72% 10%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 216 72% 10%;
+
+    --muted: 0 0% 91%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 172 78% 42%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Brand red accent */
+    --cta: 355 86% 55%;
+    --cta-foreground: 0 0% 100%;
+    --cta-hover: 355 86% 46%;
+
+    /* Yellow CTA buttons */
+    --btn: 45 100% 51%;
+    --btn-foreground: 216 72% 10%;
+    --btn-hover: 40 100% 45%;
+
+    /* Hero dark navy */
+    --hero-bg: 216 72% 10%;
+    --hero-bg-lighter: 216 55% 16%;
+
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 216 72% 10%;
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 216 72% 10%;
+    --foreground: 0 0% 98%;
+    --card: 216 60% 14%;
+    --card-foreground: 0 0% 98%;
+    --popover: 216 60% 14%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 216 72% 10%;
+    --secondary: 216 50% 18%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 216 50% 18%;
+    --muted-foreground: 216 15% 60%;
+    --accent: 172 78% 42%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+    --cta: 355 86% 55%;
+    --cta-foreground: 0 0% 100%;
+    --cta-hover: 355 86% 46%;
+    --btn: 45 100% 51%;
+    --btn-foreground: 216 72% 10%;
+    --btn-hover: 40 100% 45%;
+    --border: 216 50% 18%;
+    --input: 216 50% 18%;
+    --ring: 216 20% 80%;
+    --sidebar-background: 216 72% 8%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 216 50% 14%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 216 50% 14%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-size: 16px;
+  }
+
+  @media (min-width: 768px) {
+    html {
+      font-size: 19px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    html {
+      font-size: 22px;
+    }
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  }
+}

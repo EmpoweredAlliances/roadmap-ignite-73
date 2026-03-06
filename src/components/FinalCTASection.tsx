@@ -29,7 +29,7 @@ const FinalCTASection = () => {
           </h2>
 
           <p className="mx-auto mb-4 max-w-[600px] font-body text-base leading-relaxed text-primary-foreground/80 sm:text-lg">
-            If your team is stuck between AI urgency and AI confusion, this is the fastest way to make better next decisions — without wasting cycles.
+            If your team is stuck between AI urgency and AI confusion, this is the fastest way to make better next decisions - without wasting cycles.
           </p>
 
           <p className="mx-auto mb-10 max-w-[500px] font-body text-sm text-primary-foreground/60">

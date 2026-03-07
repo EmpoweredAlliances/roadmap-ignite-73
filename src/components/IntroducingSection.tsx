@@ -27,7 +27,7 @@ const IntroducingSection = () => {
           <h2 className="mb-4 font-headline text-[28px] font-bold text-primary-foreground sm:text-[36px] lg:text-[42px]">
             About the Workshop
           </h2>
-          <p className="mx-auto max-w-2xl font-body text-base leading-relaxed text-primary-foreground/85 sm:text-lg">
+          <p className="mx-auto max-w-2xl font-body text-base leading-relaxed text-white sm:text-lg">
             Leading with AI is an interactive workshop built around a live decision walkthrough. You'll work through the AI Priority Acceleration Workflow in a shared workspace - experiencing how AI can compress leadership decision cycle time while improving decision quality, alignment, and follow-through.
           </p>
         </motion.div>
@@ -37,14 +37,14 @@ const IntroducingSection = () => {
            {stats.map((s, i) => (
              <div key={i} className="min-w-[140px] rounded-xl bg-primary/70 px-5 py-4 text-center backdrop-blur-sm">
                <p className="font-headline text-lg font-bold text-cta sm:text-xl">{s.big}</p>
-               <p className="font-body text-xs text-primary-foreground/60 sm:text-sm">{s.sub}</p>
+               <p className="font-body text-xs text-white sm:text-sm">{s.sub}</p>
              </div>
            ))}
          </motion.div>
 
         {/* Key differentiators */}
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-          className="mb-10 space-y-4 font-body text-base leading-relaxed text-primary-foreground/80 sm:text-lg">
+          className="mb-10 space-y-4 font-body text-base leading-relaxed text-white sm:text-lg">
           <div className="rounded-xl bg-primary/70 p-5 backdrop-blur-sm sm:p-6">
             <h3 className="mb-2 font-headline text-lg font-bold text-primary-foreground">It's a decision container, not an AI demo</h3>
             <p>Vendor-neutral and scope-bounded - focused on leadership alignment and decision clarity, not tool implementation.</p>

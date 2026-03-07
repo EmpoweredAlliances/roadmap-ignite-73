@@ -28,11 +28,11 @@ const FinalCTASection = () => {
             Stop Circling. Start Deciding.
           </h2>
 
-          <p className="mx-auto mb-4 max-w-[600px] font-body text-base leading-relaxed text-primary-foreground/80 sm:text-lg">
+          <p className="mx-auto mb-4 max-w-[600px] font-body text-base leading-relaxed text-white sm:text-lg">
             If your team is stuck between AI urgency and AI confusion, this is the fastest way to make better next decisions - without wasting cycles.
           </p>
 
-          <p className="mx-auto mb-10 max-w-[500px] font-body text-sm text-primary-foreground/60">
+          <p className="mx-auto mb-10 max-w-[500px] font-body text-sm text-white">
             Join an open-enrollment session - or schedule a conversation to explore how the AI Leadership Alignment Accelerator can align your leadership team.
           </p>
 
@@ -52,7 +52,7 @@ const FinalCTASection = () => {
             </a>
           </div>
 
-          <p className="mt-8 font-body text-sm italic text-primary-foreground/50">
+          <p className="mt-8 font-body text-sm italic text-white">
             - The Empowered Alliances Team
           </p>
         </motion.div>

@@ -69,7 +69,7 @@ const OutcomesSection = () => {
               </div>
               <div>
                 <h3 className="mb-1 font-headline text-base font-bold text-white sm:text-lg">{item.title}</h3>
-                <p className="font-body text-sm leading-relaxed text-white/75 sm:text-base">{item.desc}</p>
+                <p className="font-body text-sm leading-relaxed text-white sm:text-base">{item.desc}</p>
               </div>
             </motion.div>
           ))}

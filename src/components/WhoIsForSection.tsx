@@ -71,7 +71,7 @@ const WhoIsForSection = () => {
                    <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/20">
                      <X className="h-3 w-3 text-white" strokeWidth={3} />
                    </div>
-                   <p className="font-body text-sm leading-relaxed text-white/85 sm:text-base">{text}</p>
+                   <p className="font-body text-sm leading-relaxed text-white sm:text-base">{text}</p>
                  </div>
                ))}
              </div>
@@ -84,7 +84,7 @@ const WhoIsForSection = () => {
           <h3 className="mb-4 font-headline text-xl font-bold text-primary-foreground sm:text-2xl">
             The Fastest Way to Better AI Decisions
           </h3>
-          <p className="mx-auto mb-8 max-w-[550px] font-body text-base leading-relaxed text-primary-foreground/80 sm:text-lg">
+          <p className="mx-auto mb-8 max-w-[550px] font-body text-base leading-relaxed text-white sm:text-lg">
             If your team is stuck between AI urgency and AI confusion, this is the fastest way to make better next decisions - without wasting cycles.
           </p>
           <DualCTAButtons variant="dark" />

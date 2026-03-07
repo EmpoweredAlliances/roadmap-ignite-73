@@ -71,7 +71,7 @@ const WhoIsForSection = () => {
                    <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/20">
                      <X className="h-3 w-3 text-white" strokeWidth={3} />
                    </div>
-                   <p className="font-body text-sm leading-relaxed text-white/85 sm:text-base">{text}</p>
+                   <p className="font-body text-sm leading-relaxed text-white sm:text-base">{text}</p>
                  </div>
                ))}
              </div>

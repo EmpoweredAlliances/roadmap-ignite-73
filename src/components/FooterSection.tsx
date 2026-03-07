@@ -4,7 +4,7 @@ const FooterSection = () => {
   return (
     <footer className="bg-primary px-5 py-10 text-center sm:px-8">
       <img src={logo} alt="Empowered Alliances" className="mx-auto h-12 mb-4" />
-      <p className="mx-auto mt-3 max-w-[500px] font-body text-sm text-primary-foreground/60">
+      <p className="mx-auto mt-3 max-w-[500px] font-body text-sm text-white">
         We help leadership teams turn AI complexity into clear business priorities - and build the internal capability to keep doing it.
       </p>
       <div className="mt-5 flex flex-wrap justify-center gap-4 font-body text-sm text-primary-foreground/40">

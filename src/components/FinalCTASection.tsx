@@ -32,7 +32,7 @@ const FinalCTASection = () => {
             If your team is stuck between AI urgency and AI confusion, this is the fastest way to make better next decisions - without wasting cycles.
           </p>
 
-          <p className="mx-auto mb-10 max-w-[500px] font-body text-sm text-primary-foreground/60">
+          <p className="mx-auto mb-10 max-w-[500px] font-body text-sm text-white">
             Join an open-enrollment session - or schedule a conversation to explore how the AI Leadership Alignment Accelerator can align your leadership team.
           </p>
 

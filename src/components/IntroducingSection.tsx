@@ -27,7 +27,7 @@ const IntroducingSection = () => {
           <h2 className="mb-4 font-headline text-[28px] font-bold text-primary-foreground sm:text-[36px] lg:text-[42px]">
             About the Workshop
           </h2>
-          <p className="mx-auto max-w-2xl font-body text-base leading-relaxed text-primary-foreground/85 sm:text-lg">
+          <p className="mx-auto max-w-2xl font-body text-base leading-relaxed text-white sm:text-lg">
             Leading with AI is an interactive workshop built around a live decision walkthrough. You'll work through the AI Priority Acceleration Workflow in a shared workspace - experiencing how AI can compress leadership decision cycle time while improving decision quality, alignment, and follow-through.
           </p>
         </motion.div>

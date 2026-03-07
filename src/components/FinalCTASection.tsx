@@ -29,11 +29,11 @@ const FinalCTASection = () => {
           </h2>
 
           <p className="mx-auto mb-4 max-w-[600px] font-body text-base leading-relaxed text-primary-foreground/80 sm:text-lg">
-            If your team is stuck between AI urgency and AI confusion, this is the fastest way to make better next decisions — without wasting cycles.
+            If your team is stuck between AI urgency and AI confusion, this is the fastest way to make better next decisions - without wasting cycles.
           </p>
 
           <p className="mx-auto mb-10 max-w-[500px] font-body text-sm text-primary-foreground/60">
-            Join an open-enrollment session — or schedule a conversation to explore how the AI Leadership Alignment Accelerator can align your leadership team.
+            Join an open-enrollment session - or schedule a conversation to explore how the AI Leadership Alignment Accelerator can align your leadership team.
           </p>
 
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
@@ -41,7 +41,7 @@ const FinalCTASection = () => {
               href={BOOKING_URL}
               className="flex items-center gap-3 rounded-lg bg-cta px-8 py-4 font-body text-base font-bold text-cta-foreground shadow-lg transition-all duration-200 hover:bg-cta-hover hover:shadow-xl sm:text-lg"
             >
-              Register Now — <span className="line-through opacity-70">$99</span> FREE
+              Register Now - <span className="line-through opacity-70">$99</span> FREE
               <ArrowRight className="h-5 w-5" />
             </a>
             <a
@@ -53,7 +53,7 @@ const FinalCTASection = () => {
           </div>
 
           <p className="mt-8 font-body text-sm italic text-primary-foreground/50">
-            — The Empowered Alliances Team
+            - The Empowered Alliances Team
           </p>
         </motion.div>
       </div>

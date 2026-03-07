@@ -10,11 +10,11 @@ const fadeUp: Variants = {
 const outcomes = [
   {
     title: "A Repeatable AI-Enabled Decision Workflow",
-    desc: "The AI Priority Acceleration Workflow for ideation, organization, evaluation, and prioritization — ready to use in your next leadership meeting."
+    desc: "The AI Priority Acceleration Workflow for ideation, organization, evaluation, and prioritization - ready to use in your next leadership meeting."
   },
   {
     title: "Clear AI / Human Boundaries",
-    desc: "A practical distinction between what AI should do vs. what leaders must do — avoiding both hype and underuse."
+    desc: "A practical distinction between what AI should do vs. what leaders must do - avoiding both hype and underuse."
   },
   {
     title: "Three Alignment Priorities Identified",
@@ -22,7 +22,7 @@ const outcomes = [
   },
   {
     title: "1–2 Next-Right Decisions Defined",
-    desc: "What to decide, who must be involved, and what inputs are still missing — so you leave with a path, not just ideas."
+    desc: "What to decide, who must be involved, and what inputs are still missing - so you leave with a path, not just ideas."
   },
   {
     title: "AI Priority Acceleration Toolkit",

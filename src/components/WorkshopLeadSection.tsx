@@ -15,12 +15,12 @@ const highlights = [
   {
     icon: Users,
     title: "Executive Facilitation",
-    desc: "Over 15 years facilitating senior executive workshops — from Kaiser Permanente SVPs to Fortune 500 leadership teams — specializing in alignment, decision-making, and organizational transformation.",
+    desc: "Over 15 years facilitating senior executive workshops - from Kaiser Permanente SVPs to Fortune 500 leadership teams - specializing in alignment, decision-making, and organizational transformation.",
   },
   {
     icon: Globe,
     title: "Global Leadership Experience",
-    desc: "70+ workshops for multicultural leaders across Japan, Singapore, China, and North America — partnering with organizations like Yamaha, Hitachi, Stanford, and Toshiba.",
+    desc: "70+ workshops for multicultural leaders across Japan, Singapore, China, and North America - partnering with organizations like Yamaha, Hitachi, Stanford, and Toshiba.",
   },
   {
     icon: GraduationCap,
@@ -46,7 +46,7 @@ const WorkshopLeadSection = () => {
 
         <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
           className="mx-auto mb-12 max-w-2xl text-center font-body text-base leading-relaxed text-muted-foreground sm:text-lg">
-          From mechanical engineer to AI strategy consultant — Jeff brings 30+ years of leadership development, design thinking, and executive facilitation to every session. He founded Empowered Alliances to help leadership teams turn AI complexity into clear business priorities.
+          From mechanical engineer to AI strategy consultant - Jeff brings 30+ years of leadership development, design thinking, and executive facilitation to every session. He founded Empowered Alliances to help leadership teams turn AI complexity into clear business priorities.
         </motion.p>
 
         <div className="grid gap-5 sm:grid-cols-2">

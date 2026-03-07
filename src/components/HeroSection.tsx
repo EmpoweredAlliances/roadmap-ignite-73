@@ -74,7 +74,7 @@ const HeroSection = () => {
               className="mb-4 max-w-2xl font-headline text-lg font-medium leading-relaxed text-foreground/80 sm:text-xl md:text-2xl"
             >
               Experience a faster, clearer way to make AI decisions
-              — without overbuilding or overcommitting.
+               - without overbuilding or overcommitting.
             </motion.p>
 
             {/* Description */}
@@ -85,7 +85,7 @@ const HeroSection = () => {
               variants={fadeUp}
               className="mb-10 max-w-xl font-body text-base leading-relaxed text-muted-foreground"
             >
-              A focused, experiential workshop where leaders learn — and practice — the AI Priority Acceleration Workflow to turn messy inputs into sharper decisions.
+              A focused, experiential workshop where leaders learn - and practice - the AI Priority Acceleration Workflow to turn messy inputs into sharper decisions.
             </motion.p>
 
             {/* Event details pills */}

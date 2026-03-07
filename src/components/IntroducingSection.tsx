@@ -28,7 +28,7 @@ const IntroducingSection = () => {
             About the Workshop
           </h2>
           <p className="mx-auto max-w-2xl font-body text-base leading-relaxed text-primary-foreground/85 sm:text-lg">
-            Leading with AI is an interactive workshop built around a live decision walkthrough. You'll work through the AI Priority Acceleration Workflow in a shared workspace — experiencing how AI can compress leadership decision cycle time while improving decision quality, alignment, and follow-through.
+            Leading with AI is an interactive workshop built around a live decision walkthrough. You'll work through the AI Priority Acceleration Workflow in a shared workspace - experiencing how AI can compress leadership decision cycle time while improving decision quality, alignment, and follow-through.
           </p>
         </motion.div>
 
@@ -47,11 +47,11 @@ const IntroducingSection = () => {
           className="mb-10 space-y-4 font-body text-base leading-relaxed text-primary-foreground/80 sm:text-lg">
           <div className="rounded-xl bg-primary/70 p-5 backdrop-blur-sm sm:p-6">
             <h3 className="mb-2 font-headline text-lg font-bold text-primary-foreground">It's a decision container, not an AI demo</h3>
-            <p>Vendor-neutral and scope-bounded — focused on leadership alignment and decision clarity, not tool implementation.</p>
+            <p>Vendor-neutral and scope-bounded - focused on leadership alignment and decision clarity, not tool implementation.</p>
           </div>
           <div className="rounded-xl bg-primary/70 p-5 backdrop-blur-sm sm:p-6">
             <h3 className="mb-2 font-headline text-lg font-bold text-primary-foreground">Culture impact handled upfront</h3>
-            <p>Shared language, reduced AI anxiety, and responsible experimentation — all modeled in-session.</p>
+            <p>Shared language, reduced AI anxiety, and responsible experimentation - all modeled in-session.</p>
           </div>
           <div className="rounded-xl bg-primary/70 p-5 backdrop-blur-sm sm:p-6">
             <h3 className="mb-2 font-headline text-lg font-bold text-primary-foreground">Gateway to deeper alignment</h3>

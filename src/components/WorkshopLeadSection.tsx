@@ -51,7 +51,7 @@ const WorkshopLeadSection = () => {
 
         <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
           className="mx-auto mb-12 max-w-2xl text-center font-body text-base leading-relaxed text-muted-foreground sm:text-lg">
-          From mechanical engineer to AI strategy consultant - Jeff brings 30+ years of leadership development, design thinking, and executive facilitation to every session. He founded Empowered Alliances to help leadership teams turn AI complexity into clear business priorities.
+          From transformational engineer to AI strategy consultant - Jeff brings 30+ years of leadership development, design thinking, and executive facilitation to every session. He founded Empowered Alliances to help leadership teams turn AI complexity into clear business priorities.
         </motion.p>
 
         <div className="grid gap-5 sm:grid-cols-2">

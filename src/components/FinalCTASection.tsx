@@ -28,7 +28,7 @@ const FinalCTASection = () => {
             Stop Circling. Start Deciding.
           </h2>
 
-          <p className="mx-auto mb-4 max-w-[600px] font-body text-base leading-relaxed text-primary-foreground/80 sm:text-lg">
+          <p className="mx-auto mb-4 max-w-[600px] font-body text-base leading-relaxed text-white sm:text-lg">
             If your team is stuck between AI urgency and AI confusion, this is the fastest way to make better next decisions - without wasting cycles.
           </p>
 

@@ -1,5 +1,6 @@
 import { motion, type Variants } from "framer-motion";
 import { Briefcase, GraduationCap, Globe, Users } from "lucide-react";
+import jeffProfile from "@/assets/jeff-profile.png";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 20 },
@@ -37,6 +38,10 @@ const WorkshopLeadSection = () => {
           <span className="inline-block rounded-full bg-cta/10 px-5 py-2 font-body text-xs font-semibold uppercase tracking-[0.15em] text-cta">
             Your Workshop Lead
           </span>
+        </motion.div>
+
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-8 flex justify-center">
+          <img src={jeffProfile} alt="Jeff Richardson" className="h-36 w-36 rounded-full object-cover shadow-lg sm:h-44 sm:w-44" />
         </motion.div>
 
         <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}

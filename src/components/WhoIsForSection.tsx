@@ -84,7 +84,7 @@ const WhoIsForSection = () => {
           <h3 className="mb-4 font-headline text-xl font-bold text-primary-foreground sm:text-2xl">
             The Fastest Way to Better AI Decisions
           </h3>
-          <p className="mx-auto mb-8 max-w-[550px] font-body text-base leading-relaxed text-primary-foreground/80 sm:text-lg">
+          <p className="mx-auto mb-8 max-w-[550px] font-body text-base leading-relaxed text-white sm:text-lg">
             If your team is stuck between AI urgency and AI confusion, this is the fastest way to make better next decisions - without wasting cycles.
           </p>
           <DualCTAButtons variant="dark" />

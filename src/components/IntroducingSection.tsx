@@ -44,7 +44,7 @@ const IntroducingSection = () => {
 
         {/* Key differentiators */}
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-          className="mb-10 space-y-4 font-body text-base leading-relaxed text-primary-foreground/80 sm:text-lg">
+          className="mb-10 space-y-4 font-body text-base leading-relaxed text-white sm:text-lg">
           <div className="rounded-xl bg-primary/70 p-5 backdrop-blur-sm sm:p-6">
             <h3 className="mb-2 font-headline text-lg font-bold text-primary-foreground">It's a decision container, not an AI demo</h3>
             <p>Vendor-neutral and scope-bounded - focused on leadership alignment and decision clarity, not tool implementation.</p>

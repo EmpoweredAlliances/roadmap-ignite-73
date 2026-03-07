@@ -14,7 +14,7 @@ const FooterSection = () => {
         <span>|</span>
         <a href="https://api.aiforbusiness.com/widget/booking/SMmXrKS1j5mBJBMRobfg" className="transition-colors hover:text-primary-foreground">Contact</a>
       </div>
-      <p className="mt-4 font-body text-xs text-primary-foreground/30">© 2026 Empowered Alliances. All rights reserved.</p>
+      <p className="mt-4 font-body text-xs text-white/70">© 2026 Empowered Alliances. All rights reserved.</p>
     </footer>
   );
 };

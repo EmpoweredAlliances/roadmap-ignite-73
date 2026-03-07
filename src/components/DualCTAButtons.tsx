@@ -20,7 +20,7 @@ const DualCTAButtons = ({ variant = "light", compact = false }: CTAButtonProps) 
         <ArrowRight className="h-5 w-5" />
       </a>
       {!compact && (
-        <p className={`font-body text-sm ${isDark ? "text-primary-foreground/50" : "text-muted-foreground"}`}>
+        <p className={`font-body text-sm ${isDark ? "text-white" : "text-muted-foreground"}`}>
           Schedule a conversation or register for an upcoming session
         </p>
       )}

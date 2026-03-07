@@ -37,7 +37,7 @@ const IntroducingSection = () => {
            {stats.map((s, i) => (
              <div key={i} className="min-w-[140px] rounded-xl bg-primary/70 px-5 py-4 text-center backdrop-blur-sm">
                <p className="font-headline text-lg font-bold text-cta sm:text-xl">{s.big}</p>
-               <p className="font-body text-xs text-primary-foreground/60 sm:text-sm">{s.sub}</p>
+               <p className="font-body text-xs text-white sm:text-sm">{s.sub}</p>
              </div>
            ))}
          </motion.div>

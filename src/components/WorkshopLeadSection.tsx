@@ -1,5 +1,6 @@
 import { motion, type Variants } from "framer-motion";
 import { Briefcase, GraduationCap, Globe, Users } from "lucide-react";
+import jeffProfile from "@/assets/jeff-profile.png";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 20 },

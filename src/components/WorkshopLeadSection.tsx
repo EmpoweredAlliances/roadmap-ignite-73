@@ -40,6 +40,10 @@ const WorkshopLeadSection = () => {
           </span>
         </motion.div>
 
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-8 flex justify-center">
+          <img src={jeffProfile} alt="Jeff Richardson" className="h-36 w-36 rounded-full object-cover shadow-lg sm:h-44 sm:w-44" />
+        </motion.div>
+
         <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
           className="mb-4 text-center font-headline text-[28px] font-bold text-foreground sm:text-[36px] lg:text-[42px]">
           Jeff Richardson

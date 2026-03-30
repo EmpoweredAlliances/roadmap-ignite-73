@@ -41,7 +41,7 @@ const Index = () => {
               Free intro sessions are available now. Limited to 20 participants per session.
             </p>
           </div>
-          <LeadCaptureForm source="main-page-register" />
+          <LeadCaptureForm />
         </div>
       </section>
       <FinalCTASection />

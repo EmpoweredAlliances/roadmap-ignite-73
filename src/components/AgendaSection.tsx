@@ -61,7 +61,7 @@ const AgendaSection = () => {
            initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
            className="mb-4 text-center font-headline text-[28px] font-bold text-white sm:text-[36px] lg:text-[42px]"
          >
-           What Happens in 2 Hours
+           Leading with AI Workshop
          </motion.h2>
 
         <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}

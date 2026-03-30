@@ -51,7 +51,6 @@ const Index = () => {
       <IntroducingSection />
       <AgendaSection />
       <OutcomesSection />
-      <WorkshopLeadSection />
       <WhoIsForSection />
       <FAQSection />
       <section

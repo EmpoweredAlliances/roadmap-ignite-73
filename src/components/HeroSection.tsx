@@ -183,13 +183,6 @@ const HeroSection = () => {
           <div className="flex flex-col items-start gap-12 lg:flex-row lg:items-center lg:justify-between">
             {/* Left column */}
             <div className="max-w-[560px]">
-              {/* Badge pill */}
-              <motion.div custom={0} initial="hidden" animate="visible" variants={fadeUp}>
-                <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 font-body text-[13px] text-white/80">
-                  <span className="inline-block h-2 w-2 rounded-full bg-[hsl(142_72%_48%)]" />
-                  Live sessions running now · 140+ leadership teams served
-                </span>
-              </motion.div>
 
               {/* H1 */}
               <motion.h1

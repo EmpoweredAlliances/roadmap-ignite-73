@@ -49,8 +49,8 @@ const IntroducingSection = () => {
              <h3 className="mb-2 font-headline text-lg font-bold text-primary-foreground">It's a decision container, not an AI demo</h3>
             <p>Vendor-neutral and scope-bounded - focused on leadership alignment and decision clarity, not tool implementation.</p>
           </div>
-          <div className="rounded-xl bg-primary/70 p-5 backdrop-blur-sm sm:p-6">
-            <h3 className="mb-2 font-headline text-lg font-bold text-primary-foreground">Culture impact handled upfront</h3>
+           <div className="card-hover rounded-xl bg-primary/70 p-5 backdrop-blur-sm sm:p-6">
+             <h3 className="mb-2 font-headline text-lg font-bold text-primary-foreground">Culture impact handled upfront</h3>
             <p>Shared language, reduced AI anxiety, and responsible experimentation - all modeled in-session.</p>
           </div>
           <div className="rounded-xl bg-primary/70 p-5 backdrop-blur-sm sm:p-6">

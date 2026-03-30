@@ -107,15 +107,6 @@ const AgendaSection = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* Prework note */}
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-          className="mt-10 rounded-xl bg-card p-6 text-center shadow-sm sm:p-8">
-          <p className="font-headline text-lg font-bold text-foreground sm:text-xl">Before the Workshop</p>
-          <p className="mt-2 font-body text-sm text-muted-foreground sm:text-base">
-            You'll complete a brief prework assignment (1–2 questions) to seed the live demonstration and ensure the session is directly relevant to your business challenges.
-          </p>
-        </motion.div>
       </div>
     </section>
   );

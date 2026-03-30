@@ -76,6 +76,7 @@ const ProofStats = () => {
   );
 };
 
+const HeroSection = () => {
   const [scrollPct, setScrollPct] = useState(0);
 
   useEffect(() => {

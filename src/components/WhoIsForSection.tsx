@@ -40,7 +40,7 @@ const WhoIsForSection = () => {
         <div className="grid gap-8 lg:grid-cols-2">
           {/* Perfect For */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-            className="rounded-2xl border-2 border-accent bg-[hsl(172_40%_96%)] p-7 sm:p-8">
+            className="card-hover rounded-2xl border-2 border-accent bg-[hsl(172_40%_96%)] p-7 sm:p-8">
             <div className="mb-6 flex items-center gap-3">
               <span className="text-2xl">✅</span>
               <h3 className="font-headline text-xl font-bold text-foreground sm:text-2xl">Perfect If You:</h3>

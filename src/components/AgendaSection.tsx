@@ -16,7 +16,7 @@ const agenda: AgendaItem[] = [
   {
     time: "0:00 – 0:20",
     title: "Welcome & Program Overview",
-    desc: "Brief introductions, program overview, and operating agreements to set the stage.",
+    desc: "Brief introductions, program overview, and AI vs human intelligence strengths",
   },
   {
     time: "0:20 – 1:05",

@@ -35,7 +35,7 @@ const cards = [
 
 const ExperienceHighlightsSection = () => {
   return (
-    <section id="how-it-works" className="bg-card">
+    <section id="for-consultants" className="bg-card">
       <div className="mx-auto max-w-[1200px] px-5 py-14 sm:px-8 sm:py-16 lg:py-20">
         {/* Badge */}
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-5 flex justify-center">

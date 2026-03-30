@@ -48,7 +48,7 @@ const agenda: AgendaItem[] = [
 
 const AgendaSection = () => {
   return (
-    <section className="bg-secondary py-14 sm:py-16 lg:py-20">
+    <section id="how-it-works" className="bg-secondary py-14 sm:py-16 lg:py-20">
       <div className="mx-auto max-w-[900px] px-5 sm:px-8">
         {/* Badge */}
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-5 flex justify-center">

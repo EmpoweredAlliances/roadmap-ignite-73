@@ -14,17 +14,29 @@ interface LeadCaptureFormProps {
   onSuccess?: () => void;
 }
 
+const teamSizeOptions = [
+  "Just me",
+  "2–5 people",
+  "6–15 people",
+  "16–30 people",
+  "30+ people",
+];
+
 const LeadCaptureForm = ({ source = "website-form", onSuccess }: LeadCaptureFormProps) => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
     phone: "",
+    company: "",
+    jobTitle: "",
+    format: "",
+    teamSize: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
@@ -72,6 +84,9 @@ const LeadCaptureForm = ({ source = "website-form", onSuccess }: LeadCaptureForm
     );
   }
 
+  const inputClass =
+    "rounded-lg border border-border bg-background px-4 py-3 font-body text-sm text-foreground placeholder:text-muted-foreground focus:border-cta focus:outline-none focus:ring-1 focus:ring-cta";
+
   return (
     <motion.form
       onSubmit={handleSubmit}
@@ -85,7 +100,7 @@ const LeadCaptureForm = ({ source = "website-form", onSuccess }: LeadCaptureForm
         Reserve Your Spot
       </h3>
       <p className="text-center font-body text-sm text-muted-foreground">
-        <span className="line-through opacity-60">$99</span> FREE · Limited seats available
+        FREE · Limited seats available
       </p>
 
       <div className="grid grid-cols-2 gap-3">
@@ -95,7 +110,7 @@ const LeadCaptureForm = ({ source = "website-form", onSuccess }: LeadCaptureForm
           placeholder="First Name"
           value={formData.firstName}
           onChange={handleChange}
-          className="rounded-lg border border-border bg-background px-4 py-3 font-body text-sm text-foreground placeholder:text-muted-foreground focus:border-cta focus:outline-none focus:ring-1 focus:ring-cta"
+          className={inputClass}
         />
         <input
           type="text"
@@ -103,7 +118,7 @@ const LeadCaptureForm = ({ source = "website-form", onSuccess }: LeadCaptureForm
           placeholder="Last Name"
           value={formData.lastName}
           onChange={handleChange}
-          className="rounded-lg border border-border bg-background px-4 py-3 font-body text-sm text-foreground placeholder:text-muted-foreground focus:border-cta focus:outline-none focus:ring-1 focus:ring-cta"
+          className={inputClass}
         />
       </div>
 
@@ -114,7 +129,7 @@ const LeadCaptureForm = ({ source = "website-form", onSuccess }: LeadCaptureForm
         required
         value={formData.email}
         onChange={handleChange}
-        className="w-full rounded-lg border border-border bg-background px-4 py-3 font-body text-sm text-foreground placeholder:text-muted-foreground focus:border-cta focus:outline-none focus:ring-1 focus:ring-cta"
+        className={`w-full ${inputClass}`}
       />
 
       <input
@@ -123,8 +138,58 @@ const LeadCaptureForm = ({ source = "website-form", onSuccess }: LeadCaptureForm
         placeholder="Phone Number (optional)"
         value={formData.phone}
         onChange={handleChange}
-        className="w-full rounded-lg border border-border bg-background px-4 py-3 font-body text-sm text-foreground placeholder:text-muted-foreground focus:border-cta focus:outline-none focus:ring-1 focus:ring-cta"
+        className={`w-full ${inputClass}`}
       />
+
+      <input
+        type="text"
+        name="company"
+        placeholder="Company Name"
+        value={formData.company}
+        onChange={handleChange}
+        className={`w-full ${inputClass}`}
+      />
+
+      <input
+        type="text"
+        name="jobTitle"
+        placeholder="Job Title / Role"
+        value={formData.jobTitle}
+        onChange={handleChange}
+        className={`w-full ${inputClass}`}
+      />
+
+      {/* Format toggle pills */}
+      <div className="flex gap-3">
+        {["Virtual", "In-Person"].map((option) => (
+          <button
+            key={option}
+            type="button"
+            onClick={() => setFormData((prev) => ({ ...prev, format: option }))}
+            className={`flex-1 rounded-lg border py-3 font-body text-sm font-medium transition-colors cursor-pointer ${
+              formData.format === option
+                ? "bg-foreground text-card border-foreground"
+                : "bg-background border-border text-foreground"
+            }`}
+          >
+            {option}
+          </button>
+        ))}
+      </div>
+
+      <select
+        name="teamSize"
+        value={formData.teamSize}
+        onChange={handleChange}
+        className={`w-full ${inputClass} ${!formData.teamSize ? "text-muted-foreground" : ""}`}
+      >
+        <option value="">How many people on your team? (optional)</option>
+        {teamSizeOptions.map((opt) => (
+          <option key={opt} value={opt}>
+            {opt}
+          </option>
+        ))}
+      </select>
 
       <button
         type="submit"

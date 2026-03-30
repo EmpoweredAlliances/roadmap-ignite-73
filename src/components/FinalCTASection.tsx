@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion, type Variants } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
@@ -9,6 +10,8 @@ const fadeUp: Variants = {
 const BOOKING_URL = "https://api.aiforbusiness.com/widget/booking/SMmXrKS1j5mBJBMRobfg";
 
 const FinalCTASection = () => {
+  const [showCalendar, setShowCalendar] = useState(false);
+
   return (
     <section className="relative overflow-hidden bg-primary">
       <div className="pointer-events-none absolute inset-0 opacity-[0.03]">
@@ -38,19 +41,35 @@ const FinalCTASection = () => {
 
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <a
-              href={BOOKING_URL}
+              href="#register"
               className="flex items-center gap-3 rounded-lg bg-cta px-8 py-4 font-body text-base font-bold text-cta-foreground shadow-lg transition-all duration-200 hover:bg-cta-hover hover:shadow-xl sm:text-lg"
             >
-              Register Now - <span className="line-through opacity-70">$99</span> FREE
+              Reserve Your Spot — Free
               <ArrowRight className="h-5 w-5" />
             </a>
-            <a
-              href={BOOKING_URL}
+            <button
+              onClick={() => setShowCalendar(!showCalendar)}
               className="flex items-center gap-3 rounded-lg border-2 border-primary-foreground/30 px-8 py-4 font-body text-base font-semibold text-primary-foreground transition-all duration-200 hover:border-primary-foreground/60 hover:bg-primary-foreground/10"
             >
               Schedule a Conversation
-            </a>
+            </button>
           </div>
+
+          {showCalendar && (
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+              className="mx-auto mt-8 overflow-hidden rounded-xl bg-white shadow-xl"
+              style={{ maxWidth: 600 }}
+            >
+              <iframe
+                src={BOOKING_URL}
+                title="Schedule a Conversation"
+                className="h-[600px] w-full border-0"
+              />
+            </motion.div>
+          )}
 
           <p className="mt-8 font-body text-sm italic text-white">
             - The Empowered Alliances Team

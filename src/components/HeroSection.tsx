@@ -187,7 +187,7 @@ const HeroSection = () => {
               >
                 <a
                   href={BOOKING_URL}
-                  className="rounded-lg bg-[#C49B3C] px-6 py-3 font-body text-[15px] font-medium text-white transition-opacity hover:bg-[#b08930]"
+                  className="btn-shimmer rounded-lg bg-[#C49B3C] px-6 py-3 font-body text-[15px] font-medium text-white transition-opacity hover:bg-[#b08930]"
                 >
                   Experience a live demo →
                 </a>

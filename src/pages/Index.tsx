@@ -51,7 +51,6 @@ const Index = () => {
       <IntroducingSection />
       <AgendaSection />
       <OutcomesSection />
-      <WorkshopLeadSection />
       <WhoIsForSection />
       <FAQSection />
       <section
@@ -74,6 +73,7 @@ const Index = () => {
         </div>
       </section>
       <FinalCTASection />
+      <WorkshopLeadSection />
       <FooterSection />
     </div>
   );

@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView, type Variants } from "framer-motion";
+import eaLogo from "@/assets/ea-logo.png";
 
 const useCountUp = (target: number, duration = 1200, inView = false) => {
   const [count, setCount] = useState(0);

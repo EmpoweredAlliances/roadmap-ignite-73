@@ -200,33 +200,7 @@ const HeroSection = () => {
               </motion.div>
 
               {/* Proof stats */}
-              <motion.div
-                custom={4}
-                initial="hidden"
-                animate="visible"
-                variants={fadeUp}
-                className="mt-10 flex items-start gap-0"
-              >
-                {[
-                  { num: "90 min", label: "vs. 4–8 weeks of strategy cycles" },
-                  { num: "$75K", label: "of consulting work, in one session" },
-                  { num: "100%", label: "human decisions, AI-accelerated" },
-                ].map((stat, idx) => (
-                  <div
-                    key={stat.num}
-                    className={`flex flex-col gap-1 px-5 ${
-                      idx !== 0 ? "border-l border-white/20" : ""
-                    } ${idx === 0 ? "pl-0" : ""}`}
-                  >
-                    <span className="font-body text-[28px] font-medium text-white">
-                      {stat.num}
-                    </span>
-                    <span className="font-body text-[12px] leading-snug text-white/60">
-                      {stat.label}
-                    </span>
-                  </div>
-                ))}
-              </motion.div>
+              <ProofStats />
             </div>
 
             {/* Right column — floating cards (hidden on mobile) */}

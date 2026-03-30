@@ -53,8 +53,8 @@ const IntroducingSection = () => {
              <h3 className="mb-2 font-headline text-lg font-bold text-primary-foreground">Culture impact handled upfront</h3>
             <p>Shared language, reduced AI anxiety, and responsible experimentation - all modeled in-session.</p>
           </div>
-          <div className="rounded-xl bg-primary/70 p-5 backdrop-blur-sm sm:p-6">
-            <h3 className="mb-2 font-headline text-lg font-bold text-primary-foreground">Gateway to deeper alignment</h3>
+           <div className="card-hover rounded-xl bg-primary/70 p-5 backdrop-blur-sm sm:p-6">
+             <h3 className="mb-2 font-headline text-lg font-bold text-primary-foreground">Gateway to deeper alignment</h3>
             <p>Preview how the same workflow powers the AI Leadership Alignment Accelerator working sessions: Readiness, Workflow Automation, and Governance Guardrails.</p>
           </div>
         </motion.div>

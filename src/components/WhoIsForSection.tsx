@@ -60,7 +60,7 @@ const WhoIsForSection = () => {
 
            {/* Not For */}
            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-             className="rounded-2xl border-2 border-border bg-secondary p-7 sm:p-8">
+             className="card-hover rounded-2xl border-2 border-border bg-secondary p-7 sm:p-8">
              <div className="mb-6 flex items-center gap-3">
                <span className="text-2xl">🚫</span>
                <h3 className="font-headline text-xl font-bold text-white sm:text-2xl">Not the Right Fit If You're:</h3>

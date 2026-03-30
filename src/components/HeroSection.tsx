@@ -22,10 +22,10 @@ const HeroSection = () => {
           {/* Left: logomark + wordmark */}
           <div className="flex items-center gap-2.5">
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-foreground">
-              <span className="font-body text-xs font-bold text-card">PA</span>
+              <span className="font-body text-xs font-bold text-card">LW</span>
             </div>
             <span className="font-body text-[15px] font-medium text-foreground">
-              Priority Acceleration
+              Leading with AI
             </span>
           </div>
 

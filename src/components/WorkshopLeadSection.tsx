@@ -32,7 +32,7 @@ const highlights = [
 
 const WorkshopLeadSection = () => {
   return (
-    <section className="bg-card border-t border-border">
+    <section id="for-consultants" className="bg-card border-t border-border">
       <div className="mx-auto max-w-[1000px] px-5 py-14 sm:px-8 sm:py-16 lg:py-20">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-5 flex justify-center">
           <span className="inline-block rounded-full bg-cta/10 px-5 py-2 font-body text-xs font-semibold uppercase tracking-[0.15em] text-cta">

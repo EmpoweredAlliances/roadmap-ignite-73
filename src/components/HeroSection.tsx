@@ -124,11 +124,9 @@ const HeroSection = () => {
         <div className="mx-auto flex max-w-[1200px] items-center justify-between px-5 py-3 sm:px-8">
           {/* Left: logomark + wordmark */}
           <div className="flex items-center gap-2.5">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/15 border border-white/20">
-              <span className="font-body text-xs font-bold text-white">LW</span>
-            </div>
+            <img src={eaLogo} alt="Empowered Alliances" className="h-8 w-8 rounded-lg object-contain" />
             <span className="font-body text-[15px] font-medium text-white">
-              Leading with AI
+              Empowered Alliances
             </span>
           </div>
 

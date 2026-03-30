@@ -46,6 +46,7 @@ const Index = () => {
       <TrustStrip />
       <BuiltForYourSeatSection />
       <DemoSection />
+      <WorkflowSection />
       <ExperienceHighlightsSection />
       <IntroducingSection />
       <AgendaSection />

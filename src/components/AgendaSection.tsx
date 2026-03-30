@@ -37,7 +37,7 @@ const agenda: AgendaItem[] = [
   {
     time: "1:20 – 1:30",
     title: "Wrap Up & Next Steps",
-    desc: "Receive your takeaways and learn about the AI Leadership Alignment Accelerator series.",
+    desc: "Reflect, share insights and discuss Leadership Alignment opportunities at your company",
   },
 ];
 

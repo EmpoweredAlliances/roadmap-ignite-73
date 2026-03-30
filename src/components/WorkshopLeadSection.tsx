@@ -51,7 +51,7 @@ const WorkshopLeadSection = () => {
 
         <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
           className="mx-auto mb-12 max-w-2xl text-center font-body text-base leading-relaxed text-muted-foreground sm:text-lg">
-          From transformational engineer to AI strategy consultant - Jeff brings 30+ years of leadership development, design thinking, and executive facilitation to every session. He founded Empowered Alliances to help leadership teams turn AI complexity into clear business priorities.
+          Jeff brings 30 years of facilitation experience that started with launching the first cross-functional product development program in defense industry, 10 years of strategic planning work at KP and dozens of Fortune 500 clients that included 3 years fine-tuning this interactive process for TCS Innovation group, 6 months of blending AI with human intelligence for collaborative projects and now an inspired app developer who aspires to change the world!
         </motion.p>
 
         <div className="grid gap-5 sm:grid-cols-2">

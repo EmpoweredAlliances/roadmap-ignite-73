@@ -47,7 +47,7 @@ const Index = () => {
       <BuiltForYourSeatSection />
       <DemoSection />
       <WorkflowSection />
-      <ExperienceHighlightsSection />
+      
       <IntroducingSection />
       <AgendaSection />
       <OutcomesSection />

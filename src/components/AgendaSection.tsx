@@ -66,7 +66,7 @@ const AgendaSection = () => {
 
         <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
           className="mx-auto mb-12 max-w-[700px] text-center font-body text-base leading-relaxed text-white sm:text-lg">
-          Every minute is designed to move you from complexity to clarity. You'll participate, not just observe.
+          Every minute is designed to move you from complexity to clarity.<br />You'll participate, not just observe.
         </motion.p>
 
         {/* Timeline */}

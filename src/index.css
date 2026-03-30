@@ -185,3 +185,18 @@ html {
   transform: translateY(-4px);
   box-shadow: 0 16px 40px -8px hsl(220 40% 10% / 0.18);
 }
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.section-eyebrow-accent::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, #C49B3C, #E8C97A);
+  margin: 0 auto 12px;
+  border-radius: 1px;
+}

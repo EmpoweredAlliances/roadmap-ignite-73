@@ -58,7 +58,7 @@ const Index = () => {
       >
         <div className="mx-auto max-w-[1200px]">
           <div className="mx-auto max-w-[560px] text-center mb-10">
-            <p className="font-body text-[11px] font-medium uppercase tracking-[0.08em] text-muted-foreground mb-3">
+            <p className="section-eyebrow-accent font-body text-[11px] font-medium uppercase tracking-[0.08em] text-muted-foreground mb-3">
               REGISTER NOW
             </p>
             <h2 className="font-serif text-[32px] sm:text-[36px] font-medium leading-[1.2] text-foreground mb-4">

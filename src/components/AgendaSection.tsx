@@ -23,10 +23,10 @@ const agenda: AgendaItem[] = [
     title: "AI Priority Acceleration Workflow",
     desc: "Interactive walkthrough using the Priority Acceleration decision support tool",
     details: [
-      "Ideation - AI + human intelligence generating options and alternative approaches",
-      "Organization - Grouping by themes, identifying gaps, summaries & HMW questions",
-      "Evaluation - Criteria-based prompts, visualizing analysis & bias detection",
-      "Prioritization - AI synthesis + leader judgment, ranking, owners + next steps",
+      "Ideation – AI creates idea options → People select the best ones",
+      "Organization – AI clusters and summarizes → People make sense and refine",
+      "Evaluation – AI generates metric 'scores' → People refine the numbers",
+      "Prioritization – AI creates question options → People discuss and decide",
     ],
   },
   {

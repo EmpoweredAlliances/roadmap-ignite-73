@@ -35,11 +35,6 @@ const agenda: AgendaItem[] = [
     desc: "See how the workflow adapts to different leadership use cases: AI Readiness, Workflow Automation, Governance Guardrails, and Strategy.",
   },
   {
-    time: "1:35 – 1:50",
-    title: "Reflections & Insights",
-    desc: "Capture key learnings, discuss applications to your organization, and identify your next-right decisions.",
-  },
-  {
     time: "1:50 – 2:00",
     title: "Wrap Up & Next Steps",
     desc: "Receive your takeaways and learn about the AI Leadership Alignment Accelerator series.",

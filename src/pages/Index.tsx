@@ -1,4 +1,5 @@
 import HeroSection from "@/components/HeroSection";
+import BuiltForYourSeatSection from "@/components/BuiltForYourSeatSection";
 import ExperienceHighlightsSection from "@/components/ExperienceHighlightsSection";
 import IntroducingSection from "@/components/IntroducingSection";
 import AgendaSection from "@/components/AgendaSection";

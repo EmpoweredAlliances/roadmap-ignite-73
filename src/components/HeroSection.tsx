@@ -34,7 +34,48 @@ const BOOKING_URL = "https://api.aiforbusiness.com/widget/booking/SMmXrKS1j5mBJB
 
 const NAV_LINKS = ["How it works", "Programs", "For consultants", "Results"];
 
-const HeroSection = () => {
+const STATS = [
+  { target: 90, prefix: "", suffix: " min", label: "vs. 4–8 weeks of strategy cycles" },
+  { target: 75, prefix: "$", suffix: "K", label: "of consulting work, in one session" },
+  { target: 100, prefix: "", suffix: "%", label: "human decisions, AI-accelerated" },
+];
+
+const ProofStats = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true });
+  const count0 = useCountUp(STATS[0].target, 1200, inView);
+  const count1 = useCountUp(STATS[1].target, 1200, inView);
+  const count2 = useCountUp(STATS[2].target, 1200, inView);
+  const counts = [count0, count1, count2];
+
+  return (
+    <motion.div
+      ref={ref}
+      custom={4}
+      initial="hidden"
+      animate="visible"
+      variants={fadeUp}
+      className="mt-10 flex items-start gap-0"
+    >
+      {STATS.map((stat, idx) => (
+        <div
+          key={stat.suffix}
+          className={`flex flex-col gap-1 px-5 ${
+            idx !== 0 ? "border-l border-white/20" : ""
+          } ${idx === 0 ? "pl-0" : ""}`}
+        >
+          <span className="font-body text-[28px] font-medium text-white">
+            {stat.prefix}{counts[idx]}{stat.suffix}
+          </span>
+          <span className="font-body text-[12px] leading-snug text-white/60">
+            {stat.label}
+          </span>
+        </div>
+      ))}
+    </motion.div>
+  );
+};
+
   const [scrollPct, setScrollPct] = useState(0);
 
   useEffect(() => {

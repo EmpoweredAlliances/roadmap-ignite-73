@@ -1,5 +1,25 @@
-import { useState, useEffect } from "react";
-import { motion, type Variants } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
+import { motion, useInView, type Variants } from "framer-motion";
+
+const useCountUp = (target: number, duration = 1200, inView = false) => {
+  const [count, setCount] = useState(0);
+  useEffect(() => {
+    if (!inView) return;
+    let start = 0;
+    const step = target / (duration / 16);
+    const timer = setInterval(() => {
+      start += step;
+      if (start >= target) {
+        setCount(target);
+        clearInterval(timer);
+      } else {
+        setCount(Math.floor(start));
+      }
+    }, 16);
+    return () => clearInterval(timer);
+  }, [inView, target, duration]);
+  return count;
+};
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 20 },
@@ -13,6 +33,48 @@ const fadeUp: Variants = {
 const BOOKING_URL = "https://api.aiforbusiness.com/widget/booking/SMmXrKS1j5mBJBMRobfg";
 
 const NAV_LINKS = ["How it works", "Programs", "For consultants", "Results"];
+
+const STATS = [
+  { target: 90, prefix: "", suffix: " min", label: "vs. 4–8 weeks of strategy cycles" },
+  { target: 75, prefix: "$", suffix: "K", label: "of consulting work, in one session" },
+  { target: 100, prefix: "", suffix: "%", label: "human decisions, AI-accelerated" },
+];
+
+const ProofStats = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true });
+  const count0 = useCountUp(STATS[0].target, 1200, inView);
+  const count1 = useCountUp(STATS[1].target, 1200, inView);
+  const count2 = useCountUp(STATS[2].target, 1200, inView);
+  const counts = [count0, count1, count2];
+
+  return (
+    <motion.div
+      ref={ref}
+      custom={4}
+      initial="hidden"
+      animate="visible"
+      variants={fadeUp}
+      className="mt-10 flex items-start gap-0"
+    >
+      {STATS.map((stat, idx) => (
+        <div
+          key={stat.suffix}
+          className={`flex flex-col gap-1 px-5 ${
+            idx !== 0 ? "border-l border-white/20" : ""
+          } ${idx === 0 ? "pl-0" : ""}`}
+        >
+          <span className="font-body text-[28px] font-medium text-white">
+            {stat.prefix}{counts[idx]}{stat.suffix}
+          </span>
+          <span className="font-body text-[12px] leading-snug text-white/60">
+            {stat.label}
+          </span>
+        </div>
+      ))}
+    </motion.div>
+  );
+};
 
 const HeroSection = () => {
   const [scrollPct, setScrollPct] = useState(0);
@@ -167,7 +229,7 @@ const HeroSection = () => {
               >
                 <a
                   href={BOOKING_URL}
-                  className="rounded-lg bg-[#C49B3C] px-6 py-3 font-body text-[15px] font-medium text-white transition-opacity hover:bg-[#b08930]"
+                  className="btn-shimmer rounded-lg bg-[#C49B3C] px-6 py-3 font-body text-[15px] font-medium text-white transition-opacity hover:bg-[#b08930]"
                 >
                   Experience a live demo →
                 </a>
@@ -180,33 +242,7 @@ const HeroSection = () => {
               </motion.div>
 
               {/* Proof stats */}
-              <motion.div
-                custom={4}
-                initial="hidden"
-                animate="visible"
-                variants={fadeUp}
-                className="mt-10 flex items-start gap-0"
-              >
-                {[
-                  { num: "90 min", label: "vs. 4–8 weeks of strategy cycles" },
-                  { num: "$75K", label: "of consulting work, in one session" },
-                  { num: "100%", label: "human decisions, AI-accelerated" },
-                ].map((stat, idx) => (
-                  <div
-                    key={stat.num}
-                    className={`flex flex-col gap-1 px-5 ${
-                      idx !== 0 ? "border-l border-white/20" : ""
-                    } ${idx === 0 ? "pl-0" : ""}`}
-                  >
-                    <span className="font-body text-[28px] font-medium text-white">
-                      {stat.num}
-                    </span>
-                    <span className="font-body text-[12px] leading-snug text-white/60">
-                      {stat.label}
-                    </span>
-                  </div>
-                ))}
-              </motion.div>
+              <ProofStats />
             </div>
 
             {/* Right column — floating cards (hidden on mobile) */}

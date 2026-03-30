@@ -109,7 +109,7 @@ const TestimonialsSection = () => {
             <motion.div
               key={i}
               variants={cardReveal}
-              className="mb-5 break-inside-avoid rounded-2xl border border-border bg-background p-6 shadow-sm"
+              className="card-hover mb-5 break-inside-avoid rounded-2xl border border-border bg-background p-6 shadow-sm"
             >
               <Quote className="mb-3 h-6 w-6 text-cta opacity-60" />
               <p className="mb-5 font-body text-[15px] leading-relaxed text-muted-foreground italic">

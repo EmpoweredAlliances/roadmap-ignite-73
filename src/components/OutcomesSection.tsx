@@ -62,7 +62,7 @@ const OutcomesSection = () => {
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0, transition: { delay: i * 0.08, duration: 0.45, ease: [0.25, 0.46, 0.45, 0.94] } }
               }}
-              className="flex gap-4 rounded-xl border-l-4 border-cta bg-secondary p-5 sm:p-6"
+              className="card-hover flex gap-4 rounded-xl border-l-4 border-cta bg-secondary p-5 sm:p-6"
             >
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-cta">
                 <Check className="h-5 w-5 text-cta-foreground" strokeWidth={3} />

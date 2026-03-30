@@ -324,7 +324,7 @@ const DemoSection = () => {
     >
       <div className="mx-auto max-w-[1200px] px-6 py-16 sm:px-[60px] sm:py-[64px]">
         {/* Header */}
-        <p className="mb-3 font-body text-[11px] font-medium uppercase tracking-[0.08em] text-muted-foreground">
+        <p className="section-eyebrow-accent mb-3 font-body text-[11px] font-medium uppercase tracking-[0.08em] text-muted-foreground">
           Experience it yourself
         </p>
         <h2 className="max-w-[540px] font-serif text-[32px] font-medium leading-[1.2] text-foreground sm:text-[36px]">

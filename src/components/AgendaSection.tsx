@@ -52,7 +52,7 @@ const AgendaSection = () => {
       <div className="mx-auto max-w-[900px] px-5 sm:px-8">
         {/* Badge */}
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-5 flex justify-center">
-          <span className="inline-block rounded-full bg-cta/10 px-5 py-2 font-body text-xs font-semibold uppercase tracking-[0.15em] text-cta">
+          <span className="section-eyebrow-accent inline-block rounded-full bg-cta/10 px-5 py-2 font-body text-xs font-semibold uppercase tracking-[0.15em] text-cta">
             Workshop Agenda
           </span>
         </motion.div>

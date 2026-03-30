@@ -25,7 +25,7 @@ const HeroSection = () => {
               <span className="font-body text-xs font-bold text-card">LW</span>
             </div>
             <span className="font-body text-[15px] font-medium text-foreground">
-              Priority Acceleration
+              Leading with AI
             </span>
           </div>
 

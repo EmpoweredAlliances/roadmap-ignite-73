@@ -32,7 +32,7 @@ const outcomes = [
 
 const OutcomesSection = () => {
   return (
-    <section className="border-t border-border bg-card">
+    <section id="results" className="border-t border-border bg-card">
       <div className="mx-auto max-w-[900px] px-5 py-14 sm:px-8 sm:py-16 lg:py-20">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-5 flex justify-center">
           <span className="inline-block rounded-full bg-cta/10 px-5 py-2 font-body text-xs font-semibold uppercase tracking-[0.15em] text-cta">

@@ -373,7 +373,7 @@ const DemoSection = () => {
                   onClick={() => setActiveStep(i)}
                   className={`px-3 py-[5px] font-body text-[11px] font-medium transition-colors ${
                     activeStep === i
-                      ? "bg-foreground text-card"
+                      ? "bg-foreground text-card border border-foreground"
                       : "border border-foreground/10 bg-card text-muted-foreground hover:text-foreground"
                   } ${i === 0 ? "rounded-l-[6px]" : ""} ${
                     i === STEPS.length - 1 ? "rounded-r-[6px]" : ""

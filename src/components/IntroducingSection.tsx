@@ -15,7 +15,7 @@ const stats = [
 
 const IntroducingSection = () => {
   return (
-    <section className="relative overflow-hidden">
+    <section id="programs" className="relative overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${workshopBg})` }}

@@ -20,7 +20,7 @@ const agenda: AgendaItem[] = [
   },
   {
     time: "0:20 – 1:05",
-    title: "AI Priority Acceleration Workflow - Interactive Walkthrough",
+    title: "AI Priority Acceleration Workflow",
     desc: "Interactive walkthrough using the Priority Acceleration decision support tool",
     details: [
       "Ideation - AI + human intelligence generating options and alternative approaches",

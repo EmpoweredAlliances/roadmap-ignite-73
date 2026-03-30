@@ -21,7 +21,7 @@ const agenda: AgendaItem[] = [
   {
     time: "0:20 – 1:05",
     title: "AI Priority Acceleration Workflow - Interactive Walkthrough",
-    desc: "Work through the full workflow using participant prework inputs in a shared Mural workspace.",
+    desc: "Interactive walkthrough using the Priority Acceleration decision support tool",
     details: [
       "Ideation - AI + human intelligence generating options and alternative approaches",
       "Organization - Grouping by themes, identifying gaps, summaries & HMW questions",

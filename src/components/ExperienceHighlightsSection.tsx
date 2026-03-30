@@ -50,10 +50,8 @@ const ExperienceHighlightsSection = () => {
           Four Stages of Better Decisions
         </motion.h2>
 
-        <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-          className="mx-auto mb-12 max-w-2xl text-center font-body text-base leading-relaxed text-muted-foreground sm:text-lg">
-          Learn and practice a repeatable workflow that uses AI to accelerate synthesis and expand options, while leaders supply judgment, context, and accountability.
-        </motion.p>
+
+        <div className="mb-12" />
 
         {/* 4-column cards */}
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

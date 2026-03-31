@@ -78,17 +78,7 @@ const WhoIsForSection = () => {
            </motion.div>
         </div>
 
-        {/* Decision box */}
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-          className="mx-auto mt-12 max-w-[700px] rounded-2xl bg-primary p-8 text-center sm:p-10">
-          <h3 className="mb-4 font-headline text-xl font-bold text-primary-foreground sm:text-2xl">
-            The Fastest Way to Better AI Decisions
-          </h3>
-          <p className="mx-auto mb-8 max-w-[550px] font-body text-base leading-relaxed text-white sm:text-lg">
-            If your team is stuck between AI urgency and AI confusion, this is the fastest way to make better next decisions - without wasting cycles.
-          </p>
-          <DualCTAButtons variant="dark" />
-        </motion.div>
+
       </div>
     </section>
   );

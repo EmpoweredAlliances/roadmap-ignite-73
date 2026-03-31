@@ -113,7 +113,7 @@ const RegistrationSection = () => {
             <p className="font-body text-[16px] text-white/60">
               Join a free Leading with AI session
             </p>
-            <p className="mt-2 font-body text-[13px] text-white/40">
+            <p className="mt-2 font-body text-[13px] text-white/60">
               Normally starting at $149, free this month. Limited to 20 participants.
             </p>
           </div>

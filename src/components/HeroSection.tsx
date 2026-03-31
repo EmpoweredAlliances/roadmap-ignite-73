@@ -253,11 +253,24 @@ const HeroSection = () => {
                   <span className="font-body text-[12px] font-medium text-white">
                     Step 3 — Organizing ideas
                   </span>
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-[hsl(142_72%_48%/0.1)] px-2.5 py-0.5 font-body text-[11px] font-medium text-[hsl(142_72%_38%)]">
-                    <span className="inline-block h-1.5 w-1.5 rounded-full bg-[hsl(142_72%_48%)]" />
-                    Live
-                  </span>
+                  <div className="flex items-center gap-2">
+                    <span className="font-body text-[11px] font-medium text-[hsl(180_60%_60%)]">
+                      AI synthesizing
+                    </span>
+                    <div className="flex items-center gap-1">
+                      {[0, 1, 2].map((i) => (
+                        <span
+                          key={i}
+                          className="inline-block h-1.5 w-1.5 rounded-full bg-[hsl(180_60%_60%)]"
+                          style={{ animation: `typing-dot 1.4s ease-in-out ${i * 0.2}s infinite` }}
+                        />
+                      ))}
+                    </div>
+                  </div>
                 </div>
+                <p className="mt-1 font-body text-[11px] italic text-white/50">
+                  Clustering 24 ideas into themes...
+                </p>
 
                 {/* Progress */}
                 <p className="mt-4 font-body text-[10px] uppercase tracking-wider text-white/70">

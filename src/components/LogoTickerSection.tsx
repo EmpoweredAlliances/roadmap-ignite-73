@@ -10,7 +10,7 @@ const LogoTickerSection = () => (
     <div className="relative overflow-hidden">
       <div className="flex animate-[ticker_20s_linear_infinite] whitespace-nowrap">
         {[0, 1].map((copy) => (
-          <img key={copy} src={clientLogos} alt="Client logos" className="h-8 w-auto opacity-50" />
+          <img key={copy} src={clientLogos} alt="Client logos" className="h-8 w-auto opacity-100" />
         ))}
       </div>
     </div>

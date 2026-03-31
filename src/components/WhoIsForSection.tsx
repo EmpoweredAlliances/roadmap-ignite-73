@@ -55,7 +55,7 @@ const WhoIsForSection = () => {
                 </div>
               ))}
             </div>
-            <p className="mt-5 font-body text-sm italic text-muted-foreground">No prior AI expertise required.</p>
+            <p className="mt-5 text-center font-body text-sm italic text-muted-foreground">No prior AI expertise required.</p>
           </motion.div>
 
            {/* Not For */}

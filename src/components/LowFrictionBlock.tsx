@@ -15,7 +15,7 @@ const LowFrictionBlock = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="mx-auto max-w-[480px] rounded-2xl border border-foreground/10 bg-card p-8"
+        className="mx-auto max-w-[640px] rounded-2xl border border-foreground/10 bg-card p-8"
       >
         <h3 className="mb-6 text-center font-serif text-[24px] font-medium text-foreground">
           What to expect

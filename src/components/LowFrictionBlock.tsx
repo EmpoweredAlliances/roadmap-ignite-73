@@ -15,12 +15,12 @@ const LowFrictionBlock = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="mx-auto max-w-[480px] rounded-2xl border border-foreground/10 bg-card p-8"
+        className="mx-auto max-w-[640px] rounded-2xl border border-foreground/10 bg-card p-8"
       >
         <h3 className="mb-6 text-center font-serif text-[24px] font-medium text-foreground">
           What to expect
         </h3>
-        <ul className="flex flex-col gap-4">
+        <ul className="grid grid-cols-2 gap-4">
           {items.map((item, i) => (
             <li key={i} className="flex items-start gap-3">
               <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#C49B3C]/20 font-body text-[12px] text-[#C49B3C]">

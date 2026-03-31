@@ -241,9 +241,6 @@ const HeroSection = () => {
                 >
                   Schedule a Conversation →
                 </a>
-                <p className="font-body text-[13px] text-white/40">
-                  Normally starting at $149, free this month.
-                </p>
               </motion.div>
 
               {/* Tagline */}

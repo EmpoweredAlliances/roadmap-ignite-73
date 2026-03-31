@@ -28,7 +28,7 @@ const IntroducingSection = () => {
             About the Workshop
           </h2>
           <p className="mx-auto max-w-2xl font-body text-base leading-relaxed text-white sm:text-lg">
-            Leading with AI is an interactive workshop built around a live decision walkthrough. You'll work through the AI Priority Acceleration Workflow in a shared workspace - experiencing how AI can compress leadership decision cycle time while improving decision quality, alignment, and follow-through.
+            Leading with AI is an interactive workshop built around a live decision walkthrough that shows how leaders move from complexity to clarity. Through a shared decision process, experience how a team works through the moments that matter most, focuses on meaningful conversations to build alignment, and arrives at a defensible decision everyone can support.
           </p>
         </motion.div>
 

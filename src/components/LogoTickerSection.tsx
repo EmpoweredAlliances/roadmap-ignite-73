@@ -8,7 +8,7 @@ const LogoTickerSection = () => (
       </p>
     </div>
     <div className="flex justify-center px-5 sm:px-8">
-      <img src={clientLogos} alt="Client logos" className="h-60 w-auto max-w-full object-contain" />
+      <img src={clientLogos} alt="Client logos" className="w-3/4 max-w-full object-contain" />
     </div>
   </div>
 );

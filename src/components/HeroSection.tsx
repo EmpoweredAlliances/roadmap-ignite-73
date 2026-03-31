@@ -252,9 +252,9 @@ const HeroSection = () => {
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp}
-                className="mt-8 font-body text-[14px] italic text-white/50"
+                className="mt-8 font-body text-[18px] italic text-white/65"
               >
-                Human-led decisions. AI-supported synthesis.
+                Turn scattered AI discussions into ranked priorities, clear next steps, and a documented decision record in 90 minutes.
               </motion.p>
             </div>
 

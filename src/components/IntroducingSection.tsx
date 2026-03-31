@@ -28,7 +28,7 @@ const IntroducingSection = () => {
             What You’ll Experience
           </h2>
           <p className="mx-auto max-w-2xl font-body text-base leading-relaxed text-white sm:text-lg">
-            <span className="text-lg font-bold sm:text-xl">Leading with AI</span> is an interactive workshop built around a live decision walkthrough that shows how leaders move from complexity to clarity. Through a shared decision process, experience how a team works through the moments that matter most, focuses on meaningful conversations to build alignment, and arrives at a defensible decision everyone can support.
+            <span className="text-lg font-bold sm:text-xl">Leading with AI</span> is an introductory workshop experience built around a live decision walkthrough that shows how leaders move from complexity to clarity. Through a shared decision process, experience how a team works through the moments that matter most, focuses on meaningful conversations to build alignment, and arrives at a defensible decision everyone can support.
           </p>
         </motion.div>
 

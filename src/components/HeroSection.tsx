@@ -207,8 +207,9 @@ const HeroSection = () => {
                 variants={fadeUp}
                 className="mt-6 max-w-[520px] font-body text-[17px] leading-relaxed text-white/70"
               >
-                90 minutes. Scattered leadership team → ranked priorities, documented reasoning,
-                board-ready summary. Every call stays human. Every result is traceable.
+                Scattered leadership team → ranked priorities, documented reasoning,
+                board-ready summary. <br />
+                Every call stays human. Every result is traceable.
               </motion.p>
 
               {/* Buttons */}

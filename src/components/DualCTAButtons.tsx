@@ -13,10 +13,14 @@ const DualCTAButtons = ({ variant = "light", compact = false }: CTAButtonProps) 
   return (
     <div className="flex w-full flex-col items-center gap-3">
       <a
-        href={BOOKING_URL}
-        className="flex w-full max-w-[420px] items-center justify-center gap-3 rounded-lg bg-cta px-8 py-4 font-body text-base font-bold text-cta-foreground shadow-lg transition-all duration-200 hover:bg-cta-hover hover:shadow-xl sm:text-lg"
+        href="#register"
+        className="btn-shimmer flex w-full max-w-[480px] items-center justify-center gap-3 rounded-lg px-8 py-4 font-body text-base font-bold shadow-lg transition-all duration-200 hover:shadow-xl sm:text-lg"
+        style={{
+          background: "linear-gradient(135deg, #C49B3C, #E8C97A)",
+          color: "#0f1f3d",
+        }}
       >
-        Register Now - <span className="line-through opacity-70">$99</span> FREE
+        Reserve a Seat – <span className="line-through opacity-70">$149</span>{" "}Free
         <ArrowRight className="h-5 w-5" />
       </a>
       {!compact && (

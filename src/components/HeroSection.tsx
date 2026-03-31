@@ -207,9 +207,9 @@ const HeroSection = () => {
                 variants={fadeUp}
                 className="mt-6 max-w-[520px] font-body text-[17px] leading-relaxed text-white/70"
               >
-                Scattered leadership team → ranked priorities, documented reasoning,
-                board-ready summary. <br />
-                Every call stays human. Every result is traceable.
+                Turn scattered AI discussions into ranked priorities,
+                clear next steps, and a documented decision record
+                in 90 minutes.
               </motion.p>
 
               {/* Buttons */}
@@ -218,24 +218,46 @@ const HeroSection = () => {
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp}
-                className="mt-8 flex flex-wrap items-center gap-3"
+                className="mt-8 flex flex-col items-start gap-4"
               >
                 <a
-                  href={BOOKING_URL}
-                  className="btn-shimmer rounded-lg bg-[#C49B3C] px-6 py-3 font-body text-[15px] font-medium text-white transition-opacity hover:bg-[#b08930]"
+                  href="#register"
+                  className="btn-shimmer inline-flex items-center gap-3 rounded-lg px-8 py-4 font-body text-[15px] font-bold shadow-lg transition-all duration-200 hover:shadow-xl"
+                  style={{
+                    background: "linear-gradient(135deg, #C49B3C, #E8C97A)",
+                    color: "#0f1f3d",
+                  }}
                 >
-                  Experience a live demo →
+                  Reserve a Seat →
                 </a>
                 <a
-                  href="#how-it-works"
-                  className="rounded-lg border border-white/30 bg-transparent px-6 py-3 font-body text-[15px] font-medium text-white transition-colors hover:bg-white/10"
+                  href="#schedule"
+                  className="font-body text-[13px] transition-colors duration-200"
+                  style={{ color: "rgba(245,240,232,0.5)" }}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.color = "rgba(245,240,232,0.85)")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.color = "rgba(245,240,232,0.5)")
+                  }
                 >
-                  See how it works
+                  Schedule a Conversation →
                 </a>
+                <p className="font-body text-[13px] text-white/40">
+                  Normally starting at $149, free this month.
+                </p>
               </motion.div>
 
-              {/* Proof stats */}
-              <ProofStats />
+              {/* Tagline */}
+              <motion.p
+                custom={4}
+                initial="hidden"
+                animate="visible"
+                variants={fadeUp}
+                className="mt-8 font-body text-[14px] italic text-white/50"
+              >
+                Human-led decisions. AI-supported synthesis.
+              </motion.p>
             </div>
 
             {/* Right column — floating cards (hidden on mobile) */}

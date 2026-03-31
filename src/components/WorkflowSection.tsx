@@ -4,31 +4,31 @@ import workflowImage from "@/assets/APAW_image_1.png";
 const stages = [
   {
     number: "01",
-    name: "Ideation",
+    name: "Every voice gets heard",
     color: "#4EB8A0",
     description:
-      "Every participant joins on their own device — no login, no download. AI generates personalized ideas based on each person's expertise and focus area. 18–40 ideas from 6–20 participants collected in under 10 minutes. Every idea is capped at 10 words to keep thinking sharp and scannable.",
+      "Your team contributes ideas from their own expertise — no groupthink, no dominant voices. AI generates personalized prompts by role and captures 18–40 ideas in under 10 minutes. You surface perspectives that never make it into a typical meeting.",
   },
   {
     number: "02",
-    name: "Organization",
+    name: "Stop debating. Start seeing patterns.",
     color: "#C49B3C",
     description:
-      "The AI proposes three different clustering frameworks, each using a different organizing lens. The facilitator selects the framework that reveals the most strategic insight for the context. Each cluster gets a headline, a 'How Might We' reframe, and a gap analysis — in under 3 minutes.",
+      "Your team chooses how to frame the problem. AI proposes three different clustering frameworks, each revealing a different strategic angle. You stop debating how to organize the conversation and start seeing what actually matters.",
   },
   {
     number: "03",
-    name: "Evaluation",
+    name: "Every assumption on the table",
     color: "#E8A838",
     description:
-      "AI scores each cluster against tailored metrics — severity, feasibility, ROI, organizational readiness. Every score comes with written rationale and documented assumptions. The team overrides any AI score when they have context the AI doesn't. Every override is tracked in the decision record.",
+      "Your team scores what matters. AI generates criteria tailored to your context, scores each option, and shows its reasoning. Your team overrides any score they disagree with — every override is documented. Weeks of analysis happen in minutes.",
   },
   {
     number: "04",
-    name: "Prioritization",
+    name: "A decision your whole team can stand behind",
     color: "#6AAF7A",
     description:
-      "AI generates decision-forcing questions that help the group compare options across competitive urgency, risk, and strategic value. Two rounds of votes per question. The senior leader assigns the final ranking based on votes, evaluation data, and their own judgment. Explicit, documented, defensible.",
+      "Your senior leader makes the call with full visibility into what the team thinks. Every vote recorded. Every dissenting view captured. You leave with ranked priorities, clear owners, and a decision record that survives Monday morning.",
   },
 ];
 

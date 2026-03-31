@@ -14,6 +14,17 @@ const FooterSection = () => {
         <span>|</span>
         <a href="https://api.aiforbusiness.com/widget/booking/SMmXrKS1j5mBJBMRobfg" className="transition-colors hover:text-primary-foreground">Contact</a>
       </div>
+      <p style={{ fontSize: "12px", color: "rgba(255,255,255,0.3)", marginTop: "16px" }}>
+        Consultant platform licensing —{" "}
+        <a
+          href="/consultants"
+          style={{ color: "rgba(196,155,60,0.6)", textDecoration: "none" }}
+          onMouseEnter={(e) => (e.currentTarget.style.color = "#C49B3C")}
+          onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(196,155,60,0.6)")}
+        >
+          Learn more →
+        </a>
+      </p>
       <p className="mt-4 font-body text-xs text-white/70">© 2026 Empowered Alliances. All rights reserved.</p>
     </footer>
   );

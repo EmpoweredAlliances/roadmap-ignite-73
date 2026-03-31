@@ -25,7 +25,7 @@ const IntroducingSection = () => {
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
           className="mb-10 rounded-2xl bg-primary/75 px-6 py-8 text-center backdrop-blur-sm sm:px-10 sm:py-10">
           <h2 className="mb-4 font-headline text-[24px] font-bold text-primary-foreground sm:text-[32px] lg:text-[38px]">
-            About the Workshop
+            What You’ll Experience
           </h2>
           <p className="mx-auto max-w-2xl font-body text-base leading-relaxed text-white sm:text-lg">
             Leading with AI is an interactive workshop built around a live decision walkthrough that shows how leaders move from complexity to clarity. Through a shared decision process, experience how a team works through the moments that matter most, focuses on meaningful conversations to build alignment, and arrives at a defensible decision everyone can support.

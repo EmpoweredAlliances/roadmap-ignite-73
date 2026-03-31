@@ -29,7 +29,7 @@ const Index = () => {
       <WhoIsForSection />
       <BuiltForYourSeatSection />
       <RegistrationSection />
-      <ProofSection />
+      
       {/* Testimonials removed */}
       <FAQSection />
       <FounderSection />

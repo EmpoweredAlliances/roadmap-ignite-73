@@ -187,7 +187,7 @@ const WorkflowSection = () => {
           variants={fadeUp}
           className="mt-14 text-center"
         >
-          <p className="mx-auto max-w-none font-body text-[19px] italic text-white/50">
+          <p className="mx-auto max-w-none font-body text-[23px] italic text-white/50">
             The entire workflow — from first idea to final ranking —
             takes 90 minutes.
           </p>

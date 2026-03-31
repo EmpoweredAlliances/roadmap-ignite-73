@@ -9,7 +9,7 @@ const fadeUp: Variants = {
 
 const stats = [
   { big: "90 Minutes", sub: "Focused & Experiential" },
-  { big: "FREE", sub: "Intro sessions (regular $99)" },
+  { big: "FREE", sub: "Intro sessions (regular $149)" },
   { big: "Virtual", sub: "All initial sessions" },
 ];
 

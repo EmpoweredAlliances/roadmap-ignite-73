@@ -41,8 +41,8 @@ const CredibilityStrip = () => {
   return (
     <section className="border-b border-foreground/10 bg-card px-5 py-12 sm:px-8 sm:py-16">
       <div className="mx-auto max-w-[1200px]">
-        <div className="mx-auto max-w-[720px]">
-          <div className="flex flex-col items-center gap-8 sm:flex-row sm:items-start sm:gap-10">
+        <div className="mx-auto max-w-[960px]">
+          <div className="grid grid-cols-1 items-start gap-8 sm:grid-cols-[auto_1fr_1fr] sm:gap-10">
             {/* Left — photo */}
             <div className="shrink-0">
               <div className="h-28 w-28 overflow-hidden rounded-2xl border-2 border-[#C49B3C]/30 shadow-lg">
@@ -55,35 +55,32 @@ const CredibilityStrip = () => {
               </div>
             </div>
 
-            {/* Right — content */}
+            {/* Center — name + typewriter */}
             <div className="flex flex-col gap-3">
-              {/* Name + title */}
               <p className="font-body text-[11px] font-medium uppercase tracking-[0.1em] text-muted-foreground">
                 Your facilitator
               </p>
               <p className="font-serif text-[22px] font-medium text-foreground">
                 Jeff Richardson
               </p>
-
-              {/* Rotating typewriter */}
               <p className="font-body text-[15px] text-[#C49B3C]">
                 {displayed}
                 <span className="inline-block w-[2px] h-[1em] bg-[#C49B3C] ml-0.5 align-middle" style={{ animation: "blink 1s step-end infinite" }} />
               </p>
+            </div>
 
-              {/* Rajan testimonial */}
-              <div className="mt-2 flex items-start gap-3">
-                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#C49B3C]/20 font-body text-[11px] font-semibold text-[#C49B3C]">
-                  RK
-                </div>
-                <div className="flex flex-col gap-1">
-                  <p className="font-body text-[13px] italic leading-relaxed text-muted-foreground">
-                    "Jeff brings together diverse IT and business stakeholders to foster ideation and drive innovation."
-                  </p>
-                  <p className="font-body text-[11px] text-muted-foreground/70">
-                    — Rajan, Partner at IBM
-                  </p>
-                </div>
+            {/* Right — testimonial */}
+            <div className="flex items-start gap-3">
+              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#C49B3C]/20 font-body text-[11px] font-semibold text-[#C49B3C]">
+                RK
+              </div>
+              <div className="flex flex-col gap-1">
+                <p className="font-body text-[13px] italic leading-relaxed text-muted-foreground">
+                  "Jeff brings together diverse IT and business stakeholders to foster ideation and drive innovation."
+                </p>
+                <p className="font-body text-[11px] text-muted-foreground/70">
+                  — Rajan, Partner at IBM
+                </p>
               </div>
             </div>
           </div>

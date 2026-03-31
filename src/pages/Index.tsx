@@ -8,8 +8,6 @@ import LowFrictionBlock from "@/components/LowFrictionBlock";
 import PrimaryCTASection from "@/components/PrimaryCTASection";
 import WhoIsForSection from "@/components/WhoIsForSection";
 import BuiltForYourSeatSection from "@/components/BuiltForYourSeatSection";
-
-
 import FAQSection from "@/components/FAQSection";
 import RegistrationSection from "@/components/RegistrationSection";
 import FounderSection from "@/components/FounderSection";
@@ -29,8 +27,6 @@ const Index = () => {
       <WhoIsForSection />
       <BuiltForYourSeatSection />
       <RegistrationSection />
-      
-      {/* Testimonials removed */}
       <FAQSection />
       <FounderSection />
       <FooterSection />

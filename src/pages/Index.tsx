@@ -28,10 +28,10 @@ const Index = () => {
       <PrimaryCTASection />
       <WhoIsForSection />
       <BuiltForYourSeatSection />
+      <RegistrationSection />
       <ProofSection />
       {/* Testimonials removed */}
       <FAQSection />
-      <RegistrationSection />
       <FounderSection />
       <FooterSection />
     </div>

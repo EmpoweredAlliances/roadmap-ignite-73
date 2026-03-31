@@ -1,6 +1,6 @@
 import { motion, type Variants } from "framer-motion";
 import DualCTAButtons from "@/components/DualCTAButtons";
-import workshopBg from "@/assets/workshop-bg.jpg";
+import workshopBg from "@/assets/workshop-team.png";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 20 },

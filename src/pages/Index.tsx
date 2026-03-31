@@ -9,7 +9,7 @@ import PrimaryCTASection from "@/components/PrimaryCTASection";
 import WhoIsForSection from "@/components/WhoIsForSection";
 import BuiltForYourSeatSection from "@/components/BuiltForYourSeatSection";
 import ProofSection from "@/components/ProofSection";
-import ParticipantsSaySection from "@/components/ParticipantsSaySection";
+
 import FAQSection from "@/components/FAQSection";
 import RegistrationSection from "@/components/RegistrationSection";
 import FounderSection from "@/components/FounderSection";

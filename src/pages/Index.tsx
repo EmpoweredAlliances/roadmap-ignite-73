@@ -23,9 +23,9 @@ const Index = () => {
       <WorkflowSection />
       <OutcomesSection />
       <LowFrictionBlock />
-      <PrimaryCTASection />
       <WhoIsForSection />
       <BuiltForYourSeatSection />
+      <PrimaryCTASection />
       <RegistrationSection />
       <FAQSection />
       <FounderSection />

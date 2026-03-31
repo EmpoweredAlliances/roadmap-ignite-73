@@ -205,11 +205,9 @@ const HeroSection = () => {
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp}
-                className="mt-6 max-w-[520px] font-body text-[17px] leading-relaxed text-white/70"
+                className="mt-6 max-w-[520px] font-body text-[17px] font-normal leading-relaxed text-white/70"
               >
-                Turn scattered AI discussions into ranked priorities,
-                clear next steps, and a documented decision record
-                in 90 minutes.
+                Empowered Alliances helps leadership teams turn AI complexity into clear business priorities and build the internal capability to keep doing it.
               </motion.p>
 
               {/* Buttons */}

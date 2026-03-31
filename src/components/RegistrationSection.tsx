@@ -33,7 +33,7 @@ const labelStyle: React.CSSProperties = {
   fontWeight: "500",
   textTransform: "uppercase",
   letterSpacing: "0.08em",
-  color: "rgba(245,240,232,0.5)",
+  color: "rgba(245,240,232,0.75)",
   marginBottom: "6px",
 };
 

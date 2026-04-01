@@ -49,6 +49,33 @@ const PROGRAMS = [
   },
 ];
 
+const PROGRAM_STRIP = [
+  {
+    title: "Leading with AI",
+    desc: "Experience the workflow with your leadership team",
+    num: "01",
+    highlight: true,
+  },
+  {
+    title: "AI Readiness",
+    desc: "Align on people, culture, support, and adoption conditions",
+    num: "02",
+    highlight: false,
+  },
+  {
+    title: "Workflow Automation",
+    desc: "Choose where AI can reduce handoffs, rework, and delays",
+    num: "03",
+    highlight: false,
+  },
+  {
+    title: "Governance Guardrails",
+    desc: "Set decision rights, risk tiers, and escalation paths",
+    num: "04",
+    highlight: false,
+  },
+];
+
 const containerVariants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.1 } },
@@ -67,7 +94,15 @@ const itemVariants = {
 };
 
 const JourneySection = () => (
-  <section id="programs" className="relative overflow-hidden bg-[#0a1628] py-20 sm:py-28">
+  <section
+    id="programs"
+    className="relative overflow-hidden py-20 sm:py-28"
+    style={{
+      background: "linear-gradient(135deg, #0f1f3d 0%, #1a3a5c 45%, #0d2818 100%)",
+      borderTop: "0.5px solid rgba(255,255,255,0.06)",
+      borderBottom: "0.5px solid rgba(255,255,255,0.06)",
+    }}
+  >
     <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
       <motion.div
         variants={containerVariants}
@@ -79,22 +114,26 @@ const JourneySection = () => (
         <motion.div variants={itemVariants} className="mb-14 text-center">
           <div className="mb-4 flex items-center justify-center gap-3">
             <span className="h-px w-8 bg-[#C49B3C]/40" />
-            <span className="font-body text-[11px] uppercase tracking-[0.15em] text-[#C49B3C]">
+            <span
+              className="font-body text-[11px] uppercase tracking-[0.15em]"
+              style={{ color: "#C49B3C" }}
+            >
               The bigger picture
             </span>
             <span className="h-px w-8 bg-[#C49B3C]/40" />
           </div>
 
-          <p className="mx-auto max-w-[540px] font-body text-[15px] leading-relaxed text-white/70">
-            Experience the workflow live first. Then bring its full value to your
-            leadership team when the time is right.
-          </p>
-
-          <p className="mx-auto mt-4 max-w-[540px] font-body text-[14px] italic leading-relaxed text-white/50">
+          <p
+            className="mx-auto max-w-[540px] font-body text-[15px] leading-relaxed"
+            style={{ color: "rgba(245,240,232,0.8)" }}
+          >
             This workshop is the starting point — not the whole journey.
           </p>
 
-          <p className="mx-auto mt-6 max-w-[600px] font-body text-[13px] leading-relaxed text-white/45">
+          <p
+            className="mx-auto mt-6 max-w-[600px] font-body text-[13px] leading-relaxed"
+            style={{ color: "rgba(245,240,232,0.55)" }}
+          >
             Leading with AI gives leaders a live, low-risk way to experience how
             better AI-enabled decisions get made. For companies, it also serves
             as the front door to our 4-session AI Leadership Alignment
@@ -108,43 +147,41 @@ const JourneySection = () => (
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-14">
           {/* LEFT — 4-step ladder */}
           <motion.div variants={itemVariants}>
-            <h3 className="mb-6 font-heading text-[15px] font-semibold tracking-wide text-white/80">
+            <h3
+              className="mb-6 font-heading text-[15px] font-semibold tracking-wide"
+              style={{ color: "rgba(245,240,232,0.35)" }}
+            >
               The 4-session journey
             </h3>
 
             <div className="relative space-y-0">
-              {/* Vertical connector line */}
               <div className="absolute left-[18px] top-[40px] bottom-[40px] w-px bg-white/10" />
 
               {LADDER_STEPS.map((step, i) => (
                 <div key={i} className="relative flex items-start gap-4 py-4">
-                  {/* Step circle */}
                   <div
                     className="relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-[11px] font-bold"
                     style={{
                       background: step.active
                         ? `${step.color}20`
-                        : "rgba(255,255,255,0.05)",
-                      border: `1.5px solid ${
-                        step.active ? step.color : "rgba(255,255,255,0.12)"
-                      }`,
-                      color: step.active
-                        ? step.color
-                        : "rgba(255,255,255,0.5)",
+                        : "rgba(255,255,255,0.06)",
+                      border: step.active
+                        ? `1.5px solid ${step.color}`
+                        : "1.5px solid rgba(78,184,160,0.4)",
+                      color: step.active ? step.color : "#4EB8A0",
                     }}
                   >
                     {step.number}
                   </div>
 
-                  {/* Step content */}
                   <div className="pt-1">
                     <div className="flex items-center gap-2">
                       <span
                         className="font-heading text-[14px] font-semibold"
                         style={{
                           color: step.active
-                            ? step.color
-                            : "rgba(255,255,255,0.7)",
+                            ? "#f5f0e8"
+                            : "rgba(245,240,232,0.75)",
                         }}
                       >
                         {step.name}
@@ -155,7 +192,10 @@ const JourneySection = () => (
                         </span>
                       )}
                     </div>
-                    <p className="mt-1 font-body text-[12px] leading-relaxed text-white/45">
+                    <p
+                      className="mt-1 font-body text-[12px] leading-relaxed"
+                      style={{ color: "rgba(245,240,232,0.45)" }}
+                    >
                       {step.desc}
                     </p>
                   </div>
@@ -166,12 +206,20 @@ const JourneySection = () => (
 
           {/* RIGHT — program cluster */}
           <motion.div variants={itemVariants}>
-            <h3 className="mb-6 font-heading text-[15px] font-semibold tracking-wide text-white/80">
+            <h3
+              className="mb-6 font-heading text-[15px] font-semibold tracking-wide"
+              style={{ color: "rgba(245,240,232,0.35)" }}
+            >
               What you're building toward
             </h3>
 
-            {/* Outer container */}
-            <div className="rounded-2xl border border-white/8 bg-white/[0.02] p-6">
+            <div
+              className="rounded-2xl p-6"
+              style={{
+                background: "rgba(255,255,255,0.05)",
+                border: "1px solid rgba(196,155,60,0.15)",
+              }}
+            >
               <p className="mb-1 text-center font-heading text-[13px] font-semibold tracking-wide text-[#C49B3C]">
                 AI Leadership Alignment Accelerator
               </p>
@@ -179,7 +227,6 @@ const JourneySection = () => (
                 Build AI Foundations together
               </p>
 
-              {/* Journey arrow row */}
               <div className="mb-6 flex items-center justify-center gap-2">
                 {["Experience it live", "Share with your team", "Build AI Foundations"].map(
                   (label, i) => (
@@ -195,7 +242,6 @@ const JourneySection = () => (
                 )}
               </div>
 
-              {/* Three program cards */}
               <div className="space-y-2">
                 {PROGRAMS.map((prog, i) => (
                   <div
@@ -212,12 +258,9 @@ const JourneySection = () => (
                       e.currentTarget.style.transform = "translateX(0)";
                     }}
                   >
-                    {/* Icon */}
                     <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#C49B3C]/10 text-[14px]">
                       {prog.icon}
                     </div>
-
-                    {/* Text */}
                     <div>
                       <p className="font-heading text-[13px] font-semibold text-white/80">
                         {prog.label}
@@ -230,7 +273,6 @@ const JourneySection = () => (
                 ))}
               </div>
 
-              {/* Bottom CTA */}
               <div className="mt-6 text-center">
                 <p className="mb-3 font-body text-[12px] text-white/50">
                   Ready to bring this to your leadership team?
@@ -247,6 +289,149 @@ const JourneySection = () => (
             </div>
           </motion.div>
         </div>
+
+        {/* Program strip */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.55, delay: 0.1 }}
+          style={{ marginTop: "64px" }}
+        >
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "16px",
+              marginBottom: "32px",
+            }}
+          >
+            <div style={{
+              flex: 1,
+              height: "1px",
+              background: "linear-gradient(90deg, transparent, rgba(196,155,60,0.3))",
+            }} />
+            <p style={{
+              fontSize: "10px",
+              fontWeight: 500,
+              textTransform: "uppercase" as const,
+              letterSpacing: "0.12em",
+              color: "rgba(245,240,232,0.3)",
+              whiteSpace: "nowrap" as const,
+            }}>
+              The full accelerator
+            </p>
+            <div style={{
+              flex: 1,
+              height: "1px",
+              background: "linear-gradient(90deg, rgba(196,155,60,0.3), transparent)",
+            }} />
+          </div>
+
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+            gap: "2px",
+            borderRadius: "16px",
+            overflow: "hidden",
+            border: "1px solid rgba(196,155,60,0.12)",
+          }}>
+            {PROGRAM_STRIP.map((prog, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.15 + i * 0.08, duration: 0.4 }}
+                style={{
+                  padding: "28px 24px",
+                  background: prog.highlight
+                    ? "rgba(196,155,60,0.08)"
+                    : "rgba(255,255,255,0.03)",
+                  borderRight: i < 3 ? "1px solid rgba(255,255,255,0.06)" : "none",
+                  position: "relative" as const,
+                  transition: "all 0.2s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "rgba(255,255,255,0.07)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = prog.highlight
+                    ? "rgba(196,155,60,0.08)"
+                    : "rgba(255,255,255,0.03)";
+                }}
+              >
+                <p style={{
+                  fontSize: "10px",
+                  fontWeight: 700,
+                  letterSpacing: "0.12em",
+                  color: prog.highlight ? "#C49B3C" : "rgba(245,240,232,0.2)",
+                  marginBottom: "12px",
+                }}>
+                  {prog.num}
+                </p>
+
+                {prog.highlight && (
+                  <div style={{
+                    position: "absolute" as const,
+                    top: 0,
+                    left: "24px",
+                    right: "24px",
+                    height: "2px",
+                    background: "linear-gradient(90deg, #C49B3C, #E8C97A)",
+                    borderRadius: "0 0 2px 2px",
+                  }} />
+                )}
+
+                <p style={{
+                  fontFamily: "Fraunces, serif",
+                  fontSize: "17px",
+                  fontWeight: 500,
+                  color: prog.highlight ? "#f5f0e8" : "rgba(245,240,232,0.7)",
+                  marginBottom: "8px",
+                  lineHeight: 1.3,
+                }}>
+                  {prog.title}
+                </p>
+
+                <p style={{
+                  fontSize: "12px",
+                  lineHeight: 1.6,
+                  color: prog.highlight ? "rgba(245,240,232,0.55)" : "rgba(245,240,232,0.35)",
+                }}>
+                  {prog.desc}
+                </p>
+
+                {prog.highlight && (
+                  <div style={{
+                    marginTop: "16px",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "5px",
+                    fontSize: "10px",
+                    fontWeight: 600,
+                    textTransform: "uppercase" as const,
+                    letterSpacing: "0.08em",
+                    color: "#C49B3C",
+                    background: "rgba(196,155,60,0.1)",
+                    border: "1px solid rgba(196,155,60,0.3)",
+                    borderRadius: "100px",
+                    padding: "3px 10px",
+                  }}>
+                    <span style={{
+                      width: "5px",
+                      height: "5px",
+                      borderRadius: "50%",
+                      background: "#C49B3C",
+                      display: "inline-block",
+                    }} />
+                    You are here
+                  </div>
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </motion.div>
     </div>
   </section>

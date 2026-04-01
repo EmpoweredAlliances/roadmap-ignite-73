@@ -108,10 +108,34 @@ const RegistrationSection = () => {
           source: "leading-with-ai-registration",
           sessionId: selectedSession.id,
           sessionTitle: selectedSession.title,
-          sessionDate: formatSessionDate(
-            selectedSession.date,
-            selectedSession.timezone
-          ),
+          sessionDate: (() => {
+            const date = new Date(selectedSession.date);
+            return date.toLocaleDateString("en-US", {
+              weekday: "long",
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+              timeZone: "America/Chicago",
+            });
+          })(),
+          sessionTime: (() => {
+            const start = new Date(selectedSession.date);
+            const end = new Date(
+              start.getTime() +
+              selectedSession.duration_hours * 60 * 60 * 1000
+            );
+            const startStr = start.toLocaleTimeString("en-US", {
+              hour: "numeric",
+              minute: "2-digit",
+              timeZone: "America/Chicago",
+            });
+            const endStr = end.toLocaleTimeString("en-US", {
+              hour: "numeric",
+              minute: "2-digit",
+              timeZone: "America/Chicago",
+            });
+            return `${startStr} – ${endStr} ${selectedSession.timezone}`;
+          })(),
         }),
       });
       

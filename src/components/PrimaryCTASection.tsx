@@ -16,16 +16,6 @@ const PrimaryCTASection = () => (
       >
         Your next AI decision deserves a workflow that delivers results
       </motion.h2>
-      <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.1 }}
-        className="mx-auto mt-5 max-w-[520px] font-body text-[16px] leading-relaxed text-white/60"
-      >
-        Join a free Leading with AI session and leave with your team's priorities ranked,
-        documented, and ready to act on.
-      </motion.p>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

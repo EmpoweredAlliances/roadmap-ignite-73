@@ -57,9 +57,6 @@ const PrimaryCTASection = () => (
         >
           Prefer to talk first? Schedule a conversation →
         </a>
-        <p className="font-body text-[13px] text-white/30">
-          Normally starting at $149, free this month.
-        </p>
       </motion.div>
     </div>
   </section>

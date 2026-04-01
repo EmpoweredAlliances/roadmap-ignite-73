@@ -148,7 +148,7 @@ const HeroSection = () => {
             href={BOOKING_URL}
             className="shrink-0 rounded-lg bg-[#C49B3C] px-4 py-2 font-body text-[13px] font-medium text-white transition-opacity hover:bg-[#b08930]"
           >
-            Book a session
+            Schedule a Conversation
           </a>
         </div>
       </nav>

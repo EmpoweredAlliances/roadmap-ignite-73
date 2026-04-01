@@ -2,6 +2,7 @@ export interface Session {
   id: string;
   title: string;
   date: string;
+  start_time: string;
   timezone: string;
   duration_hours: number;
   capacity: number;

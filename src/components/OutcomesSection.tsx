@@ -1,86 +1,194 @@
-import { motion, type Variants } from "framer-motion";
-import { Check } from "lucide-react";
-import DualCTAButtons from "@/components/DualCTAButtons";
+import { motion } from "framer-motion";
 
-const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] } }
-};
-
-const outcomes = [
+const OUTCOMES = [
   {
-    title: "A Repeatable AI-Enabled Decision Workflow",
-    desc: "The AI Priority Acceleration Workflow for ideation, organization, evaluation, and prioritization - ready to use in your next leadership meeting."
+    number: "01",
+    title: "A repeatable AI-enabled decision method",
+    body: "A practical approach to ideation, organization, evaluation, and prioritization that you can reuse in future leadership conversations.",
   },
   {
-    title: "Clear AI / Human Boundaries",
-    desc: "A practical distinction between what AI should do vs. what leaders must do - avoiding both hype and underuse."
+    number: "02",
+    title: "Clear AI / human decision boundaries",
+    body: "A better understanding of what AI should do versus what leaders must still own — so you avoid both hype and underuse.",
   },
   {
-    title: "Three Alignment Priorities Identified",
-    desc: "A practical view of your team's next steps across AI Readiness, Workflow Automation, and Governance Guardrails."
+    number: "03",
+    title: "A clearer view of your next three alignment priorities",
+    body: "A practical introduction to readiness, workflow automation, and governance guardrails — so you know what your team needs to align on next.",
   },
   {
-    title: "1–2 Next-Right Decisions Defined",
-    desc: "What to decide, who must be involved, and what inputs are still missing - so you leave with a path, not just ideas."
+    number: "04",
+    title: "1–2 next-right decisions",
+    body: "Greater clarity on what needs to be decided, who should be involved, and what inputs are still missing.",
   },
   {
-    title: "AI Priority Acceleration Toolkit",
-    desc: "Reusable prompts, facilitation patterns for all 4 stages, and a leader-ready guide for engaging your leadership team."
+    number: "05",
+    title: "A toolkit and session artifacts you can use right away",
+    body: "Reusable prompts, facilitation patterns, and a short list of next steps so you leave with a path, not just ideas.",
   },
 ];
 
-const OutcomesSection = () => {
-  return (
-    <section id="results" className="border-t border-border bg-card">
-      <div className="mx-auto max-w-[900px] px-5 py-14 sm:px-8 sm:py-16 lg:py-20">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-5 flex justify-center">
-          <span className="section-eyebrow-accent inline-block rounded-full bg-cta/10 px-5 py-2 font-body text-xs font-semibold uppercase tracking-[0.15em] text-cta">
-            What You Leave With
-          </span>
-        </motion.div>
+const containerVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.09 } },
+};
 
-        <motion.h2
-          initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-          className="mb-4 text-center font-headline text-[28px] font-bold text-foreground sm:text-[36px] lg:text-[42px]">
-          Outcomes You Can Act On Immediately
-        </motion.h2>
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.45,
+      ease: [0.25, 0.46, 0.45, 0.94] },
+  },
+};
 
-        <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-          className="mx-auto mb-10 max-w-[650px] text-center font-body text-base leading-relaxed text-muted-foreground sm:text-lg">
-          By the end of the session, you'll have tangible tools, clarity, and a defined path forward.
-        </motion.p>
-
-        <div className="flex flex-col gap-4">
-          {outcomes.map((item, i) => (
-            <motion.div
-              key={i}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-30px" }}
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0, transition: { delay: i * 0.08, duration: 0.45, ease: [0.25, 0.46, 0.45, 0.94] } }
-              }}
-              className="card-hover flex gap-4 rounded-xl border-l-4 border-cta bg-secondary p-5 sm:p-6"
-            >
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-cta">
-                <Check className="h-5 w-5 text-cta-foreground" strokeWidth={3} />
-              </div>
-              <div>
-                <h3 className="mb-1 font-headline text-base font-bold text-white sm:text-lg">{item.title}</h3>
-                <p className="font-body text-sm leading-relaxed text-white sm:text-base">{item.desc}</p>
-              </div>
-            </motion.div>
-          ))}
+const OutcomesSection = () => (
+  <section
+    id="results"
+    style={{
+      background: "#f9f7f4",
+      padding: "80px 24px",
+      borderTop: "0.5px solid rgba(15,31,61,0.08)",
+    }}
+  >
+    <div className="mx-auto max-w-[1100px]">
+      {/* Header */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="mb-14"
+      >
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "12px",
+            marginBottom: "16px",
+          }}
+        >
+          <div style={{
+            height: "1px",
+            width: "40px",
+            background:
+              "linear-gradient(90deg, #C49B3C, transparent)",
+          }} />
+          <p style={{
+            fontSize: "11px",
+            fontWeight: 500,
+            textTransform: "uppercase",
+            letterSpacing: "0.1em",
+            color: "#C49B3C",
+          }}>
+            Session outcomes
+          </p>
         </div>
 
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mt-12 flex flex-col items-center">
-          <DualCTAButtons />
-        </motion.div>
-      </div>
-    </section>
-  );
-};
+        <h2 style={{
+          fontFamily: "Fraunces, serif",
+          fontSize: "clamp(28px, 3.5vw, 40px)",
+          fontWeight: 500,
+          lineHeight: 1.15,
+          color: "#0f1f3d",
+        }}>
+          What You'll Leave With
+        </h2>
+      </motion.div>
+
+      {/* Outcome cards */}
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        style={{
+          display: "grid",
+          gridTemplateColumns:
+            "repeat(auto-fit, minmax(300px, 1fr))",
+          gap: "16px",
+        }}
+      >
+        {OUTCOMES.map((item, i) => (
+          <motion.div
+            key={i}
+            variants={itemVariants}
+            style={{
+              background: "#ffffff",
+              border: "1px solid rgba(15,31,61,0.07)",
+              borderRadius: "16px",
+              padding: "28px 26px",
+              position: "relative",
+              overflow: "hidden",
+              transition: "all 0.2s ease",
+              cursor: "default",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform =
+                "translateY(-4px)";
+              e.currentTarget.style.boxShadow =
+                "0 16px 40px -8px rgba(15,31,61,0.12)";
+              e.currentTarget.style.borderColor =
+                "rgba(196,155,60,0.25)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform =
+                "translateY(0)";
+              e.currentTarget.style.boxShadow =
+                "none";
+              e.currentTarget.style.borderColor =
+                "rgba(15,31,61,0.07)";
+            }}
+          >
+            {/* Gold top accent */}
+            <div style={{
+              position: "absolute",
+              top: 0,
+              left: "26px",
+              width: "32px",
+              height: "2px",
+              background:
+                "linear-gradient(90deg, #C49B3C, #E8C97A)",
+              borderRadius: "0 0 2px 2px",
+            }} />
+
+            {/* Number */}
+            <p style={{
+              fontSize: "10px",
+              fontWeight: 700,
+              letterSpacing: "0.12em",
+              color: "rgba(196,155,60,0.5)",
+              marginBottom: "14px",
+            }}>
+              {item.number}
+            </p>
+
+            {/* Title */}
+            <p style={{
+              fontFamily: "Fraunces, serif",
+              fontSize: "17px",
+              fontWeight: 500,
+              color: "#0f1f3d",
+              lineHeight: 1.35,
+              marginBottom: "10px",
+            }}>
+              {item.title}
+            </p>
+
+            {/* Body */}
+            <p style={{
+              fontSize: "13px",
+              lineHeight: 1.75,
+              color: "#4a5a6b",
+            }}>
+              {item.body}
+            </p>
+          </motion.div>
+        ))}
+      </motion.div>
+    </div>
+  </section>
+);
 
 export default OutcomesSection;

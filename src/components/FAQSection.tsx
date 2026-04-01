@@ -15,7 +15,7 @@ const faqs = [
   { q: "Do I need AI expertise to attend?", a: "No. This workshop is designed for leaders at all levels of AI familiarity. The focus is on decision-making methodology, not technical implementation." },
   { q: "What's the format - virtual or in-person?", a: "The default format is a 90-minute virtual session. An optional in-person format is also available. Both deliver the same core experience and outcomes." },
   { q: "How is this different from other AI workshops?", a: "This is a decision container, not an AI demo. It's vendor-neutral and focused on leadership alignment and decision clarity - not tool implementation. You'll practice a repeatable workflow, not watch a presentation." },
-  { q: "What do I need to prepare?", a: "You'll complete a brief prework assignment (1-2 questions via Google Form) to seed the live demonstration. This ensures the session is directly relevant to your challenges." },
+  
   { q: "What do I walk away with?", a: "A repeatable meeting workflow, reusable AI prompts, session artifacts (priorities, decision log, and next steps), and a leader-ready guide for engaging your leadership team on AI priorities." },
   { q: "Is this for individual leaders or teams?", a: "Leading with AI is an open-enrollment session for individual leaders. For teams, we offer the AI Leadership Alignment Accelerator - a customized version that kicks off with a private Leading with AI session for your leadership team." },
   { q: "What's the AI Leadership Alignment Accelerator?", a: "It's our 3-pillar leadership-team workshop series (Readiness, Workflow Automation, Governance Guardrails) designed to create shared clarity and accelerate decisions on AI direction. Leading with AI previews how the workflow powers those sessions." },

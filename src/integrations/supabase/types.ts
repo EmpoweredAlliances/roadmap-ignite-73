@@ -14,13 +14,54 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      sessions: {
+        Row: {
+          active: boolean
+          capacity: number
+          created_at: string | null
+          date: string
+          duration_hours: number
+          format: string
+          id: string
+          registered: number
+          timezone: string
+          title: string
+        }
+        Insert: {
+          active?: boolean
+          capacity?: number
+          created_at?: string | null
+          date: string
+          duration_hours?: number
+          format?: string
+          id?: string
+          registered?: number
+          timezone?: string
+          title: string
+        }
+        Update: {
+          active?: boolean
+          capacity?: number
+          created_at?: string | null
+          date?: string
+          duration_hours?: number
+          format?: string
+          id?: string
+          registered?: number
+          timezone?: string
+          title?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      increment_session_registered: {
+        Args: { session_id: string }
+        Returns: undefined
+      }
     }
     Enums: {
       [_ in never]: never

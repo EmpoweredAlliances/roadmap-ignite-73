@@ -152,6 +152,20 @@ const JourneySection = () => (
             ))}
           </div>
         </motion.div>
+
+        {/* Journey diagram */}
+        <motion.div variants={itemVariants} className="mx-auto mt-12 max-w-[600px]">
+          <h3 className="mb-6 text-center font-heading text-[15px] font-semibold tracking-wide text-white/80">
+            What you're building toward
+          </h3>
+          <div className="rounded-2xl border border-white/8 bg-white/[0.02] p-6">
+            <img
+              src={journeyDiagram}
+              alt="AI Leadership journey — Experience it live, Share with your leadership team, Build AI Foundations together"
+              className="w-full rounded-lg object-contain"
+            />
+          </div>
+        </motion.div>
       </motion.div>
     </div>
   </section>

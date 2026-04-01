@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 const items = [
-  "No prep required",
+  "No prep or AI experience required",
   "No account needed",
   "Begin with one current AI challenge",
   "Leave with a clearer next step",

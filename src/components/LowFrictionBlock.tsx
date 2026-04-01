@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const items = [
   "No prep or AI experience required",
   "No account needed",
-  "Begin with one current AI challenge",
+  "Explore a current AI challenge with peers",
   "Leave with a clearer next step",
 ];
 

@@ -132,9 +132,10 @@ const JourneySection = () => (
             Leading with AI gives leaders a live, low-risk way to experience how
             better AI-enabled decisions get made. For companies, it also serves
             as the front door to our 4-session AI Leadership Alignment
-            Accelerator — where leadership teams align on readiness, workflow
-            priorities, and governance guardrails, and build the internal
-            capability to keep using the method after the workshops end.
+            Accelerator - where leadership teams use these tools and methods to
+            align on readiness, workflow priorities, and governance decisions,
+            and build the internal capability to adapt its use after the
+            workshops end.
           </p>
         </motion.div>
 

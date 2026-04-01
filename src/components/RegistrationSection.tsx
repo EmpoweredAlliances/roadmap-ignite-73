@@ -496,7 +496,7 @@ const RegistrationSection = () => {
                   You Are Confirmed
                 </h3>
                 <p className="font-body text-[14px] text-white/50">
-                  You'll receive an email confirmation shortly. We look forward to collaborating with you soon!
+                  You are registered for the Leading with AI workshop. You'll receive an email confirmation shortly. We look forward to collaborating with you soon!
                 </p>
               </div>
 

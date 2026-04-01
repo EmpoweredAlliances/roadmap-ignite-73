@@ -506,14 +506,12 @@ const RegistrationSection = () => {
                 </p>
                 <p className="mt-1 font-body text-[12px] text-white/40">
                   {(() => {
-                    const start = new Date(selectedSession.date);
-                    const end = new Date(start.getTime() + selectedSession.duration_hours * 60 * 60 * 1000);
-                    const startStr = start.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", timeZone: "America/Chicago" });
+                    const date = new Date(selectedSession.date);
+                    const dateStr = date.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", timeZone: "America/Chicago" });
+                    const end = new Date(date.getTime() + selectedSession.duration_hours * 60 * 60 * 1000);
+                    const startStr = date.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", timeZone: "America/Chicago" });
                     const endStr = end.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", timeZone: "America/Chicago" });
-                    return (
-                      formatSessionDate(selectedSession.date, selectedSession.timezone) +
-                      ` · ${startStr} – ${endStr} ${selectedSession.timezone} · Virtual`
-                    );
+                    return `${dateStr} · ${startStr} – ${endStr} ${selectedSession.timezone} · Virtual`;
                   })()}
                 </p>
               </div>

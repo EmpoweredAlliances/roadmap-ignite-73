@@ -108,73 +108,50 @@ const JourneySection = () => (
           </p>
         </motion.div>
 
-        {/* Two-column layout */}
-        <div className="grid gap-10 lg:grid-cols-2 lg:gap-14">
+        {/* Centered ladder */}
+        <motion.div variants={itemVariants} className="mx-auto max-w-[480px]">
+          <h3 className="mb-6 text-center font-heading text-[15px] font-semibold tracking-wide text-white/80">
+            The 4-session journey
+          </h3>
 
-          {/* LEFT — 4-step ladder */}
-          <motion.div variants={itemVariants}>
-            <h3 className="mb-6 font-heading text-[15px] font-semibold tracking-wide text-white/80">
-              The 4-session journey
-            </h3>
+          <div className="relative space-y-0">
+            <div className="absolute left-[18px] top-[40px] bottom-[40px] w-px bg-white/10" />
 
-            <div className="relative space-y-0">
-              {/* Vertical connector line */}
-              <div className="absolute left-[18px] top-[40px] bottom-[40px] w-px bg-white/10" />
-
-              {LADDER_STEPS.map((step, i) => (
-                <div key={i} className="relative flex items-start gap-4 py-4">
-                  {/* Step circle */}
-                  <div
-                    className="relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-[11px] font-bold"
-                    style={{
-                      background: step.active ? `${step.color}20` : "rgba(255,255,255,0.05)",
-                      border: `1.5px solid ${step.active ? step.color : "rgba(255,255,255,0.12)"}`,
-                      color: step.active ? step.color : "rgba(255,255,255,0.5)",
-                    }}
-                  >
-                    {step.number}
-                  </div>
-
-                  {/* Step content */}
-                  <div className="pt-1">
-                    <div className="flex items-center gap-2">
-                      <span
-                        className="font-heading text-[14px] font-semibold"
-                        style={{ color: step.active ? step.color : "rgba(255,255,255,0.7)" }}
-                      >
-                        {step.name}
-                      </span>
-                      {step.active && (
-                        <span className="rounded-full bg-[#C49B3C]/15 px-2 py-0.5 text-[10px] font-semibold text-[#C49B3C]">
-                          You are here
-                        </span>
-                      )}
-                    </div>
-                    <p className="mt-1 font-body text-[12px] leading-relaxed text-white/45">
-                      {step.desc}
-                    </p>
-                  </div>
+            {LADDER_STEPS.map((step, i) => (
+              <div key={i} className="relative flex items-start gap-4 py-4">
+                <div
+                  className="relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-[11px] font-bold"
+                  style={{
+                    background: step.active ? `${step.color}20` : "rgba(255,255,255,0.05)",
+                    border: `1.5px solid ${step.active ? step.color : "rgba(255,255,255,0.12)"}`,
+                    color: step.active ? step.color : "rgba(255,255,255,0.5)",
+                  }}
+                >
+                  {step.number}
                 </div>
-              ))}
-            </div>
-          </motion.div>
 
-          {/* RIGHT — program cluster */}
-          <motion.div variants={itemVariants}>
-            <h3 className="mb-6 font-heading text-[15px] font-semibold tracking-wide text-white/80">
-              What you're building toward
-            </h3>
-
-            {/* Outer container */}
-            <div className="rounded-2xl border border-white/8 bg-white/[0.02] p-6">
-              <img
-                src={journeyDiagram}
-                alt="AI Leadership journey — Experience it live, Share with your leadership team, Build AI Foundations together"
-                className="w-full rounded-lg object-contain"
-              />
-            </div>
-          </motion.div>
-        </div>
+                <div className="pt-1">
+                  <div className="flex items-center gap-2">
+                    <span
+                      className="font-heading text-[14px] font-semibold"
+                      style={{ color: step.active ? step.color : "rgba(255,255,255,0.7)" }}
+                    >
+                      {step.name}
+                    </span>
+                    {step.active && (
+                      <span className="rounded-full bg-[#C49B3C]/15 px-2 py-0.5 text-[10px] font-semibold text-[#C49B3C]">
+                        You are here
+                      </span>
+                    )}
+                  </div>
+                  <p className="mt-1 font-body text-[12px] leading-relaxed text-white/45">
+                    {step.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </motion.div>
       </motion.div>
     </div>
   </section>

@@ -66,10 +66,8 @@ const RegistrationSection = () => {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    fetchUpcomingSessions().then((data) => {
-      setSessions(data);
-      setSessionsLoading(false);
-    });
+    setSessions(getUpcomingSessions());
+    setSessionsLoading(false);
   }, []);
 
   const set = (k: string, v: string) =>

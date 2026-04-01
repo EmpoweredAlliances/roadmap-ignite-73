@@ -78,7 +78,7 @@ const BuiltForYourSeatSection = () => {
       <div className="mx-auto max-w-[1200px] px-5 py-16 sm:px-8 sm:py-[64px]">
         {/* Header */}
         <p className="section-eyebrow-accent mb-3 font-body text-[11px] font-medium uppercase tracking-[0.08em] text-muted-foreground">
-          Built for your seat
+          THE PRIORITY ACCELERATION WORKFLOW DELIVERS WHAT YOU NEED
         </p>
         <h2 className="max-w-[520px] font-serif text-[32px] font-medium leading-[1.2] text-foreground sm:text-[36px]">
           Every leader gets what they actually need

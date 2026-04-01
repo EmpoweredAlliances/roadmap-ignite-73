@@ -495,6 +495,8 @@ const RegistrationSection = () => {
                 </p>
                 <p className="mt-1 font-body text-[12px] text-white/40">
                   {formatSessionDate(selectedSession.date, selectedSession.timezone)}
+                  {" · "}
+                  {selectedSession.start_time}
                   {" · 2 hours · Virtual"}
                 </p>
               </div>

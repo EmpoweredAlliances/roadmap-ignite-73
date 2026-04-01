@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import journeyDiagram from "@/assets/journey-diagram.png";
 
 const LADDER_STEPS = [
   {
@@ -60,7 +59,10 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.45, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] },
+    transition: {
+      duration: 0.45,
+      ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number],
+    },
   },
 };
 
@@ -84,85 +86,167 @@ const JourneySection = () => (
           </div>
 
           <p className="mx-auto max-w-[540px] font-body text-[15px] leading-relaxed text-white/70">
-            Experience the workflow live first.
-            Then bring its full value to your
+            Experience the workflow live first. Then bring its full value to your
             leadership team when the time is right.
           </p>
 
-
+          <p className="mx-auto mt-4 max-w-[540px] font-body text-[14px] italic leading-relaxed text-white/50">
+            This workshop is the starting point — not the whole journey.
+          </p>
 
           <p className="mx-auto mt-6 max-w-[600px] font-body text-[13px] leading-relaxed text-white/45">
-            Leading with AI gives leaders a live,
-            low-risk way to experience how better
-            AI-enabled decisions get made. For
-            companies, it also serves as the front
-            door to our 4-session AI Leadership
-            Alignment Accelerator — where leadership
-            teams align on readiness, workflow
-            priorities, and governance guardrails,
-            and build the internal capability to keep
-            using the method after the workshops end.
+            Leading with AI gives leaders a live, low-risk way to experience how
+            better AI-enabled decisions get made. For companies, it also serves
+            as the front door to our 4-session AI Leadership Alignment
+            Accelerator — where leadership teams align on readiness, workflow
+            priorities, and governance guardrails, and build the internal
+            capability to keep using the method after the workshops end.
           </p>
         </motion.div>
 
-        {/* Centered ladder */}
-        <motion.div variants={itemVariants} className="mx-auto max-w-[480px]">
-          <h3 className="mb-6 text-center font-heading text-[15px] font-semibold tracking-wide text-white/80">
-            The 4-session journey
-          </h3>
+        {/* Two-column layout */}
+        <div className="grid gap-10 lg:grid-cols-2 lg:gap-14">
+          {/* LEFT — 4-step ladder */}
+          <motion.div variants={itemVariants}>
+            <h3 className="mb-6 font-heading text-[15px] font-semibold tracking-wide text-white/80">
+              The 4-session journey
+            </h3>
 
-          <div className="relative space-y-0">
-            <div className="absolute left-[18px] top-[40px] bottom-[40px] w-px bg-white/10" />
+            <div className="relative space-y-0">
+              {/* Vertical connector line */}
+              <div className="absolute left-[18px] top-[40px] bottom-[40px] w-px bg-white/10" />
 
-            {LADDER_STEPS.map((step, i) => (
-              <div key={i} className="relative flex items-start gap-4 py-4">
-                <div
-                  className="relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-[11px] font-bold"
-                  style={{
-                    background: step.active ? `${step.color}20` : "rgba(255,255,255,0.05)",
-                    border: `1.5px solid ${step.active ? step.color : "rgba(255,255,255,0.12)"}`,
-                    color: step.active ? step.color : "rgba(255,255,255,0.5)",
-                  }}
-                >
-                  {step.number}
-                </div>
-
-                <div className="pt-1">
-                  <div className="flex items-center gap-2">
-                    <span
-                      className="font-heading text-[14px] font-semibold"
-                      style={{ color: step.active ? step.color : "rgba(255,255,255,0.7)" }}
-                    >
-                      {step.name}
-                    </span>
-                    {step.active && (
-                      <span className="rounded-full bg-[#C49B3C]/15 px-2 py-0.5 text-[10px] font-semibold text-[#C49B3C]">
-                        You are here
-                      </span>
-                    )}
+              {LADDER_STEPS.map((step, i) => (
+                <div key={i} className="relative flex items-start gap-4 py-4">
+                  {/* Step circle */}
+                  <div
+                    className="relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-[11px] font-bold"
+                    style={{
+                      background: step.active
+                        ? `${step.color}20`
+                        : "rgba(255,255,255,0.05)",
+                      border: `1.5px solid ${
+                        step.active ? step.color : "rgba(255,255,255,0.12)"
+                      }`,
+                      color: step.active
+                        ? step.color
+                        : "rgba(255,255,255,0.5)",
+                    }}
+                  >
+                    {step.number}
                   </div>
-                  <p className="mt-1 font-body text-[12px] leading-relaxed text-white/45">
-                    {step.desc}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </motion.div>
 
-        {/* Journey diagram */}
-        <motion.div variants={itemVariants} className="mx-auto mt-12 max-w-[600px]">
-          <h3 className="mb-6 text-center font-heading text-[15px] font-semibold tracking-wide text-white/80">
-            What you're building toward
-          </h3>
-          <div className="rounded-2xl border border-white/8 bg-white/[0.02] p-6">
-            <img
-              src={journeyDiagram}
-              alt="AI Leadership journey — Experience it live, Share with your leadership team, Build AI Foundations together"
-              className="w-full rounded-lg object-contain"
-            />
-          </div>
-        </motion.div>
+                  {/* Step content */}
+                  <div className="pt-1">
+                    <div className="flex items-center gap-2">
+                      <span
+                        className="font-heading text-[14px] font-semibold"
+                        style={{
+                          color: step.active
+                            ? step.color
+                            : "rgba(255,255,255,0.7)",
+                        }}
+                      >
+                        {step.name}
+                      </span>
+                      {step.active && (
+                        <span className="rounded-full bg-[#C49B3C]/15 px-2 py-0.5 text-[10px] font-semibold text-[#C49B3C]">
+                          You are here
+                        </span>
+                      )}
+                    </div>
+                    <p className="mt-1 font-body text-[12px] leading-relaxed text-white/45">
+                      {step.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* RIGHT — program cluster */}
+          <motion.div variants={itemVariants}>
+            <h3 className="mb-6 font-heading text-[15px] font-semibold tracking-wide text-white/80">
+              What you're building toward
+            </h3>
+
+            {/* Outer container */}
+            <div className="rounded-2xl border border-white/8 bg-white/[0.02] p-6">
+              <p className="mb-1 text-center font-heading text-[13px] font-semibold tracking-wide text-[#C49B3C]">
+                AI Leadership Alignment Accelerator
+              </p>
+              <p className="mb-5 text-center font-body text-[11px] text-white/40">
+                Build AI Foundations together
+              </p>
+
+              {/* Journey arrow row */}
+              <div className="mb-6 flex items-center justify-center gap-2">
+                {["Experience it live", "Share with your team", "Build AI Foundations"].map(
+                  (label, i) => (
+                    <div key={i} className="flex items-center gap-2">
+                      <span className="rounded-full bg-white/5 px-3 py-1.5 text-[10px] font-medium text-white/60">
+                        {label}
+                      </span>
+                      {i < 2 && (
+                        <span className="text-[12px] text-white/25">→</span>
+                      )}
+                    </div>
+                  )
+                )}
+              </div>
+
+              {/* Three program cards */}
+              <div className="space-y-2">
+                {PROGRAMS.map((prog, i) => (
+                  <div
+                    key={i}
+                    className="flex items-start gap-3 rounded-xl border border-white/8 bg-white/5 p-3 transition-all duration-200 cursor-pointer"
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.background = "rgba(255,255,255,0.08)";
+                      e.currentTarget.style.borderColor = "rgba(196,155,60,0.3)";
+                      e.currentTarget.style.transform = "translateX(4px)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.background = "rgba(255,255,255,0.05)";
+                      e.currentTarget.style.borderColor = "rgba(255,255,255,0.08)";
+                      e.currentTarget.style.transform = "translateX(0)";
+                    }}
+                  >
+                    {/* Icon */}
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#C49B3C]/10 text-[14px]">
+                      {prog.icon}
+                    </div>
+
+                    {/* Text */}
+                    <div>
+                      <p className="font-heading text-[13px] font-semibold text-white/80">
+                        {prog.label}
+                      </p>
+                      <p className="mt-0.5 font-body text-[11px] text-white/40">
+                        {prog.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Bottom CTA */}
+              <div className="mt-6 text-center">
+                <p className="mb-3 font-body text-[12px] text-white/50">
+                  Ready to bring this to your leadership team?
+                </p>
+                <a
+                  href="https://api.aiforbusiness.com/widget/booking/4fA8ynDeW5IRfskSEjQ6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg border border-[#C49B3C]/30 bg-[#C49B3C]/8 px-[18px] py-2 text-[13px] font-semibold text-[#C49B3C] transition-all duration-200 hover:bg-[#C49B3C]/15 hover:border-[#C49B3C]/50"
+                >
+                  Schedule a conversation →
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </motion.div>
     </div>
   </section>

@@ -14,7 +14,7 @@ const stages = [
     name: "Stop debating. Start seeing patterns.",
     color: "#C49B3C",
     description:
-      "Your team chooses how to frame the problem. AI proposes three different clustering frameworks, each revealing a different strategic angle. You stop debating how to organize the conversation and start seeing what actually matters.",
+      "Your team chooses how to frame the problem. AI proposes three different clustering frameworks, each revealing a different strategic angle. You stop debating how to organize the conversation and start making sense of the ideas shared and what actually matters.",
   },
   {
     number: "03",

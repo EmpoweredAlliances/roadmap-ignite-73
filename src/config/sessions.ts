@@ -109,10 +109,9 @@ export const buildGoogleCalendarUrl = (
     dates: `${fmt(start)}/${fmt(end)}`,
     details:
       "You are registered for the Leading with AI workshop. " +
-      "You will receive a Zoom link via email " +
-      "before the session. " +
-      "https://empoweredalliances.com",
-    location: "Virtual (Zoom link sent via email)",
+      "Join Zoom: https://zoom.us/j/97875162394?pwd=wL4xFtsMLtJFneeclkMdrN1xGxyqTx.13",
+    location:
+      "https://zoom.us/j/97875162394?pwd=wL4xFtsMLtJFneeclkMdrN1xGxyqTx.13",
   });
 
   return `https://calendar.google.com/calendar/render?${params}`;
@@ -143,8 +142,8 @@ export const buildAppleCalendarUrl = (
     `DTSTART:${fmt(start)}`,
     `DTEND:${fmt(end)}`,
     "SUMMARY:Leading with AI Workshop — Empowered Alliances",
-    "DESCRIPTION:Zoom link sent via email.",
-    "LOCATION:Virtual",
+    "DESCRIPTION:Join Zoom: https://zoom.us/j/97875162394?pwd=wL4xFtsMLtJFneeclkMdrN1xGxyqTx.13",
+    "LOCATION:https://zoom.us/j/97875162394?pwd=wL4xFtsMLtJFneeclkMdrN1xGxyqTx.13",
     "END:VEVENT",
     "END:VCALENDAR",
   ].join("\n");

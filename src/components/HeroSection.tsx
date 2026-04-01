@@ -228,19 +228,6 @@ const HeroSection = () => {
                 >
                   Reserve a Seat →
                 </a>
-                <a
-                  href="#schedule"
-                  className="font-body text-[13px] transition-colors duration-200"
-                  style={{ color: "rgba(245,240,232,0.5)" }}
-                  onMouseEnter={(e) =>
-                    (e.currentTarget.style.color = "rgba(245,240,232,0.85)")
-                  }
-                  onMouseLeave={(e) =>
-                    (e.currentTarget.style.color = "rgba(245,240,232,0.5)")
-                  }
-                >
-                  Schedule a Conversation →
-                </a>
               </motion.div>
 
               {/* Tagline */}

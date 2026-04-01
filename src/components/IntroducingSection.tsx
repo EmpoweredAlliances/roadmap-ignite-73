@@ -23,7 +23,7 @@ const IntroducingSection = () => {
       <div className="absolute inset-0 bg-primary/40" />
       <div className="relative mx-auto max-w-[1000px] px-5 py-14 sm:px-8 sm:py-16 lg:py-20">
         <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-          className="mb-6 text-center font-body text-[15px] italic leading-relaxed text-white/70">
+          className="mb-6 text-center font-body text-[15px] italic leading-relaxed text-[#36454F]">
           This workshop is the starting point — not the whole journey.
         </motion.p>
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}

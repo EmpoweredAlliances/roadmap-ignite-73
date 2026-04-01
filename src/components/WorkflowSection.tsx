@@ -191,12 +191,6 @@ const WorkflowSection = () => {
             The entire workflow — from first idea to final ranking —
             takes 90 minutes.
           </p>
-          <div
-            className="mx-auto mt-6 h-12 w-px"
-            style={{
-              background: "linear-gradient(to bottom, rgba(196,155,60,0.4), transparent)",
-            }}
-          />
         </motion.div>
       </div>
     </section>

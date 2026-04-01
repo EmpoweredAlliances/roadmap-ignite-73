@@ -274,9 +274,15 @@ const RegistrationSection = () => {
                     const seats = getSeatsRemaining(s);
                     return (
                       <option key={s.id} value={s.id} disabled={seats === 0} style={{ background: "#1a2a4a" }}>
-                        {s.title}
-                        {seats <= 5 && seats > 0 ? ` — ${seats} seats left` : ""}
-                        {seats === 0 ? " — Full" : ""}
+                        {(() => {
+                          const start = new Date(s.date);
+                          const end = new Date(start.getTime() + s.duration_hours * 60 * 60 * 1000);
+                          const startStr = start.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", timeZone: "America/Chicago" });
+                          const endStr = end.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", timeZone: "America/Chicago" });
+                          const timeRange = `${startStr} – ${endStr} ${s.timezone}`;
+                          const seatsLabel = seats === 0 ? " — Full" : seats <= 5 ? ` — ${seats} seats left` : "";
+                          return `${s.title} · ${timeRange}${seatsLabel}`;
+                        })()}
                       </option>
                     );
                   })}

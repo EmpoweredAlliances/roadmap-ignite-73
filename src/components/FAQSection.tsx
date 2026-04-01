@@ -19,7 +19,7 @@ const faqs = [
   { q: "What do I walk away with?", a: "A repeatable meeting workflow, reusable AI prompts, session artifacts and a leader-ready guide for engaging your leadership team on AI priorities." },
   { q: "Is this for individual leaders or teams?", a: "Leading with AI is an open-enrollment session for individual leaders. For teams, we offer the AI Leadership Alignment Accelerator - a customized version that kicks off with a private Leading with AI session for your leadership team." },
   { q: "What's the AI Leadership Alignment Accelerator?", a: "It's our 3-pillar leadership-team workshop series (Readiness, Workflow Automation, Governance Guardrails) designed to create shared clarity and accelerate decisions on AI direction. Leading with AI previews how the workflow powers those sessions." },
-  { q: "How much does it cost?", a: "Introductory sessions are FREE (regularly $99 per person). Team packages for the AI Leadership Alignment Accelerator use a sliding scale based on company size, with package discounts available." },
+  { q: "How much does it cost?", a: "Introductory sessions are FREE (regularly $149 per person). Team packages for the AI Leadership Alignment Accelerator use a sliding scale based on company size, with package discounts available." },
 ];
 
 const FAQSection = () => {

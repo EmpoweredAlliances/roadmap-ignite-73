@@ -502,8 +502,16 @@ const RegistrationSection = () => {
                 <p className="mt-1 font-body text-[12px] text-white/40">
                   {formatSessionDate(selectedSession.date, selectedSession.timezone)}
                   {" · "}
-                  {selectedSession.start_time}
-                  {" · 2 hours · Virtual"}
+                  {(() => {
+                    const start = new Date(selectedSession.date);
+                    const end = new Date(start.getTime() + selectedSession.duration_hours * 60 * 60 * 1000);
+                    const startStr = start.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", timeZone: "America/Chicago" });
+                    const endStr = end.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", timeZone: "America/Chicago" });
+                    return `${startStr} – ${endStr} ${selectedSession.timezone}`;
+                  })()}
+                  {" · "}
+                  {selectedSession.duration_hours}
+                  {" hours · Virtual"}
                 </p>
               </div>
 

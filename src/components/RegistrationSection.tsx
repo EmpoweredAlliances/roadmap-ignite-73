@@ -2,14 +2,13 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Loader2, X, Calendar, Share2 } from "lucide-react";
 import {
-  fetchUpcomingSessions,
-  incrementRegistered,
+  getUpcomingSessions,
   formatSessionDate,
   getSeatsRemaining,
   buildGoogleCalendarUrl,
   buildAppleCalendarUrl,
   type Session,
-} from "@/lib/sessions";
+} from "@/config/sessions";
 
 const GHL_WEBHOOK =
   "https://services.leadconnectorhq.com/hooks/" +
@@ -67,10 +66,8 @@ const RegistrationSection = () => {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    fetchUpcomingSessions().then((data) => {
-      setSessions(data);
-      setSessionsLoading(false);
-    });
+    setSessions(getUpcomingSessions());
+    setSessionsLoading(false);
   }, []);
 
   const set = (k: string, v: string) =>
@@ -117,7 +114,7 @@ const RegistrationSection = () => {
           ),
         }),
       });
-      await incrementRegistered(selectedSession.id);
+      
       setConfirmed(true);
     } catch {
       setError("Something went wrong. Please try again.");

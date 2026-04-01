@@ -110,13 +110,11 @@ const RegistrationSection = () => {
           sessionTitle: selectedSession.title,
           sessionDate: (() => {
             const date = new Date(selectedSession.date);
-            return date.toLocaleDateString("en-US", {
-              weekday: "long",
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-              timeZone: "America/Chicago",
-            });
+            const day = String(date.toLocaleDateString("en-US", { day: "numeric", timeZone: "America/Chicago" })).padStart(2, "0");
+            const month = date.toLocaleDateString("en-US", { month: "short", timeZone: "America/Chicago" }).toUpperCase();
+            const year = date.toLocaleDateString("en-US", { year: "numeric", timeZone: "America/Chicago" });
+            const time = date.toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", hour12: false, timeZone: "America/Chicago" });
+            return `${day}-${month}-${year} ${time}`;
           })(),
           sessionTime: (() => {
             const start = new Date(selectedSession.date);

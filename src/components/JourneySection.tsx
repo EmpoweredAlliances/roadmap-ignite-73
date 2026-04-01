@@ -123,12 +123,7 @@ const JourneySection = () => (
             <span className="h-px w-8 bg-[#C49B3C]/40" />
           </div>
 
-          <p
-            className="mx-auto max-w-[540px] font-body text-[15px] leading-relaxed"
-            style={{ color: "rgba(245,240,232,0.8)" }}
-          >
-            This workshop is the starting point — not the whole journey.
-          </p>
+
 
           <p
             className="mx-auto mt-6 max-w-[600px] font-body text-[13px] leading-relaxed"

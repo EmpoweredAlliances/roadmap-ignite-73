@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import journeyDiagram from "@/assets/journey-diagram.png";
 
 const LADDER_STEPS = [
   {
@@ -166,103 +167,11 @@ const JourneySection = () => (
 
             {/* Outer container */}
             <div className="rounded-2xl border border-white/8 bg-white/[0.02] p-6">
-              <p className="font-heading text-[13px] font-semibold tracking-wide text-[#C49B3C]">
-                AI Leadership Alignment Accelerator
-              </p>
-              <p className="mt-1 font-body text-[12px] text-white/50">
-                Build AI Foundations together
-              </p>
-
-              {/* Journey arrow row */}
-              <div className="mt-5 flex items-center gap-2">
-                {[
-                  "Experience it live",
-                  "Share with your team",
-                  "Build AI Foundations",
-                ].map((label, i) => (
-                  <div key={i} className="flex items-center gap-2">
-                    <span className="rounded-full bg-white/5 px-3 py-1 text-[10px] text-white/50">
-                      {label}
-                    </span>
-                    {i < 2 && (
-                      <span className="text-[12px] text-white/20">
-                        →
-                      </span>
-                    )}
-                  </div>
-                ))}
-              </div>
-
-              {/* Three program cards */}
-              <div className="mt-6 space-y-3">
-                {PROGRAMS.map((prog, i) => (
-                  <div
-                    key={i}
-                    className="flex items-start gap-3 rounded-xl border border-white/8 bg-white/5 p-4 transition-all duration-200 cursor-pointer"
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.background = "rgba(255,255,255,0.08)";
-                      e.currentTarget.style.borderColor = "rgba(196,155,60,0.3)";
-                      e.currentTarget.style.transform = "translateX(4px)";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.background = "rgba(255,255,255,0.05)";
-                      e.currentTarget.style.borderColor = "rgba(255,255,255,0.08)";
-                      e.currentTarget.style.transform = "translateX(0)";
-                    }}
-                  >
-                    {/* Icon */}
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#4EB8A0]/10 text-[16px] text-[#4EB8A0]">
-                      {prog.icon}
-                    </div>
-
-                    {/* Text */}
-                    <div>
-                      <p className="font-heading text-[13px] font-semibold text-white/80">
-                        {prog.label}
-                      </p>
-                      <p className="mt-0.5 font-body text-[11px] text-white/40">
-                        {prog.desc}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Bottom CTA */}
-              <div className="mt-6 border-t border-white/8 pt-5 text-center">
-                <p className="mb-3 font-body text-[12px] text-white/50">
-                  Ready to bring this to your leadership team?
-                </p>
-                <a
-                  href="https://api.aiforbusiness.com/widget/booking/4fA8ynDeW5IRfskSEjQ6"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: "8px",
-                    fontSize: "13px",
-                    fontWeight: 600,
-                    color: "#C49B3C",
-                    textDecoration: "none",
-                    padding: "8px 18px",
-                    borderRadius: "8px",
-                    border: "1px solid rgba(196,155,60,0.3)",
-                    background: "rgba(196,155,60,0.08)",
-                    transition: "all 0.2s",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.background = "rgba(196,155,60,0.15)";
-                    e.currentTarget.style.borderColor = "rgba(196,155,60,0.5)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.background = "rgba(196,155,60,0.08)";
-                    e.currentTarget.style.borderColor = "rgba(196,155,60,0.3)";
-                  }}
-                >
-                  Schedule a conversation →
-                </a>
-              </div>
+              <img
+                src={journeyDiagram}
+                alt="AI Leadership journey — Experience it live, Share with your leadership team, Build AI Foundations together"
+                className="w-full rounded-lg object-contain"
+              />
             </div>
           </motion.div>
         </div>

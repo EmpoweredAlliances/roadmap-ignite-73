@@ -28,7 +28,7 @@ const stages = [
     name: "A decision your whole team can stand behind",
     color: "#6AAF7A",
     description:
-      "Your senior leader makes the call with full visibility into what the team thinks. Every vote recorded. Every dissenting view captured. You leave with ranked priorities, clear owners, and a decision record that survives Monday morning.",
+      "Your senior leader makes the call with full visibility into the team's thinking. Every conversation brings the added clarity and insight that generates shared ownership that accelerates implementation. You leave with ranked priorities and a decision record that survives Monday morning.",
   },
 ];
 

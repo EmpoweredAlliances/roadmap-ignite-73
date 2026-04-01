@@ -14,7 +14,7 @@ const PrimaryCTASection = () => (
         transition={{ duration: 0.5 }}
         className="mx-auto max-w-[600px] font-serif text-[32px] font-medium leading-[1.2] text-white sm:text-[40px]"
       >
-        Your next AI decision deserves a process.
+        Your next AI decision deserves a workflow that delivers results
       </motion.h2>
       <motion.p
         initial={{ opacity: 0, y: 20 }}

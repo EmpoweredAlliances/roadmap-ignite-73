@@ -2,44 +2,41 @@ import { motion } from "framer-motion";
 
 const OUTCOMES = [
   {
-    number: "01",
-    title: "A repeatable AI-enabled decision method",
+    title: "A Repeatable AI-Enabled Decision Method",
     body: "A practical approach to ideation, organization, evaluation, and prioritization that you can reuse in future leadership conversations.",
   },
   {
-    number: "02",
-    title: "Clear AI / human decision boundaries",
+    title: "Clear AI / Human Decision Boundaries",
     body: "A better understanding of what AI should do versus what leaders must still own — so you avoid both hype and underuse.",
   },
   {
-    number: "03",
-    title: "A clearer view of your next three alignment priorities",
+    title: "A Clearer View of Your Next Three Alignment Priorities",
     body: "A practical introduction to readiness, workflow automation, and governance guardrails — so you know what your team needs to align on next.",
   },
   {
-    number: "04",
-    title: "1–2 next-right decisions",
-    body: "Greater clarity on what needs to be decided, who should be involved, and what inputs are still missing.",
+    title: "1–2 Next-Right Decisions",
+    body: "Greater clarity on what needs to be decided, who should be involved, and what inputs are still missing — so you leave with a path, not just ideas.",
   },
   {
-    number: "05",
-    title: "A toolkit and session artifacts you can use right away",
+    title: "A Toolkit and Session Artifacts You Can Use Right Away",
     body: "Reusable prompts, facilitation patterns, and a short list of next steps so you leave with a path, not just ideas.",
   },
 ];
 
 const containerVariants = {
   hidden: {},
-  visible: { transition: { staggerChildren: 0.09 } },
+  visible: { transition: { staggerChildren: 0.1 } },
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 16 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.45,
-      ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] },
+    transition: {
+      duration: 0.45,
+      ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number],
+    },
   },
 };
 
@@ -52,23 +49,21 @@ const OutcomesSection = () => (
       borderTop: "0.5px solid rgba(15,31,61,0.08)",
     }}
   >
-    <div className="mx-auto max-w-[1100px]">
+    <div className="mx-auto max-w-[760px]">
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="mb-14"
+        style={{ marginBottom: "48px" }}
       >
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "12px",
-            marginBottom: "16px",
-          }}
-        >
+        <div style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "12px",
+          marginBottom: "16px",
+        }}>
           <div style={{
             height: "1px",
             width: "40px",
@@ -82,7 +77,7 @@ const OutcomesSection = () => (
             letterSpacing: "0.1em",
             color: "#C49B3C",
           }}>
-            Session outcomes
+            What you leave with
           </p>
         </div>
 
@@ -97,17 +92,16 @@ const OutcomesSection = () => (
         </h2>
       </motion.div>
 
-      {/* Outcome cards */}
+      {/* Stacked cards */}
       <motion.div
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         style={{
-          display: "grid",
-          gridTemplateColumns:
-            "repeat(auto-fit, minmax(300px, 1fr))",
-          gap: "16px",
+          display: "flex",
+          flexDirection: "column",
+          gap: "12px",
         }}
       >
         {OUTCOMES.map((item, i) => (
@@ -115,77 +109,141 @@ const OutcomesSection = () => (
             key={i}
             variants={itemVariants}
             style={{
-              background: "#ffffff",
-              border: "1px solid rgba(15,31,61,0.07)",
-              borderRadius: "16px",
-              padding: "28px 26px",
-              position: "relative",
-              overflow: "hidden",
+              display: "flex",
+              alignItems: "flex-start",
+              gap: "20px",
+              background:
+                "linear-gradient(135deg, #1a2f4a 0%, #162540 100%)",
+              borderRadius: "14px",
+              padding: "24px 28px",
+              border: "1px solid rgba(255,255,255,0.06)",
               transition: "all 0.2s ease",
               cursor: "default",
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.transform =
-                "translateY(-4px)";
-              e.currentTarget.style.boxShadow =
-                "0 16px 40px -8px rgba(15,31,61,0.12)";
+              e.currentTarget.style.background =
+                "linear-gradient(135deg, #1e3654 0%, #1a2f4a 100%)";
               e.currentTarget.style.borderColor =
                 "rgba(196,155,60,0.25)";
+              e.currentTarget.style.transform =
+                "translateX(4px)";
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.transform =
-                "translateY(0)";
-              e.currentTarget.style.boxShadow =
-                "none";
+              e.currentTarget.style.background =
+                "linear-gradient(135deg, #1a2f4a 0%, #162540 100%)";
               e.currentTarget.style.borderColor =
-                "rgba(15,31,61,0.07)";
+                "rgba(255,255,255,0.06)";
+              e.currentTarget.style.transform =
+                "translateX(0)";
             }}
           >
-            {/* Gold top accent */}
+            {/* Gold check circle */}
             <div style={{
-              position: "absolute",
-              top: 0,
-              left: "26px",
-              width: "32px",
-              height: "2px",
+              width: "36px",
+              height: "36px",
+              borderRadius: "50%",
+              flexShrink: 0,
               background:
-                "linear-gradient(90deg, #C49B3C, #E8C97A)",
-              borderRadius: "0 0 2px 2px",
-            }} />
-
-            {/* Number */}
-            <p style={{
-              fontSize: "10px",
-              fontWeight: 700,
-              letterSpacing: "0.12em",
-              color: "rgba(196,155,60,0.5)",
-              marginBottom: "14px",
+                "linear-gradient(135deg, #C49B3C, #E8C97A)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              marginTop: "2px",
+              boxShadow:
+                "0 4px 12px rgba(196,155,60,0.3)",
             }}>
-              {item.number}
-            </p>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <path
+                  d="M3 8l3.5 3.5L13 4.5"
+                  stroke="#0f1f3d"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
 
-            {/* Title */}
-            <p style={{
-              fontFamily: "Fraunces, serif",
-              fontSize: "17px",
-              fontWeight: 500,
-              color: "#0f1f3d",
-              lineHeight: 1.35,
-              marginBottom: "10px",
-            }}>
-              {item.title}
-            </p>
-
-            {/* Body */}
-            <p style={{
-              fontSize: "13px",
-              lineHeight: 1.75,
-              color: "#4a5a6b",
-            }}>
-              {item.body}
-            </p>
+            {/* Text */}
+            <div style={{ flex: 1 }}>
+              <p style={{
+                fontFamily: "Fraunces, serif",
+                fontSize: "17px",
+                fontWeight: 500,
+                color: "#f5f0e8",
+                marginBottom: "6px",
+                lineHeight: 1.35,
+              }}>
+                {item.title}
+              </p>
+              <p style={{
+                fontSize: "13px",
+                lineHeight: 1.75,
+                color: "rgba(245,240,232,0.55)",
+              }}>
+                {item.body}
+              </p>
+            </div>
           </motion.div>
         ))}
+      </motion.div>
+
+      {/* CTA below cards */}
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        style={{
+          marginTop: "36px",
+          textAlign: "center",
+        }}
+      >
+        <a
+          href="#register"
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            gap: "10px",
+            padding: "14px 32px",
+            borderRadius: "10px",
+            background:
+              "linear-gradient(135deg, #C49B3C, #E8C97A)",
+            color: "#0f1f3d",
+            fontSize: "15px",
+            fontWeight: 700,
+            textDecoration: "none",
+            boxShadow:
+              "0 4px 20px rgba(196,155,60,0.3)",
+            transition: "all 0.2s ease",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.boxShadow =
+              "0 8px 32px rgba(196,155,60,0.45)";
+            e.currentTarget.style.transform =
+              "translateY(-2px)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.boxShadow =
+              "0 4px 20px rgba(196,155,60,0.3)";
+            e.currentTarget.style.transform =
+              "translateY(0)";
+          }}
+        >
+          Reserve a Seat —{" "}
+          <span style={{
+            textDecoration: "line-through",
+            opacity: 0.6,
+            fontWeight: 400,
+          }}>
+            $149
+          </span>{" "}
+          Free →
+        </a>
       </motion.div>
     </div>
   </section>

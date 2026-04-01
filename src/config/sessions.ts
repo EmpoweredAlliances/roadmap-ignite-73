@@ -142,8 +142,8 @@ export const buildAppleCalendarUrl = (
     `DTSTART:${fmt(start)}`,
     `DTEND:${fmt(end)}`,
     "SUMMARY:Leading with AI Workshop — Empowered Alliances",
-    "DESCRIPTION:Zoom link sent via email.",
-    "LOCATION:Virtual",
+    "DESCRIPTION:Join Zoom: https://zoom.us/j/97875162394?pwd=wL4xFtsMLtJFneeclkMdrN1xGxyqTx.13",
+    "LOCATION:https://zoom.us/j/97875162394?pwd=wL4xFtsMLtJFneeclkMdrN1xGxyqTx.13",
     "END:VEVENT",
     "END:VCALENDAR",
   ].join("\n");

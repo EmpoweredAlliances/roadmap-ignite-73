@@ -14,7 +14,7 @@ export const SESSIONS: Session[] = [
   {
     id: "apr-08-2026",
     title: "Leading with AI — Wednesday, April 8",
-    date: "2026-04-08T17:00:00Z",
+    date: "2026-04-08T16:00:00Z",
     start_time: "11:00 AM CT",
     timezone: "CT",
     duration_hours: 1.5,

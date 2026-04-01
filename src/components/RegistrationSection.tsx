@@ -301,6 +301,8 @@ const RegistrationSection = () => {
                       <p className="mt-1 font-body text-[12px] text-white/40">
                         {formatSessionDate(selectedSession.date, selectedSession.timezone)}
                         {" · "}
+                        {selectedSession.start_time}
+                        {" · "}
                         {selectedSession.duration_hours}
                         {" hours · "}
                         {selectedSession.format}

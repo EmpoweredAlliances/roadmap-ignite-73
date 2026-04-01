@@ -114,7 +114,7 @@ const RegistrationSection = () => {
           ),
         }),
       });
-      await incrementRegistered(selectedSession.id);
+      
       setConfirmed(true);
     } catch {
       setError("Something went wrong. Please try again.");

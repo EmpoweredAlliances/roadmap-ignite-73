@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import journeyDiagram from "@/assets/journey-diagram.png";
 
 const LADDER_STEPS = [
   {

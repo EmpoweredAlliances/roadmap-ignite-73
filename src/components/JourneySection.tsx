@@ -89,10 +89,7 @@ const JourneySection = () => (
             leadership team when the time is right.
           </p>
 
-          <p className="mx-auto mt-4 max-w-[540px] font-body text-[13px] italic leading-relaxed text-white/50">
-            This workshop is the starting point —
-            not the whole journey.
-          </p>
+
 
           <p className="mx-auto mt-6 max-w-[600px] font-body text-[13px] leading-relaxed text-white/45">
             Leading with AI gives leaders a live,

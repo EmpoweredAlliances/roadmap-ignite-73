@@ -26,6 +26,7 @@ export const SESSIONS: Session[] = [
     id: "may-01-2026",
     title: "Leading with AI — May 1, 2026",
     date: "2026-05-01T17:00:00Z",
+    start_time: "12:00 PM CT",
     timezone: "CT",
     duration_hours: 2,
     capacity: 20,

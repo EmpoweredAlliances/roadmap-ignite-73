@@ -126,8 +126,8 @@ const JourneySection = () => (
 
 
           <p
-            className="mx-auto mt-6 max-w-[600px] font-body text-[17px] leading-relaxed"
-            style={{ color: "rgba(245,240,232,0.55)" }}
+            className="mx-auto mt-6 max-w-[600px] font-body text-[21px] leading-relaxed"
+            style={{ color: "rgba(245,240,232,0.72)" }}
           >
             Leading with AI gives leaders a live, low-risk way to experience how
             better AI-enabled decisions get made. For companies, it also serves

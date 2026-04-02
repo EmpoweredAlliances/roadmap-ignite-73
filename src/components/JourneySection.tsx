@@ -246,7 +246,7 @@ const JourneySection = () => (
                 <p style={{
                   fontSize: "12px",
                   lineHeight: 1.6,
-                  color: prog.highlight ? "rgba(245,240,232,0.55)" : "rgba(245,240,232,0.35)",
+                  color: prog.highlight ? "rgba(245,240,232,0.55)" : "rgba(245,240,232,0.46)",
                 }}>
                   {prog.desc}
                 </p>

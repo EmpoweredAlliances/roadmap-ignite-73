@@ -14,8 +14,8 @@ export const SESSIONS: Session[] = [
   {
     id: "apr-08-2026",
     title: "Leading with AI — Wednesday, April 8",
-    date: "2026-04-08T16:00:00Z",
-    start_time: "11:00 AM CT",
+    date: "2026-04-08T11:00",
+    start_time: "11:00 AM",
     timezone: "CT",
     duration_hours: 1.5,
     capacity: 20,
@@ -25,8 +25,8 @@ export const SESSIONS: Session[] = [
   {
     id: "apr-14-2026",
     title: "Leading with AI — Tuesday, April 14",
-    date: "2026-04-14T19:00:00Z",
-    start_time: "02:00 PM CT",
+    date: "2026-04-14T14:00",
+    start_time: "02:00 PM",
     timezone: "CT",
     duration_hours: 1.5,
     capacity: 20,
@@ -36,8 +36,8 @@ export const SESSIONS: Session[] = [
   {
     id: "apr-24-2026",
     title: "Leading with AI — Friday, April 24",
-    date: "2026-04-24T18:00:00Z",
-    start_time: "01:00 PM CT",
+    date: "2026-04-24T13:00",
+    start_time: "01:00 PM",
     timezone: "CT",
     duration_hours: 1.5,
     capacity: 20,

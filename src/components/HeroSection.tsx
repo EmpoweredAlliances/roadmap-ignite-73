@@ -192,7 +192,7 @@ const HeroSection = () => {
                 variants={fadeUp}
                 className="mt-6 font-serif text-[44px] font-medium leading-[1.1] sm:text-[52px]"
               >
-                <span className="text-white">You decide.</span>
+                <span className="text-white">Leaders decide.</span>
                 <br />
                 <span className="bg-gradient-to-r from-[#C49B3C] to-[#E8C97A] bg-clip-text text-transparent">
                   AI accelerates.

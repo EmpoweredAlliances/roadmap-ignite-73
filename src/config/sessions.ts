@@ -11,11 +11,12 @@ export interface Session {
 }
 
 export const SESSIONS: Session[] = [
+ 
   {
-    id: "apr-08-2026",
-    title: "Leading with AI — Wednesday, April 8",
-    date: "2026-04-08T11:00",
-    start_time: "11:00 AM",
+    id: "apr-14-2026",
+    title: "Leading with AI — Tuesday, April 14",
+    date: "2026-04-14T14:00",
+    start_time: "02:00 PM",
     timezone: "CT",
     duration_hours: 1.5,
     capacity: 20,
@@ -23,10 +24,10 @@ export const SESSIONS: Session[] = [
     format: "Virtual",
   },
   {
-    id: "apr-14-2026",
-    title: "Leading with AI — Tuesday, April 14",
-    date: "2026-04-14T14:00",
-    start_time: "02:00 PM",
+    id: "apr-22-2026",
+    title: "Leading with AI — Wednesday, April 22",
+    date: "2026-04-22T11:00",
+    start_time: "11:00 AM",
     timezone: "CT",
     duration_hours: 1.5,
     capacity: 20,

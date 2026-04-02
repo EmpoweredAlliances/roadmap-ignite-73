@@ -1,6 +1,7 @@
 import { motion, type Variants } from "framer-motion";
 import { Check, X } from "lucide-react";
 import DualCTAButtons from "@/components/DualCTAButtons";
+import whoIsForBg from "@/assets/who-is-for-bg.png";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 20 },

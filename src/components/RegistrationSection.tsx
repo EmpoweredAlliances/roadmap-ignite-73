@@ -9,11 +9,7 @@ import {
   buildAppleCalendarUrl,
   type Session,
 } from "@/config/sessions";
-
-const GHL_WEBHOOK =
-  "https://services.leadconnectorhq.com/hooks/" +
-  "WNktxTbhl0MIORsBz8Jq/webhook-trigger/" +
-  "a5dd6860-64c4-4835-bcfe-197a5348d38f";
+import { supabase } from "@/integrations/supabase/client";
 
 const HOW_OPTIONS = [
   "Select one (optional)",
@@ -99,14 +95,8 @@ const RegistrationSection = () => {
     setError("");
     setSubmitting(true);
     try {
-      const response = await fetch(GHL_WEBHOOK, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json",
-        },
-        mode: "no-cors",
-        body: JSON.stringify({
+      const { error: fnError } = await supabase.functions.invoke("ghl-webhook", {
+        body: {
           firstName: form.firstName,
           lastName: form.lastName,
           email: form.email,
@@ -151,10 +141,17 @@ const RegistrationSection = () => {
                 timeZone: "America/Chicago",
               }
             );
-            return `${startStr} – ${endStr} ${selectedSession.timezone}`;
+            return (
+              `${startStr} – ${endStr} ` +
+              `${selectedSession.timezone}`
+            );
           })(),
-        }),
+        },
       });
+
+      if (fnError) {
+        throw new Error(fnError.message);
+      }
 
       setConfirmed(true);
 

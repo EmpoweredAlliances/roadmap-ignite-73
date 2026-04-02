@@ -99,47 +99,71 @@ const RegistrationSection = () => {
     setError("");
     setSubmitting(true);
     try {
-      await fetch(GHL_WEBHOOK, {
+      const response = await fetch(GHL_WEBHOOK, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+        },
+        mode: "no-cors",
         body: JSON.stringify({
-          ...form,
+          firstName: form.firstName,
+          lastName: form.lastName,
+          email: form.email,
+          company: form.company,
+          jobTitle: form.jobTitle,
+          howHeard: form.howHeard,
+          referralCode: form.referralCode,
           format: "Virtual",
           source: "leading-with-ai-registration",
           sessionId: selectedSession.id,
           sessionTitle: selectedSession.title,
           sessionDate: (() => {
             const date = new Date(selectedSession.date);
-            const day = String(date.toLocaleDateString("en-US", { day: "numeric", timeZone: "America/Chicago" })).padStart(2, "0");
-            const month = date.toLocaleDateString("en-US", { month: "short", timeZone: "America/Chicago" }).toUpperCase();
-            const year = date.toLocaleDateString("en-US", { year: "numeric", timeZone: "America/Chicago" });
-            const time = date.toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", hour12: false, timeZone: "America/Chicago" });
-            return `${day}-${month}-${year} ${time}`;
+            return date.toLocaleDateString("en-US", {
+              weekday: "long",
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+              timeZone: "America/Chicago",
+            });
           })(),
           sessionTime: (() => {
             const start = new Date(selectedSession.date);
             const end = new Date(
               start.getTime() +
-              selectedSession.duration_hours * 60 * 60 * 1000
+              selectedSession.duration_hours *
+              60 * 60 * 1000
             );
-            const startStr = start.toLocaleTimeString("en-US", {
-              hour: "numeric",
-              minute: "2-digit",
-              timeZone: "America/Chicago",
-            });
-            const endStr = end.toLocaleTimeString("en-US", {
-              hour: "numeric",
-              minute: "2-digit",
-              timeZone: "America/Chicago",
-            });
+            const startStr = start.toLocaleTimeString(
+              "en-US",
+              {
+                hour: "numeric",
+                minute: "2-digit",
+                timeZone: "America/Chicago",
+              }
+            );
+            const endStr = end.toLocaleTimeString(
+              "en-US",
+              {
+                hour: "numeric",
+                minute: "2-digit",
+                timeZone: "America/Chicago",
+              }
+            );
             return `${startStr} – ${endStr} ${selectedSession.timezone}`;
           })(),
         }),
       });
-      
+
       setConfirmed(true);
-    } catch {
-      setError("Something went wrong. Please try again.");
+
+    } catch (err) {
+      console.error("GHL webhook error:", err);
+      setError(
+        "Something went wrong. Please try again " +
+        "or email us at jeff@empoweredalliances.com"
+      );
     } finally {
       setSubmitting(false);
     }

@@ -59,6 +59,7 @@ const RegistrationSection = () => {
   const [focused, setFocused] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [confirmed, setConfirmed] = useState(false);
+  const [submittedSession, setSubmittedSession] = useState<Session | null>(null);
   const [error, setError] = useState("");
 
   useEffect(() => {
@@ -155,6 +156,7 @@ const RegistrationSection = () => {
         throw new Error(fnError.message);
       }
 
+      setSubmittedSession(selectedSession);
       setForm({
         firstName: "",
         lastName: "",
@@ -490,7 +492,7 @@ const RegistrationSection = () => {
 
       {/* ━━━ CONFIRMATION POPUP ━━━ */}
       <AnimatePresence>
-        {confirmed && selectedSession && (
+        {confirmed && submittedSession && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -562,16 +564,16 @@ const RegistrationSection = () => {
               {/* Session detail card */}
               <div className="mb-5 rounded-xl border border-[#C49B3C]/15 bg-[#C49B3C]/[0.06] px-4 py-3">
                 <p className="font-body text-[14px] font-medium text-[#f5f0e8]">
-                  {selectedSession.title}
+                  {submittedSession.title}
                 </p>
                 <p className="mt-1 font-body text-[12px] text-white/40">
                   {(() => {
-                    const date = new Date(selectedSession.date);
+                    const date = new Date(submittedSession.date);
                     const dateStr = date.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", timeZone: "America/Chicago" });
-                    const end = new Date(date.getTime() + selectedSession.duration_hours * 60 * 60 * 1000);
+                    const end = new Date(date.getTime() + submittedSession.duration_hours * 60 * 60 * 1000);
                     const startStr = date.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", timeZone: "America/Chicago" });
                     const endStr = end.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", timeZone: "America/Chicago" });
-                    return `${dateStr} · ${startStr} – ${endStr} ${selectedSession.timezone} · Virtual`;
+                    return `${dateStr} · ${startStr} – ${endStr} ${submittedSession.timezone} · Virtual`;
                   })()}
                 </p>
               </div>
@@ -579,7 +581,7 @@ const RegistrationSection = () => {
               {/* Calendar buttons */}
               <div className="mb-5 flex flex-col gap-2">
                 <a
-                  href={buildGoogleCalendarUrl(selectedSession)}
+                  href={buildGoogleCalendarUrl(submittedSession)}
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
@@ -601,7 +603,7 @@ const RegistrationSection = () => {
                   Add to Google Calendar
                 </a>
                 <a
-                  href={buildAppleCalendarUrl(selectedSession)}
+                  href={buildAppleCalendarUrl(submittedSession)}
                   download="leading-with-ai.ics"
                   style={{
                     display: "flex",

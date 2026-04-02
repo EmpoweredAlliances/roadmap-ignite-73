@@ -9,10 +9,7 @@ import {
   buildAppleCalendarUrl,
   type Session,
 } from "@/config/sessions";
-const GHL_WEBHOOK =
-  "https://services.leadconnectorhq.com/hooks/" +
-  "WNktxTbhl0MIORsBz8Jq/webhook-trigger/" +
-  "a6433cb4-723b-480a-96dc-60dd22be4ca6";
+import { supabase } from "@/integrations/supabase/client";
 
 const HOW_OPTIONS = [
   "Select one (optional)",
@@ -98,28 +95,20 @@ const RegistrationSection = () => {
     setError("");
     setSubmitting(true);
     try {
-      const sessionStart = new Date(
-        selectedSession.date
-      );
+      const sessionStart = new Date(selectedSession.date);
       const sessionEnd = new Date(
         sessionStart.getTime() +
-        selectedSession.duration_hours * 
-        60 * 60 * 1000
+        selectedSession.duration_hours * 60 * 60 * 1000
       );
 
-      const pad = (n: number) =>
-        String(n).padStart(2, "0");
+      const pad = (n: number) => String(n).padStart(2, "0");
 
-      const toChicago = (d: Date) => {
-        return new Date(
-          d.toLocaleString("en-US", {
-            timeZone: "America/Chicago",
-          })
-        );
-      };
+      const toChicago = (d: Date) =>
+        new Date(d.toLocaleString("en-US", { 
+          timeZone: "America/Chicago" 
+        }));
 
       const localStart = toChicago(sessionStart);
-      const localEnd = toChicago(sessionEnd);
 
       const sessionDateFormatted =
         `${pad(localStart.getMonth() + 1)}-` +
@@ -128,54 +117,62 @@ const RegistrationSection = () => {
         `${pad(localStart.getHours())}:` +
         `${pad(localStart.getMinutes())}`;
 
-      const startTimeStr = 
-        sessionStart.toLocaleTimeString("en-US", {
-          hour: "numeric",
-          minute: "2-digit",
-          timeZone: "America/Chicago",
-        });
-      const endTimeStr = 
-        sessionEnd.toLocaleTimeString("en-US", {
-          hour: "numeric",
-          minute: "2-digit",
-          timeZone: "America/Chicago",
-        });
+      const startTimeStr = sessionStart.toLocaleTimeString(
+        "en-US",
+        { hour: "numeric", minute: "2-digit", 
+          timeZone: "America/Chicago" }
+      );
+      const endTimeStr = sessionEnd.toLocaleTimeString(
+        "en-US",
+        { hour: "numeric", minute: "2-digit", 
+          timeZone: "America/Chicago" }
+      );
       const sessionTimeFormatted =
         `${startTimeStr} – ${endTimeStr} ` +
         `${selectedSession.timezone}`;
 
-      const payload = {
-        firstName: form.firstName,
-        lastName: form.lastName,
-        email: form.email,
-        company: form.company,
-        jobTitle: form.jobTitle,
-        howHeard: form.howHeard,
-        referralCode: form.referralCode,
-        format: "Virtual",
-        source: "leading-with-ai-registration",
-        sessionId: selectedSession.id,
-        sessionTitle: selectedSession.title,
-        sessionDate: sessionDateFormatted,
-        sessionTime: sessionTimeFormatted,
-      };
+      const { error: fnError } = await 
+        supabase.functions.invoke("ghl-webhook", {
+          body: {
+            firstName: form.firstName,
+            lastName: form.lastName,
+            email: form.email,
+            company: form.company,
+            jobTitle: form.jobTitle,
+            howHeard: form.howHeard,
+            referralCode: form.referralCode,
+            format: "Virtual",
+            source: "leading-with-ai-registration",
+            sessionId: selectedSession.id,
+            sessionTitle: selectedSession.title,
+            sessionDate: sessionDateFormatted,
+            sessionTime: sessionTimeFormatted,
+          },
+        });
 
-      fetch(GHL_WEBHOOK, {
-        method: "POST",
-        mode: "no-cors",
-        headers: {
-          "Content-Type": "text/plain",
-        },
-        body: JSON.stringify(payload),
+      if (fnError) {
+        console.error("Edge function error:", fnError);
+        throw new Error(fnError.message);
+      }
+
+      setForm({
+        firstName: "",
+        lastName: "",
+        email: "",
+        company: "",
+        jobTitle: "",
+        howHeard: "",
+        referralCode: "",
       });
-
+      setSelectedSession(null);
       setConfirmed(true);
 
     } catch (err) {
       console.error("Submission error:", err);
       setError(
-        "Something went wrong. Please try again " +
-        "or email jeff@empoweredalliances.com"
+        "Something went wrong submitting your " +
+        "registration. Please try again or email " +
+        "jeff@empoweredalliances.com"
       );
     } finally {
       setSubmitting(false);

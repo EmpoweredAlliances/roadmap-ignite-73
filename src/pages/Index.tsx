@@ -27,9 +27,9 @@ const Index = () => {
       <LowFrictionBlock />
       <WhoIsForSection />
       <BuiltForYourSeatSection />
-      <PrimaryCTASection />
       <RegistrationSection />
       <FAQSection />
+      <PrimaryCTASection />
       <FounderSection />
       <FooterSection />
     </div>

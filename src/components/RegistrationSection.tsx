@@ -9,7 +9,10 @@ import {
   buildAppleCalendarUrl,
   type Session,
 } from "@/config/sessions";
-import { supabase } from "@/integrations/supabase/client";
+const GHL_WEBHOOK =
+  "https://services.leadconnectorhq.com/hooks/" +
+  "WNktxTbhl0MIORsBz8Jq/webhook-trigger/" +
+  "a6433cb4-723b-480a-96dc-60dd22be4ca6";
 
 const HOW_OPTIONS = [
   "Select one (optional)",
@@ -95,71 +98,84 @@ const RegistrationSection = () => {
     setError("");
     setSubmitting(true);
     try {
-      const { error: fnError } = await supabase.functions.invoke("ghl-webhook", {
-        body: {
-          firstName: form.firstName,
-          lastName: form.lastName,
-          email: form.email,
-          company: form.company,
-          jobTitle: form.jobTitle,
-          howHeard: form.howHeard,
-          referralCode: form.referralCode,
-          format: "Virtual",
-          source: "leading-with-ai-registration",
-          sessionId: selectedSession.id,
-          sessionTitle: selectedSession.title,
-          sessionDate: (() => {
-            const date = new Date(selectedSession.date);
-            return date.toLocaleDateString("en-US", {
-              weekday: "long",
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-              timeZone: "America/Chicago",
-            });
-          })(),
-          sessionTime: (() => {
-            const start = new Date(selectedSession.date);
-            const end = new Date(
-              start.getTime() +
-              selectedSession.duration_hours *
-              60 * 60 * 1000
-            );
-            const startStr = start.toLocaleTimeString(
-              "en-US",
-              {
-                hour: "numeric",
-                minute: "2-digit",
-                timeZone: "America/Chicago",
-              }
-            );
-            const endStr = end.toLocaleTimeString(
-              "en-US",
-              {
-                hour: "numeric",
-                minute: "2-digit",
-                timeZone: "America/Chicago",
-              }
-            );
-            return (
-              `${startStr} – ${endStr} ` +
-              `${selectedSession.timezone}`
-            );
-          })(),
-        },
-      });
+      const sessionStart = new Date(
+        selectedSession.date
+      );
+      const sessionEnd = new Date(
+        sessionStart.getTime() +
+        selectedSession.duration_hours * 
+        60 * 60 * 1000
+      );
 
-      if (fnError) {
-        throw new Error(fnError.message);
-      }
+      const pad = (n: number) =>
+        String(n).padStart(2, "0");
+
+      const toChicago = (d: Date) => {
+        return new Date(
+          d.toLocaleString("en-US", {
+            timeZone: "America/Chicago",
+          })
+        );
+      };
+
+      const localStart = toChicago(sessionStart);
+      const localEnd = toChicago(sessionEnd);
+
+      const sessionDateFormatted =
+        `${pad(localStart.getMonth() + 1)}-` +
+        `${pad(localStart.getDate())}-` +
+        `${localStart.getFullYear()} ` +
+        `${pad(localStart.getHours())}:` +
+        `${pad(localStart.getMinutes())}`;
+
+      const startTimeStr = 
+        sessionStart.toLocaleTimeString("en-US", {
+          hour: "numeric",
+          minute: "2-digit",
+          timeZone: "America/Chicago",
+        });
+      const endTimeStr = 
+        sessionEnd.toLocaleTimeString("en-US", {
+          hour: "numeric",
+          minute: "2-digit",
+          timeZone: "America/Chicago",
+        });
+      const sessionTimeFormatted =
+        `${startTimeStr} – ${endTimeStr} ` +
+        `${selectedSession.timezone}`;
+
+      const payload = {
+        firstName: form.firstName,
+        lastName: form.lastName,
+        email: form.email,
+        company: form.company,
+        jobTitle: form.jobTitle,
+        howHeard: form.howHeard,
+        referralCode: form.referralCode,
+        format: "Virtual",
+        source: "leading-with-ai-registration",
+        sessionId: selectedSession.id,
+        sessionTitle: selectedSession.title,
+        sessionDate: sessionDateFormatted,
+        sessionTime: sessionTimeFormatted,
+      };
+
+      fetch(GHL_WEBHOOK, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "text/plain",
+        },
+        body: JSON.stringify(payload),
+      });
 
       setConfirmed(true);
 
     } catch (err) {
-      console.error("GHL webhook error:", err);
+      console.error("Submission error:", err);
       setError(
         "Something went wrong. Please try again " +
-        "or email us at jeff@empoweredalliances.com"
+        "or email jeff@empoweredalliances.com"
       );
     } finally {
       setSubmitting(false);
@@ -190,6 +206,7 @@ const RegistrationSection = () => {
           transition={{ duration: 0.5 }}
         >
           {/* Header */}
+          {!confirmed && (
           <div className="mb-8 text-center">
             <div className="mb-4 flex items-center justify-center gap-2">
               <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#C49B3C]" />
@@ -205,8 +222,10 @@ const RegistrationSection = () => {
               2 min to complete · Virtual · Normally $149, free this month
             </p>
           </div>
+          )}
 
           {/* Form card */}
+          {!confirmed && (
           <form
             onSubmit={handleSubmit}
             className="flex flex-col gap-5 rounded-2xl border border-[#C49B3C]/20 bg-white/5 p-8 backdrop-blur-sm"
@@ -468,6 +487,7 @@ const RegistrationSection = () => {
               No spam. Your information is kept confidential.
             </p>
           </form>
+          )}
         </motion.div>
       </div>
 

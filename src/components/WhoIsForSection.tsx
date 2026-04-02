@@ -25,7 +25,15 @@ const notFor = [
 
 const WhoIsForSection = () => {
   return (
-    <section className="bg-card">
+    <section
+      className="relative bg-card"
+      style={{
+        backgroundImage: `url(${whoIsForBg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div className="absolute inset-0 bg-card/85" />
       <div className="mx-auto max-w-[1000px] px-5 py-14 sm:px-8 sm:py-16 lg:py-20">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-5 flex justify-center">
           <span className="section-eyebrow-accent inline-block rounded-full bg-cta/10 px-5 py-2 font-body text-xs font-semibold uppercase tracking-[0.15em] text-cta">

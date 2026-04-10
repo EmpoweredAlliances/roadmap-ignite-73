@@ -13,9 +13,9 @@ export interface Session {
 export const SESSIONS: Session[] = [
  
   {
-    id: "apr-14-2026",
-    title: "Leading with AI — Tuesday, April 14",
-    date: "2026-04-14T14:00",
+    id: "apr-16-2026",
+    title: "Leading with AI — Thursday, April 16",
+    date: "2026-04-16T14:00",
     start_time: "02:00 PM",
     timezone: "CT",
     duration_hours: 1.5,

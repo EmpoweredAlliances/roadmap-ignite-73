@@ -13,17 +13,6 @@ export interface Session {
 export const SESSIONS: Session[] = [
  
   {
-    id: "apr-16-2026",
-    title: "Leading with AI — Thursday, April 16",
-    date: "2026-04-16T14:00",
-    start_time: "02:00 PM",
-    timezone: "CT",
-    duration_hours: 1.5,
-    capacity: 20,
-    registered: 0,
-    format: "Virtual",
-  },
-  {
     id: "apr-22-2026",
     title: "Leading with AI — Wednesday, April 22",
     date: "2026-04-22T11:00",
@@ -39,6 +28,17 @@ export const SESSIONS: Session[] = [
     title: "Leading with AI — Friday, April 24",
     date: "2026-04-24T13:00",
     start_time: "01:00 PM",
+    timezone: "CT",
+    duration_hours: 1.5,
+    capacity: 20,
+    registered: 0,
+    format: "Virtual",
+  },
+    {
+    id: "may-01-2026",
+    title: "Leading with AI — Friday, May 1,
+    date: "2026-05-16T14:00",
+    start_time: "02:00 PM",
     timezone: "CT",
     duration_hours: 1.5,
     capacity: 20,

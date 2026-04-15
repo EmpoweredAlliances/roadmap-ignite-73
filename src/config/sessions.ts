@@ -34,10 +34,10 @@ export const SESSIONS: Session[] = [
     registered: 0,
     format: "Virtual",
   },
-    {
+  {
     id: "may-01-2026",
-    title: "Leading with AI — Friday, May 1,
-    date: "2026-05-16T14:00",
+    title: "Leading with AI — Friday, May 1",
+    date: "2026-05-01T14:00",
     start_time: "02:00 PM",
     timezone: "CT",
     duration_hours: 1.5,

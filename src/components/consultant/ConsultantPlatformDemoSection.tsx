@@ -190,7 +190,7 @@ const ConsultantPlatformDemoSection = () => {
   const ActivePanel = PANELS[activeStep];
 
   return (
-    <section className="bg-white px-5 py-20 sm:px-8">
+    <section className="border-b border-foreground/10 bg-white px-5 py-16 sm:px-8 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-[1200px]">
         {/* Header */}
         <motion.div
@@ -200,7 +200,7 @@ const ConsultantPlatformDemoSection = () => {
           variants={fadeUp}
           className="mb-10 text-center"
         >
-          <span className="mb-4 inline-block font-body text-[11px] font-semibold uppercase tracking-[0.15em] text-[#C49B3C]">
+          <span className="section-eyebrow-accent mb-4 inline-block font-body text-[11px] font-semibold uppercase tracking-[0.15em] text-[#C49B3C]">
             The platform
           </span>
           <h2 className="mb-4 font-serif text-[36px] font-medium leading-[1.2] text-foreground">

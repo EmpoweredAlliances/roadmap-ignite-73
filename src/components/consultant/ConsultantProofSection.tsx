@@ -42,7 +42,7 @@ const ConsultantProofSection = () => (
     <div className="relative mx-auto max-w-[1060px]">
       {/* Header */}
       <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="mb-12 text-center">
-        <span className="mb-4 inline-block font-body text-[11px] font-semibold uppercase tracking-[0.15em] text-[#C49B3C]">What this looks like in practice</span>
+        <span className="section-eyebrow-accent mb-4 inline-block font-body text-[11px] font-semibold uppercase tracking-[0.15em] text-[#C49B3C]">What this looks like in practice</span>
         <h2 className="mb-4 font-serif text-[36px] font-medium leading-[1.2] text-white">From scattered discussion to structured decisions</h2>
         <p className="mx-auto max-w-[560px] font-body text-[17px] leading-relaxed text-white/60">The same leadership conversation — before and after Priority Acceleration.</p>
       </motion.div>

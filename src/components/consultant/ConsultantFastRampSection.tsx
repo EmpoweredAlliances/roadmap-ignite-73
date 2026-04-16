@@ -43,24 +43,23 @@ const ConsultantFastRampSection = () => {
   return (
     <section
       id="fastramp"
-      className="relative overflow-hidden px-5 py-20 sm:px-8"
+      className="relative overflow-hidden px-5 py-16 sm:px-8 sm:py-20 lg:py-24"
       style={{
         background: "linear-gradient(180deg, #0f1f3d 0%, #132a4a 50%, #0f1f3d 100%)",
+        borderTop: "0.5px solid rgba(255,255,255,0.06)",
+        borderBottom: "0.5px solid rgba(255,255,255,0.06)",
       }}
     >
-      {/* Dot texture */}
       <div
         className="pointer-events-none absolute inset-0"
         style={{
           opacity: 0.035,
-          backgroundImage:
-            "radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px)",
+          backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px)",
           backgroundSize: "24px 24px",
         }}
       />
 
-      <div className="relative mx-auto max-w-[960px]">
-        {/* Header */}
+      <div className="relative mx-auto max-w-[1200px]">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -68,7 +67,7 @@ const ConsultantFastRampSection = () => {
           variants={fadeUp}
           className="mb-10 text-center"
         >
-          <span className="mb-4 inline-block font-body text-[11px] font-semibold uppercase tracking-[0.15em] text-[#C49B3C]">
+          <span className="section-eyebrow-accent mb-4 inline-block font-body text-[11px] font-semibold uppercase tracking-[0.15em] text-[#C49B3C]">
             Fast Ramp Partner Program
           </span>
           <h2 className="mb-4 font-serif text-[36px] font-medium leading-[1.2] text-white">
@@ -79,7 +78,6 @@ const ConsultantFastRampSection = () => {
           </p>
         </motion.div>
 
-        {/* Tabs */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -102,7 +100,6 @@ const ConsultantFastRampSection = () => {
           ))}
         </motion.div>
 
-        {/* Tab content */}
         <AnimatePresence mode="wait">
           <motion.div
             key={activePathway}
@@ -110,9 +107,8 @@ const ConsultantFastRampSection = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -16 }}
             transition={{ duration: 0.35, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="grid grid-cols-1 gap-10 lg:grid-cols-2"
+            className="mx-auto max-w-[960px] grid grid-cols-1 gap-10 lg:grid-cols-2"
           >
-            {/* Left — text */}
             <div className="flex flex-col justify-center">
               <h3 className="mb-4 font-serif text-[26px] font-medium leading-[1.2] text-[#E8C97A]">
                 {current.title}
@@ -122,7 +118,6 @@ const ConsultantFastRampSection = () => {
               </p>
             </div>
 
-            {/* Right — steps */}
             <motion.div
               variants={staggerContainer}
               initial="hidden"
@@ -131,21 +126,13 @@ const ConsultantFastRampSection = () => {
             >
               <div className="flex flex-col gap-4">
                 {current.steps.map((step) => (
-                  <motion.div
-                    key={step.num}
-                    variants={fadeUp}
-                    className="flex items-start gap-4"
-                  >
+                  <motion.div key={step.num} variants={fadeUp} className="flex items-start gap-4">
                     <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-[#C49B3C]/40 bg-[#C49B3C]/15 font-body text-[11px] font-bold text-[#E8C97A]">
                       {step.num}
                     </div>
                     <div>
-                      <span className="font-body text-[14px] font-semibold text-white">
-                        {step.label}
-                      </span>
-                      <span className="font-body text-[14px] text-white/60">
-                        {" — "}{step.text}
-                      </span>
+                      <span className="font-body text-[14px] font-semibold text-white">{step.label}</span>
+                      <span className="font-body text-[14px] text-white/60">{" — "}{step.text}</span>
                     </div>
                   </motion.div>
                 ))}
@@ -154,8 +141,7 @@ const ConsultantFastRampSection = () => {
           </motion.div>
         </AnimatePresence>
 
-        {/* Bridge line */}
-        <div className="mt-10 border-t border-white/10 pt-8 text-center">
+        <div className="mx-auto max-w-[960px] mt-10 border-t border-white/10 pt-8 text-center">
           <p className="mx-auto max-w-[640px] font-body text-[15px] italic text-white/50">
             In both models, your expertise stays visible. Empowered Alliances helps power the structure, facilitation, and decision flow.
           </p>

@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
-const ease = [0.25, 0.46, 0.45, 0.94] as const;
+const ease: [number, number, number, number] = [0.25, 0.46, 0.45, 0.94];
 
 const YOU_BRING = [
   "The client relationship",

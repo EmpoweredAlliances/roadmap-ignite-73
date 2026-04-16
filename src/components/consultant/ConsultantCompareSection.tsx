@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
 
 const fadeUp: Variants = {
@@ -26,13 +25,15 @@ const PANELS = [
 
 const ConsultantCompareSection = () => {
   const [active, setActive] = useState(0);
-  const location = useLocation();
 
   useEffect(() => {
-    if (location.hash === "#whitelabel") {
-      setActive(1);
-    }
-  }, [location.hash]);
+    const onHash = () => {
+      if (window.location.hash === "#whitelabel") setActive(1);
+    };
+    onHash();
+    window.addEventListener("hashchange", onHash);
+    return () => window.removeEventListener("hashchange", onHash);
+  }, []);
 
   return (
     <section

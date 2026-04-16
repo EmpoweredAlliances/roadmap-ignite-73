@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
 
 const fadeUp: Variants = {
@@ -25,6 +25,15 @@ const PANELS = [
 
 const ConsultantCompareSection = () => {
   const [active, setActive] = useState(0);
+
+  useEffect(() => {
+    const onHash = () => {
+      if (window.location.hash === "#whitelabel") setActive(1);
+    };
+    onHash();
+    window.addEventListener("hashchange", onHash);
+    return () => window.removeEventListener("hashchange", onHash);
+  }, []);
 
   return (
     <section

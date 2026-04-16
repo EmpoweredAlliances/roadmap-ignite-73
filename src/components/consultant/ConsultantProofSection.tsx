@@ -31,8 +31,8 @@ const PRIORITIES = [
 
 const ConsultantProofSection = () => (
   <section
-    className="relative overflow-hidden px-5 py-20 sm:px-8"
-    style={{ background: "linear-gradient(180deg, #0f1f3d 0%, #132a4a 50%, #0f1f3d 100%)" }}
+    className="relative overflow-hidden px-5 py-16 sm:px-8 sm:py-20 lg:py-24"
+    style={{ background: "linear-gradient(180deg, #0f1f3d 0%, #132a4a 50%, #0f1f3d 100%)", borderTop: "0.5px solid rgba(255,255,255,0.06)", borderBottom: "0.5px solid rgba(255,255,255,0.06)" }}
   >
     <div
       className="pointer-events-none absolute inset-0"

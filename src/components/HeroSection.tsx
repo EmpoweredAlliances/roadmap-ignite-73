@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { motion, useInView, type Variants } from "framer-motion";
 import eaLogo from "@/assets/ea-logo.png";
 
@@ -132,15 +133,25 @@ const HeroSection = () => {
 
           {/* Center: links (hidden on mobile) */}
           <div className="hidden items-center gap-7 md:flex">
-            {NAV_LINKS.map((link) => (
-              <a
-                key={link}
-                href={`#${link.toLowerCase().replace(/\s+/g, "-")}`}
-                className="font-body text-[13px] text-white/70 transition-colors hover:text-white"
-              >
-                {link}
-              </a>
-            ))}
+            {NAV_LINKS.map((link) =>
+              link === "For consultants" ? (
+                <Link
+                  key={link}
+                  to="/for-consultants"
+                  className="font-body text-[13px] text-white/70 transition-colors hover:text-white"
+                >
+                  {link}
+                </Link>
+              ) : (
+                <a
+                  key={link}
+                  href={`#${link.toLowerCase().replace(/\s+/g, "-")}`}
+                  className="font-body text-[13px] text-white/70 transition-colors hover:text-white"
+                >
+                  {link}
+                </a>
+              )
+            )}
           </div>
 
           {/* Right: CTA */}

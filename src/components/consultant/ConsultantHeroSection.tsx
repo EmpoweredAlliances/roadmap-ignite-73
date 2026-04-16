@@ -209,6 +209,7 @@ const ConsultantHeroSection = () => {
               >
                 <a
                   href="#fastramp"
+                  onClick={(e) => { e.preventDefault(); document.getElementById("fastramp")?.scrollIntoView({ behavior: "smooth" }); }}
                   className="btn-shimmer inline-flex items-center gap-3 rounded-lg px-8 py-4 font-body text-[15px] font-bold shadow-lg transition-all duration-200 hover:shadow-xl"
                   style={{
                     background: "linear-gradient(135deg, #C49B3C, #E8C97A)",
@@ -219,6 +220,7 @@ const ConsultantHeroSection = () => {
                 </a>
                 <a
                   href="#whitelabel"
+                  onClick={(e) => { e.preventDefault(); document.getElementById("whitelabel")?.scrollIntoView({ behavior: "smooth" }); }}
                   className="inline-flex items-center gap-3 rounded-lg border-2 border-white/30 px-8 py-4 font-body text-[15px] font-bold text-white transition-all duration-200 hover:border-white/60 hover:bg-white/10"
                 >
                   Ask About White Label

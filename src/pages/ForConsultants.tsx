@@ -12,7 +12,7 @@ import ConsultantFinalCTASection from "@/components/consultant/ConsultantFinalCT
 import FooterSection from "@/components/FooterSection";
 
 const ForConsultants = () => (
-  <div className="min-h-screen">
+  <div className="min-h-screen scroll-smooth">
     <ConsultantHeroSection />
     <ConsultantProblemSection />
     <ConsultantFastRampSection />

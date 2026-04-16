@@ -19,7 +19,7 @@ const POINTS = [
 ];
 
 const ConsultantProblemSection = () => (
-  <section className="border-b border-foreground/10 bg-white px-5 py-20 sm:px-8">
+  <section className="border-b border-foreground/10 bg-white px-5 py-16 sm:px-8 sm:py-20 lg:py-24">
     <div className="mx-auto max-w-[800px]">
       {/* Eyebrow */}
       <motion.div
@@ -30,13 +30,12 @@ const ConsultantProblemSection = () => (
         className="mb-5 flex items-center justify-center gap-4"
       >
         <div className="h-px w-8 bg-[#C49B3C]/40" />
-        <span className="font-body text-[11px] font-semibold uppercase tracking-[0.15em] text-[#C49B3C]">
+        <span className="section-eyebrow-accent font-body text-[11px] font-semibold uppercase tracking-[0.15em] text-[#C49B3C]">
           The opportunity
         </span>
         <div className="h-px w-8 bg-[#C49B3C]/40" />
       </motion.div>
 
-      {/* Headline */}
       <motion.h2
         initial="hidden"
         whileInView="visible"
@@ -49,7 +48,6 @@ const ConsultantProblemSection = () => (
         They need better decisions.
       </motion.h2>
 
-      {/* Body */}
       <motion.p
         initial="hidden"
         whileInView="visible"
@@ -60,7 +58,6 @@ const ConsultantProblemSection = () => (
         Many consultants already have strong expertise, trusted relationships, and valuable programs in market. What's often missing is a structured way to help clients move from discussion to aligned priorities, documented rationale, and clear next steps. That's where Empowered Alliances fits.
       </motion.p>
 
-      {/* Proof points */}
       <motion.div
         initial="hidden"
         whileInView="visible"

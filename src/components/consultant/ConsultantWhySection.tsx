@@ -20,10 +20,10 @@ const CARDS = [
 ];
 
 const ConsultantWhySection = () => (
-  <section className="bg-background px-5 py-20 sm:px-8">
-    <div className="mx-auto max-w-[1060px]">
+  <section className="border-b border-foreground/10 bg-background px-5 py-16 sm:px-8 sm:py-20 lg:py-24">
+    <div className="mx-auto max-w-[1200px]">
       <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={itemVariants} className="mb-10 text-center">
-        <span className="mb-4 inline-block font-body text-[11px] font-semibold uppercase tracking-[0.15em] text-[#C49B3C]">For your practice</span>
+        <span className="section-eyebrow-accent mb-4 inline-block font-body text-[11px] font-semibold uppercase tracking-[0.15em] text-[#C49B3C]">For your practice</span>
         <h2 className="font-serif text-[36px] font-medium leading-[1.2] text-foreground">Why this works for consultants and advisors</h2>
       </motion.div>
 

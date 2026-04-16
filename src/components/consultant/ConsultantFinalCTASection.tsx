@@ -9,7 +9,6 @@ const BOOKING_URL = "https://api.aiforbusiness.com/widget/booking/YT4jENzU1MfAIw
 
 const ConsultantFinalCTASection = () => (
   <section id="final" className="relative overflow-hidden bg-primary">
-    {/* Grid overlay */}
     <div
       className="pointer-events-none absolute inset-0"
       style={{
@@ -20,7 +19,7 @@ const ConsultantFinalCTASection = () => (
       }}
     />
 
-    <div className="relative mx-auto max-w-[700px] px-5 py-20 text-center sm:px-8">
+    <div className="relative mx-auto max-w-[700px] px-5 py-16 text-center sm:px-8 sm:py-20 lg:py-24">
       <motion.h2
         initial="hidden"
         whileInView="visible"
@@ -55,10 +54,7 @@ const ConsultantFinalCTASection = () => (
           target="_blank"
           rel="noopener noreferrer"
           className="btn-shimmer inline-flex items-center gap-3 rounded-lg px-8 py-4 font-body text-[15px] font-bold shadow-lg transition-all duration-200 hover:shadow-xl"
-          style={{
-            background: "linear-gradient(135deg, #C49B3C, #E8C97A)",
-            color: "#0f1f3d",
-          }}
+          style={{ background: "linear-gradient(135deg, #C49B3C, #E8C97A)", color: "#0f1f3d" }}
         >
           Start a Fast Ramp Conversation →
         </a>

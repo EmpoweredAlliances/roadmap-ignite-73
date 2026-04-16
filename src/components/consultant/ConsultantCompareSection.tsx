@@ -29,26 +29,27 @@ const ConsultantCompareSection = () => {
   return (
     <section
       id="whitelabel"
-      className="relative overflow-hidden px-5 py-20 sm:px-8"
-      style={{ background: "linear-gradient(135deg, #0f1f3d 0%, #1a3a5c 45%, #0d2818 100%)" }}
+      className="relative overflow-hidden px-5 py-16 sm:px-8 sm:py-20 lg:py-24"
+      style={{
+        background: "linear-gradient(135deg, #0f1f3d 0%, #1a3a5c 45%, #0d2818 100%)",
+        borderTop: "0.5px solid rgba(255,255,255,0.06)",
+        borderBottom: "0.5px solid rgba(255,255,255,0.06)",
+      }}
     >
       <div className="pointer-events-none absolute inset-0" style={{ opacity: 0.035, backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px)", backgroundSize: "24px 24px" }} />
 
-      <div className="relative mx-auto max-w-[800px]">
+      <div className="relative mx-auto max-w-[1200px]">
         <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-8 text-center font-serif text-[36px] font-medium leading-[1.2] text-white">
           Which partnership path fits you best?
         </motion.h2>
 
-        {/* Toggle */}
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mx-auto mb-10 flex max-w-[480px] rounded-xl bg-white/4 p-1">
           {TABS.map((tab, i) => (
             <button
               key={tab}
               onClick={() => setActive(i)}
               className={`flex-1 rounded-lg px-4 py-2.5 font-body text-[14px] font-semibold transition-all duration-200 ${
-                active === i
-                  ? "bg-[#C49B3C]/15 text-[#E8C97A] shadow-md"
-                  : "text-white/50 hover:text-white/70"
+                active === i ? "bg-[#C49B3C]/15 text-[#E8C97A] shadow-md" : "text-white/50 hover:text-white/70"
               }`}
             >
               {tab}
@@ -56,7 +57,6 @@ const ConsultantCompareSection = () => {
           ))}
         </motion.div>
 
-        {/* Panels */}
         <AnimatePresence mode="wait">
           <motion.div
             key={active}
@@ -64,7 +64,7 @@ const ConsultantCompareSection = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -16 }}
             transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="grid grid-cols-1 gap-4 sm:grid-cols-2"
+            className="mx-auto max-w-[800px] grid grid-cols-1 gap-4 sm:grid-cols-2"
           >
             {PANELS[active].cards.map((card) => (
               <div key={card.title} className="rounded-[14px] border border-white/8 bg-white/4 p-6">

@@ -26,6 +26,13 @@ const PANELS = [
 
 const ConsultantCompareSection = () => {
   const [active, setActive] = useState(0);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === "#whitelabel") {
+      setActive(1);
+    }
+  }, [location.hash]);
 
   return (
     <section

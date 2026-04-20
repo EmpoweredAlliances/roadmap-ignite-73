@@ -34,7 +34,7 @@ const fadeUp: Variants = {
 
 const BOOKING_URL = "https://api.aiforbusiness.com/widget/booking/SMmXrKS1j5mBJBMRobfg";
 
-const NAV_LINKS = ["How it works", "Programs", "For consultants", "Results"];
+const NAV_LINKS = ["How it works", "Programs", "For consultants"];
 
 const STATS = [
   { target: 90, prefix: "", suffix: " min", label: "vs. 4–8 weeks of strategy cycles" },

@@ -82,7 +82,7 @@ const FinalCTASection = () => {
                 color: "#0f1f3d",
               }}
             >
-              Reserve a Seat – <span className="line-through opacity-70">$149</span>{" "}Free
+              Schedule a Conversation
               <ArrowRight className="h-5 w-5" />
             </a>
 

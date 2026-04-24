@@ -215,7 +215,7 @@ const RegistrationSection = () => {
               <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#C49B3C]" />
             </div>
             <p className="font-body text-[16px] text-white/60">
-              Join a free Leading with AI session
+              Join a free Leading with AI session for consultants to explore possibilities
             </p>
             <p className="mt-2 font-body text-[13px] text-white/60">
               2 min to complete · Virtual · Normally $149, free this month

@@ -204,7 +204,7 @@ const OutcomesSection = () => (
         }}
       >
         <a
-          href="#register"
+          href="https://api.aiforbusiness.com/widget/booking/SMmXrKS1j5mBJBMRobfg"
           style={{
             display: "inline-flex",
             alignItems: "center",
@@ -234,15 +234,7 @@ const OutcomesSection = () => (
               "translateY(0)";
           }}
         >
-          Reserve a Seat —{" "}
-          <span style={{
-            textDecoration: "line-through",
-            opacity: 0.6,
-            fontWeight: 400,
-          }}>
-            $149
-          </span>{" "}
-          Free →
+          Schedule a Conversation →
         </a>
       </motion.div>
     </div>

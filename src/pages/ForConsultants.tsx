@@ -9,6 +9,7 @@ import ConsultantWhySection from "@/components/consultant/ConsultantWhySection";
 import ConsultantCompareSection from "@/components/consultant/ConsultantCompareSection";
 import ConsultantFAQSection from "@/components/consultant/ConsultantFAQSection";
 import ConsultantFinalCTASection from "@/components/consultant/ConsultantFinalCTASection";
+import RegistrationSection from "@/components/RegistrationSection";
 import FooterSection from "@/components/FooterSection";
 
 const ForConsultants = () => (
@@ -24,6 +25,7 @@ const ForConsultants = () => (
     <ConsultantCompareSection />
     <ConsultantFAQSection />
     <ConsultantFinalCTASection />
+    <RegistrationSection />
     <FooterSection />
   </div>
 );

@@ -20,14 +20,9 @@ const DualCTAButtons = ({ variant = "light", compact = false }: CTAButtonProps) 
           color: "#0f1f3d",
         }}
       >
-        Reserve a Seat – <span className="line-through opacity-70">$149</span>{" "}Free
+        Schedule a Conversation
         <ArrowRight className="h-5 w-5" />
       </a>
-      {!compact && (
-        <p className={`font-body text-sm ${isDark ? "text-white" : "text-muted-foreground"}`}>
-          Schedule a conversation or register for an upcoming session
-        </p>
-      )}
     </div>
   );
 };

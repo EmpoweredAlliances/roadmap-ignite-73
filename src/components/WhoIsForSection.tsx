@@ -9,7 +9,7 @@ const fadeUp: Variants = {
 };
 
 const perfectFor = [
-  "Executives or functional/business VPs from small and midsized companies",
+  
   "Leaders experimenting with AI or ready to start",
   "Internal AI initiative leads responsible for building clarity and a decision path",
   "Leadership teams stuck between AI urgency and AI confusion",

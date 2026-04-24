@@ -24,28 +24,15 @@ const PrimaryCTASection = () => (
         className="mt-8 flex flex-col items-center gap-4"
       >
         <a
-          href="#register"
+          href="https://api.aiforbusiness.com/widget/booking/SMmXrKS1j5mBJBMRobfg"
           className="btn-shimmer mb-4 inline-flex items-center gap-3 rounded-lg px-10 py-4 font-body text-[16px] font-bold shadow-lg transition-all duration-200 hover:shadow-xl"
           style={{
             background: "linear-gradient(135deg, #C49B3C, #E8C97A)",
             color: "#0f1f3d",
           }}
         >
-          Reserve a Seat
+          Schedule a Conversation
           <ArrowRight className="h-4 w-4" />
-        </a>
-        <a
-          href="https://api.aiforbusiness.com/widget/booking/4fA8ynDeW5IRfskSEjQ6"
-          className="font-body text-[13px] transition-colors duration-200"
-          style={{ color: "rgba(245,240,232,0.4)" }}
-          onMouseEnter={(e) =>
-            (e.currentTarget.style.color = "rgba(245,240,232,0.75)")
-          }
-          onMouseLeave={(e) =>
-            (e.currentTarget.style.color = "rgba(245,240,232,0.4)")
-          }
-        >
-          Prefer to talk first? Schedule a conversation →
         </a>
       </motion.div>
     </div>

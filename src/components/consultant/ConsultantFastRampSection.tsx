@@ -17,7 +17,7 @@ const tabContent = [
     description:
       "You introduce clients to an Empowered Alliances session and co-facilitate alongside our methodology. Your domain expertise shapes the conversation. The platform handles structure, AI synthesis, and documentation. Clients get a premium decision experience — and you stay in the trusted advisor seat throughout.",
     steps: [
-      { num: "01", label: "Introduce", text: "Connect your client to an EA session" },
+      { num: "01", label: "Introduce", text: "Schedule an intro conversation with your client" },
       { num: "02", label: "Co-facilitate", text: "Contribute your domain expertise live" },
       { num: "03", label: "Deliver outputs", text: "Client gets ranked priorities + decision record" },
       { num: "04", label: "Extend", text: "Follow up with advisory or implementation work" },

@@ -120,6 +120,25 @@ const WorkflowSection = () => {
           />
         </motion.div>
 
+        {/* Video embed */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
+          className="mx-auto mb-14 w-full max-w-[900px]"
+        >
+          <div className="relative overflow-hidden rounded-2xl border border-white/[0.08] shadow-2xl" style={{ aspectRatio: "16 / 9" }}>
+            <iframe
+              src="https://www.youtube.com/embed/MTME7Rz1Vz4?autoplay=1&mute=1&playsinline=1&rel=0"
+              title="Leading with AI"
+              allow="autoplay; encrypted-media; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 h-full w-full"
+            />
+          </div>
+        </motion.div>
+
         {/* Stage description cards */}
         <motion.div
           initial="hidden"

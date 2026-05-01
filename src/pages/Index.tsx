@@ -26,10 +26,10 @@ const Index = () => {
       <OutcomesSection />
       <LowFrictionBlock />
       <WhoIsForSection />
+      <PrimaryCTASection />
       <BuiltForYourSeatSection />
       
       <FAQSection />
-      <PrimaryCTASection />
       <FounderSection />
       <FooterSection />
     </div>

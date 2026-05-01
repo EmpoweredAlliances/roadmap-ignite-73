@@ -140,17 +140,10 @@ const WorkflowSection = () => {
         </motion.div>
 
         {/* Stage description cards */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={containerVariants}
-          className="grid gap-4 sm:grid-cols-2"
-        >
+        <div className="grid gap-4 sm:grid-cols-2">
           {stages.map((stage) => (
-            <motion.div
+            <div
               key={stage.number}
-              variants={itemVariants}
               className="rounded-2xl border border-white/[0.08] p-6 sm:p-7"
               style={{
                 background: "rgba(255,255,255,0.04)",
@@ -194,9 +187,9 @@ const WorkflowSection = () => {
               <p className="font-body text-[14px] leading-relaxed text-white/60">
                 {stage.description}
               </p>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Bottom connector to next section */}
         <motion.div

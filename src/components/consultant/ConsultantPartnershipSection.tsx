@@ -5,7 +5,7 @@ const ease: [number, number, number, number] = [0.25, 0.46, 0.45, 0.94];
 
 const YOU_BRING = [
   "The client relationship",
-  "Industry or functional expertise",
+  "INDUSTRY / FUNCTION expertise",
   "Strategic context",
   "Credibility and continuity",
 ];

@@ -297,7 +297,7 @@ const RegistrationSection = () => {
                 onFocus={() => setFocused("jobTitle")}
                 onBlur={() => setFocused("")}
                 style={getFocusStyle("jobTitle")}
-                placeholder="Your role"
+                placeholder="Your Expertise"
               />
             </div>
 

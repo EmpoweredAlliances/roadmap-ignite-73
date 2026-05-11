@@ -4,25 +4,25 @@ import { motion, useInView } from "framer-motion";
 const ease: [number, number, number, number] = [0.25, 0.46, 0.45, 0.94];
 
 const YOU_BRING = [
-  "The client relationship",
-  "INDUSTRY / FUNCTION expertise",
-  "Strategic context",
-  "Credibility and continuity",
+  "CLIENT RELATIONSHIP",
+  "INDUSTRY / FUNCTION EXPERTISE",
+  "STRATEGIC CONTEXT",
+  "CREDIBILITY / CONTINUITY",
 ];
 
 const WE_BRING = [
-  "Priority Acceleration methodology",
-  "Facilitation support & decision flow",
-  "Priority Acceleration platform",
-  "Structured outputs & artifacts",
+  "PRIORITY ACCELERATION METHODOLOGY",
+  "FACILITATION SUPPORT / DECISION FLOW",
+  "PRIORITY ACCELERATION PLATFORM",
+  "STRUCTURED OUTPUTS / ARTIFACTS",
 ];
 
 const CLIENT_GETS = [
-  "Faster alignment",
-  "Better-organized decision-making",
-  "More engaging working sessions",
-  "Documented rationale behind priorities",
-  "Clearer next steps after every workshop",
+  "FASTER ALIGNMENT",
+  "BETTER-ORGANIZED DECISION-MAKING",
+  "MORE ENGAGING WORKING SESSIONS",
+  "DOCUMENTED RATIONALE BEHIND PRIORITIES",
+  "CLEARER NEXT STEPS AFTER EVERY WORKSHOP",
 ];
 
 const Dot = ({ color }: { color: string }) => (

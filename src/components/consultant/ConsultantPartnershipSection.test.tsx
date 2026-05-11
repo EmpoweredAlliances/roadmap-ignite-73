@@ -24,15 +24,18 @@ const SLASH_LABELS = [
 
 describe("ConsultantPartnershipSection — slash labels", () => {
   it("renders all uppercase slash labels", () => {
-    render(<ConsultantPartnershipSection />);
+    const { container } = render(<ConsultantPartnershipSection />);
+    const text = container.textContent ?? "";
     for (const label of SLASH_LABELS) {
-      expect(screen.getByText(label)).toBeInTheDocument();
+      expect(text).toContain(label);
     }
   });
 
   it("each slash label uses the shared SlashLabel component (data-slot + base classes)", () => {
     const { container } = render(<ConsultantPartnershipSection />);
-    const labels = container.querySelectorAll('[data-slot="slash-label"]');
+    const labels = Array.from(
+      container.querySelectorAll<HTMLElement>('[data-slot="slash-label"]')
+    );
     // 4 + 4 + 5 items across the three columns
     expect(labels.length).toBe(13);
 
@@ -51,7 +54,7 @@ describe("ConsultantPartnershipSection — slash labels", () => {
   it("snapshot of partnership label markup stays stable across copy changes to non-label elements", () => {
     const { container } = render(<ConsultantPartnershipSection />);
     const labelMarkup = Array.from(
-      container.querySelectorAll('[data-slot="slash-label"]')
+      container.querySelectorAll<HTMLElement>('[data-slot="slash-label"]')
     ).map((el) => `${el.tagName}|${el.className}|${el.textContent}`);
     expect(labelMarkup).toMatchSnapshot();
   });

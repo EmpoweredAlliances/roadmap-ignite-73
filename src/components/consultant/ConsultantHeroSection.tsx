@@ -220,12 +220,10 @@ const ConsultantHeroSection = () => {
                 Schedule a Conversation →
               </a>
               <a
-                href={BOOKING_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#register"
                 className="inline-flex items-center gap-3 rounded-lg border-2 border-white/30 px-8 py-4 font-body text-[15px] font-bold text-white transition-all duration-200 hover:border-white/60 hover:bg-white/10"
               >
-                Schedule a Conversation
+                Claim a Seat of Consultant Workshop
               </a>
               </motion.div>
 

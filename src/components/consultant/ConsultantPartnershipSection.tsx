@@ -88,7 +88,7 @@ const ConsultantPartnershipSection = () => {
               {WE_BRING.map((item) => (
                 <li key={item} className="flex items-start gap-2.5">
                   <Dot color="#C49B3C" />
-                  <span className={`${slashLabelClass} text-white/75`}>{item}</span>
+                  <SlashLabel tone="onDark">{item}</SlashLabel>
                 </li>
               ))}
             </ul>

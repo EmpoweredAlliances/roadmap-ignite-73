@@ -1,0 +1,19 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ConsultantPartnershipSection — slash labels > snapshot of partnership label markup stays stable across copy changes to non-label elements 1`] = `
+[
+  "SPAN|font-body text-[12px] sm:text-[13px] font-semibold uppercase tracking-[0.08em] leading-[1.5] break-words [word-spacing:0.05em] text-foreground|CLIENT RELATIONSHIP",
+  "SPAN|font-body text-[12px] sm:text-[13px] font-semibold uppercase tracking-[0.08em] leading-[1.5] break-words [word-spacing:0.05em] text-foreground|INDUSTRY / FUNCTION EXPERTISE",
+  "SPAN|font-body text-[12px] sm:text-[13px] font-semibold uppercase tracking-[0.08em] leading-[1.5] break-words [word-spacing:0.05em] text-foreground|STRATEGIC CONTEXT",
+  "SPAN|font-body text-[12px] sm:text-[13px] font-semibold uppercase tracking-[0.08em] leading-[1.5] break-words [word-spacing:0.05em] text-foreground|CREDIBILITY / CONTINUITY",
+  "SPAN|font-body text-[12px] sm:text-[13px] font-semibold uppercase tracking-[0.08em] leading-[1.5] break-words [word-spacing:0.05em] text-white/75|PRIORITY ACCELERATION METHODOLOGY",
+  "SPAN|font-body text-[12px] sm:text-[13px] font-semibold uppercase tracking-[0.08em] leading-[1.5] break-words [word-spacing:0.05em] text-white/75|FACILITATION SUPPORT / DECISION FLOW",
+  "SPAN|font-body text-[12px] sm:text-[13px] font-semibold uppercase tracking-[0.08em] leading-[1.5] break-words [word-spacing:0.05em] text-white/75|PRIORITY ACCELERATION PLATFORM",
+  "SPAN|font-body text-[12px] sm:text-[13px] font-semibold uppercase tracking-[0.08em] leading-[1.5] break-words [word-spacing:0.05em] text-white/75|STRUCTURED OUTPUTS / ARTIFACTS",
+  "SPAN|font-body text-[12px] sm:text-[13px] font-semibold uppercase tracking-[0.08em] leading-[1.5] break-words [word-spacing:0.05em] text-foreground|FASTER ALIGNMENT",
+  "SPAN|font-body text-[12px] sm:text-[13px] font-semibold uppercase tracking-[0.08em] leading-[1.5] break-words [word-spacing:0.05em] text-foreground|BETTER-ORGANIZED DECISION-MAKING",
+  "SPAN|font-body text-[12px] sm:text-[13px] font-semibold uppercase tracking-[0.08em] leading-[1.5] break-words [word-spacing:0.05em] text-foreground|MORE ENGAGING WORKING SESSIONS",
+  "SPAN|font-body text-[12px] sm:text-[13px] font-semibold uppercase tracking-[0.08em] leading-[1.5] break-words [word-spacing:0.05em] text-foreground|DOCUMENTED RATIONALE BEHIND PRIORITIES",
+  "SPAN|font-body text-[12px] sm:text-[13px] font-semibold uppercase tracking-[0.08em] leading-[1.5] break-words [word-spacing:0.05em] text-foreground|CLEARER NEXT STEPS AFTER EVERY WORKSHOP",
+]
+`;

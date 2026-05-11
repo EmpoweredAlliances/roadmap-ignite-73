@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { SlashLabel } from "@/components/ui/SlashLabel";
 
 const ease: [number, number, number, number] = [0.25, 0.46, 0.45, 0.94];
 
@@ -28,10 +29,6 @@ const CLIENT_GETS = [
 const Dot = ({ color }: { color: string }) => (
   <span className="mt-[7px] inline-block h-1.5 w-1.5 shrink-0 rounded-full" style={{ background: color }} />
 );
-
-// Shared style for uppercase slash-based labels — ensures clean wrapping on mobile
-const slashLabelClass =
-  "font-body text-[12px] sm:text-[13px] font-semibold uppercase tracking-[0.08em] leading-[1.5] break-words [word-spacing:0.05em]";
 
 const ConsultantPartnershipSection = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -70,7 +67,7 @@ const ConsultantPartnershipSection = () => {
               {YOU_BRING.map((item) => (
                 <li key={item} className="flex items-start gap-2.5">
                   <Dot color="#4EB8A0" />
-                  <span className={`${slashLabelClass} text-foreground`}>{item}</span>
+                  <SlashLabel tone="default">{item}</SlashLabel>
                 </li>
               ))}
             </ul>
@@ -91,7 +88,7 @@ const ConsultantPartnershipSection = () => {
               {WE_BRING.map((item) => (
                 <li key={item} className="flex items-start gap-2.5">
                   <Dot color="#C49B3C" />
-                  <span className={`${slashLabelClass} text-white/75`}>{item}</span>
+                  <SlashLabel tone="onDark">{item}</SlashLabel>
                 </li>
               ))}
             </ul>
@@ -144,7 +141,7 @@ const ConsultantPartnershipSection = () => {
               {CLIENT_GETS.map((item) => (
                 <li key={item} className="flex items-start gap-2.5">
                   <Dot color="hsl(142, 72%, 38%)" />
-                  <span className={`${slashLabelClass} text-foreground`}>{item}</span>
+                  <SlashLabel tone="default">{item}</SlashLabel>
                 </li>
               ))}
             </ul>

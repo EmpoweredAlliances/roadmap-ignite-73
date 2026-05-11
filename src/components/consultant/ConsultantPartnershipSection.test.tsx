@@ -34,8 +34,8 @@ describe("ConsultantPartnershipSection — slash labels", () => {
   it("each slash label uses the shared SlashLabel component (data-slot + base classes)", () => {
     const { container } = render(<ConsultantPartnershipSection />);
     const labels = Array.from(
-      container.querySelectorAll<HTMLElement>('[data-slot="slash-label"]')
-    );
+      container.querySelectorAll('[data-slot="slash-label"]')
+    ) as HTMLElement[];
     // 4 + 4 + 5 items across the three columns
     expect(labels.length).toBe(13);
 

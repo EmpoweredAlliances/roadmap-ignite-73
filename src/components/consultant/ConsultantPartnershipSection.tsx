@@ -4,30 +4,34 @@ import { motion, useInView } from "framer-motion";
 const ease: [number, number, number, number] = [0.25, 0.46, 0.45, 0.94];
 
 const YOU_BRING = [
-  "The client relationship",
-  "INDUSTRY / FUNCTION expertise",
-  "Strategic context",
-  "Credibility and continuity",
+  "CLIENT RELATIONSHIP",
+  "INDUSTRY / FUNCTION EXPERTISE",
+  "STRATEGIC CONTEXT",
+  "CREDIBILITY / CONTINUITY",
 ];
 
 const WE_BRING = [
-  "Priority Acceleration methodology",
-  "Facilitation support & decision flow",
-  "Priority Acceleration platform",
-  "Structured outputs & artifacts",
+  "PRIORITY ACCELERATION METHODOLOGY",
+  "FACILITATION SUPPORT / DECISION FLOW",
+  "PRIORITY ACCELERATION PLATFORM",
+  "STRUCTURED OUTPUTS / ARTIFACTS",
 ];
 
 const CLIENT_GETS = [
-  "Faster alignment",
-  "Better-organized decision-making",
-  "More engaging working sessions",
-  "Documented rationale behind priorities",
-  "Clearer next steps after every workshop",
+  "FASTER ALIGNMENT",
+  "BETTER-ORGANIZED DECISION-MAKING",
+  "MORE ENGAGING WORKING SESSIONS",
+  "DOCUMENTED RATIONALE BEHIND PRIORITIES",
+  "CLEARER NEXT STEPS AFTER EVERY WORKSHOP",
 ];
 
 const Dot = ({ color }: { color: string }) => (
-  <span className="mt-1.5 inline-block h-1.5 w-1.5 shrink-0 rounded-full" style={{ background: color }} />
+  <span className="mt-[7px] inline-block h-1.5 w-1.5 shrink-0 rounded-full" style={{ background: color }} />
 );
+
+// Shared style for uppercase slash-based labels — ensures clean wrapping on mobile
+const slashLabelClass =
+  "font-body text-[12px] sm:text-[13px] font-semibold uppercase tracking-[0.08em] leading-[1.5] break-words [word-spacing:0.05em]";
 
 const ConsultantPartnershipSection = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -66,7 +70,7 @@ const ConsultantPartnershipSection = () => {
               {YOU_BRING.map((item) => (
                 <li key={item} className="flex items-start gap-2.5">
                   <Dot color="#4EB8A0" />
-                  <span className="font-body text-[14px] text-foreground">{item}</span>
+                  <span className={`${slashLabelClass} text-foreground`}>{item}</span>
                 </li>
               ))}
             </ul>
@@ -87,7 +91,7 @@ const ConsultantPartnershipSection = () => {
               {WE_BRING.map((item) => (
                 <li key={item} className="flex items-start gap-2.5">
                   <Dot color="#C49B3C" />
-                  <span className="font-body text-[14px] text-white/70">{item}</span>
+                  <span className={`${slashLabelClass} text-white/75`}>{item}</span>
                 </li>
               ))}
             </ul>
@@ -140,7 +144,7 @@ const ConsultantPartnershipSection = () => {
               {CLIENT_GETS.map((item) => (
                 <li key={item} className="flex items-start gap-2.5">
                   <Dot color="hsl(142, 72%, 38%)" />
-                  <span className="font-body text-[14px] text-foreground">{item}</span>
+                  <span className={`${slashLabelClass} text-foreground`}>{item}</span>
                 </li>
               ))}
             </ul>

@@ -18,6 +18,7 @@ const ForConsultants = () => (
     <ConsultantHeroSection />
     <ConsultantProblemSection />
     <ConsultantFastRampSection />
+    <ConsultantPlatformVideoSection />
     <ConsultantPartnershipSection />
     <ConsultantJourneySection />
     <ConsultantPlatformDemoSection />

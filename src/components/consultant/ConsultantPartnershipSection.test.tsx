@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeAll } from "vitest";
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import ConsultantPartnershipSection from "./ConsultantPartnershipSection";
 import { SLASH_LABEL_BASE } from "@/components/ui/SlashLabel";
 

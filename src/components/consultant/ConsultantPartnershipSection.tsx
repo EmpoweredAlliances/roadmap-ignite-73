@@ -141,7 +141,7 @@ const ConsultantPartnershipSection = () => {
               {CLIENT_GETS.map((item) => (
                 <li key={item} className="flex items-start gap-2.5">
                   <Dot color="hsl(142, 72%, 38%)" />
-                  <span className={`${slashLabelClass} text-foreground`}>{item}</span>
+                  <SlashLabel tone="default">{item}</SlashLabel>
                 </li>
               ))}
             </ul>

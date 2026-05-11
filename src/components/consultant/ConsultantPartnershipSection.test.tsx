@@ -53,8 +53,10 @@ describe("ConsultantPartnershipSection — slash labels", () => {
 
   it("snapshot of partnership label markup stays stable across copy changes to non-label elements", () => {
     const { container } = render(<ConsultantPartnershipSection />);
-    const labelMarkup = Array.from(
-      container.querySelectorAll<HTMLElement>('[data-slot="slash-label"]')
+    const labelMarkup = (
+      Array.from(
+        container.querySelectorAll('[data-slot="slash-label"]')
+      ) as HTMLElement[]
     ).map((el) => `${el.tagName}|${el.className}|${el.textContent}`);
     expect(labelMarkup).toMatchSnapshot();
   });

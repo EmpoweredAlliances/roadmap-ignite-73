@@ -12,7 +12,7 @@ const fadeUp: Variants = {
   }),
 };
 
-const BOOKING_URL = "https://api.aiforbusiness.com/widget/booking/SMmXrKS1j5mBJBMRobfg";
+const BOOKING_URL = "https://api.aiforbusiness.com/widget/booking/YT4jENzU1MfAIwCe7l4X";
 
 const NAV_LINKS = [
   { label: "How it works", href: "/#how-it-works" },
@@ -207,24 +207,26 @@ const ConsultantHeroSection = () => {
                 variants={fadeUp}
                 className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center"
               >
-                <a
-                  href="#fastramp"
-                  onClick={(e) => { e.preventDefault(); document.getElementById("fastramp")?.scrollIntoView({ behavior: "smooth" }); }}
-                  className="btn-shimmer inline-flex items-center gap-3 rounded-lg px-8 py-4 font-body text-[15px] font-bold shadow-lg transition-all duration-200 hover:shadow-xl"
-                  style={{
-                    background: "linear-gradient(135deg, #C49B3C, #E8C97A)",
-                    color: "#0f1f3d",
-                  }}
-                >
-                  Explore the Fast Ramp Partner Program →
-                </a>
-                <a
-                  href="#whitelabel"
-                  onClick={(e) => { e.preventDefault(); window.history.replaceState(null, "", "#whitelabel"); window.dispatchEvent(new HashChangeEvent("hashchange")); document.getElementById("whitelabel")?.scrollIntoView({ behavior: "smooth" }); }}
-                  className="inline-flex items-center gap-3 rounded-lg border-2 border-white/30 px-8 py-4 font-body text-[15px] font-bold text-white transition-all duration-200 hover:border-white/60 hover:bg-white/10"
-                >
-                  Ask About White Label
-                </a>
+              <a
+                href={BOOKING_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-shimmer inline-flex items-center gap-3 rounded-lg px-8 py-4 font-body text-[15px] font-bold shadow-lg transition-all duration-200 hover:shadow-xl"
+                style={{
+                  background: "linear-gradient(135deg, #C49B3C, #E8C97A)",
+                  color: "#0f1f3d",
+                }}
+              >
+                Schedule a Conversation →
+              </a>
+              <a
+                href={BOOKING_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 rounded-lg border-2 border-white/30 px-8 py-4 font-body text-[15px] font-bold text-white transition-all duration-200 hover:border-white/60 hover:bg-white/10"
+              >
+                Schedule a Conversation
+              </a>
               </motion.div>
 
               {/* Tagline */}

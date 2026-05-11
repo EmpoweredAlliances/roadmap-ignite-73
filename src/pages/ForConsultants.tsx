@@ -2,6 +2,7 @@ import ConsultantHeroSection from "@/components/consultant/ConsultantHeroSection
 import ConsultantProblemSection from "@/components/consultant/ConsultantProblemSection";
 import ConsultantFastRampSection from "@/components/consultant/ConsultantFastRampSection";
 import ConsultantPartnershipSection from "@/components/consultant/ConsultantPartnershipSection";
+import ConsultantPlatformVideoSection from "@/components/consultant/ConsultantPlatformVideoSection";
 import ConsultantJourneySection from "@/components/consultant/ConsultantJourneySection";
 import ConsultantPlatformDemoSection from "@/components/consultant/ConsultantPlatformDemoSection";
 import ConsultantProofSection from "@/components/consultant/ConsultantProofSection";
@@ -17,6 +18,7 @@ const ForConsultants = () => (
     <ConsultantHeroSection />
     <ConsultantProblemSection />
     <ConsultantFastRampSection />
+    <ConsultantPlatformVideoSection />
     <ConsultantPartnershipSection />
     <ConsultantJourneySection />
     <ConsultantPlatformDemoSection />

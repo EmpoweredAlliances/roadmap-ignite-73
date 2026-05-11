@@ -26,8 +26,12 @@ const CLIENT_GETS = [
 ];
 
 const Dot = ({ color }: { color: string }) => (
-  <span className="mt-1.5 inline-block h-1.5 w-1.5 shrink-0 rounded-full" style={{ background: color }} />
+  <span className="mt-[7px] inline-block h-1.5 w-1.5 shrink-0 rounded-full" style={{ background: color }} />
 );
+
+// Shared style for uppercase slash-based labels — ensures clean wrapping on mobile
+const slashLabelClass =
+  "font-body text-[12px] sm:text-[13px] font-semibold uppercase tracking-[0.08em] leading-[1.5] break-words [word-spacing:0.05em]";
 
 const ConsultantPartnershipSection = () => {
   const ref = useRef<HTMLDivElement>(null);
